@@ -8,15 +8,22 @@ function mudarColor() {
     document.body.classList.remove('masculino', 'feminino', 'padrao')
 
     if (sexoSelecionado === 'masculino') {
-        document.body.style.background ='#fff'
-    //    document.body.classList.add('masculino');
+       document.body.classList.add('masculino');
     } else if (sexoSelecionado === 'feminino') {
         document.body.classList.add('feminino');
     } else {
-        document.body.classList.add = ('padrao');
+        document.body.classList.add('padrao');
     }
 }
 
+const radios = document.querySelectorAll('input[name="sexo_crianca"]');
+
+radios.forEach(radio => {
+    radio.addEventListener('change', mudarColor);
+});
+
+const radioSexo = document.querySelector('input[name="sexo_crianca"]');
+radioSexo.addEventListener('click', mudarColor())
 
 
 const form = document.getElementById('formulario');
