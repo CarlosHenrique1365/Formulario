@@ -7,7 +7,8 @@ function mudarColor() {
     document.body.classList.remove('masculino', 'feminino', 'padrao')
 
     if (sexoSelecionado === 'masculino') {
-       document.body.classList.add('masculino');
+        document.body.style.background ='#fff'
+    //    document.body.classList.add('masculino');
     } else if (sexoSelecionado === 'feminino') {
         document.body.classList.add('feminino');
     } else {
@@ -15,13 +16,4 @@ function mudarColor() {
     }
 }
 
-const form = document.querySelector('form');
-
-form.addEventListener('click', function (event) {
-  event.preventDefault();
-
-  const dados = new FormData(form);
-  const objeto = Object.fromEntries(dados.entries());
-
-  console.log(objeto);
-});
+mudarColor()
