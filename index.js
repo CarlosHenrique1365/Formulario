@@ -1,0 +1,27 @@
+function mudarColor() {
+    const sexoCriança = document.querySelector('input[name="sexo_crianca"]:checked');
+    if (!sexoCriança) return; // se nenhum estiver marcado, não faz nada
+
+    const sexoSelecionado = sexoCriança.value;
+
+    document.body.classList.remove('masculino', 'feminino', 'padrao')
+
+    if (sexoSelecionado === 'masculino') {
+       document.body.classList.add('masculino');
+    } else if (sexoSelecionado === 'feminino') {
+        document.body.classList.add('feminino');
+    } else {
+        document.body.classList.add = ('padrao');
+    }
+}
+
+const form = document.querySelector('form');
+
+form.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  const dados = new FormData(form);
+  const objeto = Object.fromEntries(dados.entries());
+
+  console.log(objeto);
+});

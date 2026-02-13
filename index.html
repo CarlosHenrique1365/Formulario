@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Anamnese Infantil</title>
+  <script type="module" src="index.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <h1>Anamnese Infantil</h1>
+
+    <form action="" method="post">
+
+      <!-- Identificação da criança -->
+      <fieldset>
+        <legend>Identificação da Criança</legend>
+
+        <label for="nome_crianca"> Nome da Criança <input type="text" id="nome_crianca" name="nome_crianca" required></label>
+        
+        <label for="data_nascimento">Data de Nascimento <input type="date" id="data_nascimento" name="data_nascimento" required></label>
+
+        <label for="idade">Idade <input type="number" id="idade" name="idade" min="0" required></label> 
+        
+        <label for="data_entrevista">Data da Entrevista
+        <input type="date" id="data_entrevista" name="data_entrevista">
+        </label>
+
+        <label for="masculino"><input type="radio" name="sexo_crianca" id="masculino" value="masculino"> Masculino</label>
+
+        <label for="feminino"><input type="radio" name="sexo_crianca" id="feminino" value="feminino"> Feminino</label>
+
+       
+      </fieldset>
+
+      <!-- Dados da escola -->
+      <fieldset>
+        <legend>Dados da Escola</legend>
+
+        <label for="escola">Nome da Escola
+        <input type="text" id="escola" name="escola">
+        </label>
+
+        <p>Tipo de Escola</p>
+
+        <label for="particular"><input type="radio" id="particular" name="tipo_escola" value="particular"> Particular</label>
+
+        <label for="estadual"><input type="radio" id="estadual" name="tipo_escola" value="estadual"> Estadual</label>
+
+        <label for="municipal"><input type="radio" id="municipal" name="tipo_escola" value="municipal"> Municipal</label>
+      </fieldset>
+
+      <!-- Dados do pai -->
+      <fieldset>
+        <legend>Dados do Pai</legend>
+
+        <label for="nome_pai">Nome do Pai
+        <input type="text" id="nome_pai" name="nome_pai">
+        </label>
+
+        <label for="idade_pai">Idade
+        <input type="number" id="idade_pai" name="idade_pai" min="0">
+        </label>
+
+        <label for="profissao_pai">Profissão
+        <input type="text" id="profissao_pai" name="profissao_pai">
+        </label>
+
+        <label for="mao_dominante_pai">Mão Dominante</label>
+        <select id="mao_dominante_pai" name="mao_dominante_pai">
+          <option value="">Selecione</option>
+          <option value="destro">Destro</option>
+          <option value="canhoto">Canhoto</option>
+          <option value="ambidestro">Ambidestro</option>
+        </select>
+      </fieldset>
+
+      <!-- dados da mae -->
+      <fieldset>
+        <legend>Dados da Mãe</legend>
+
+        <label for="nome_mae">Nome da Mãe
+        <input type="text" id="nome_mae" name="nome_mae">
+        </label>
+
+        <label for="idade_mae">Idade
+        <input type="number" id="idade_mae" name="idade_mae" min="0">
+        </label>
+
+        <label for="profissao_mae">Profissão
+<input type="text" id="profissao_mae" name="profissao_mae">
+</label>
+
+        <label for="mao_dominante_mae">Mão Dominante</label>
+        <select id="mao_dominante_mae" name="mao_dominante_mae">
+          <option value="">Selecione</option>
+          <option value="destro">Destro</option>
+          <option value="canhoto">Canhoto</option>
+          <option value="ambidestro">Ambidestro</option>
+        </select>
+      </fieldset>
+
+      <!--STEP Dados da Criança -->
+       <fieldset>
+        <legend>Sobre a Criança</legend>
+        <p>A criança é?</p>
+
+        <label for="filho_unico"><input type="radio" id="filho_unico" name="crianca" value="filho_unico"> Filho Unico</label>
+
+        <label for="primogenito"><input type="radio" id="primogenito" name="crianca" value="primogenito"> Primogenito</label>
+
+        <label for="segundo_filho"><input type="radio" id="segundo_filho" name="crianca" value="segundo_filho"> 2° Filho</label>
+
+        <label for="terceiro_filho"><input type="radio" id="terceiro_filho" name="crianca" value="terceiro_filho"> 3° Filho</label>
+
+        <p>É Adotado(a)?</p>
+
+        <label for="sim"><input type="radio" id="sim" name="adotado" value="sim"> Sim</label>
+
+        <label for="nao"><input type="radio" id="nao" name="adotado" value="nao"> Não</label>
+
+        <p>Possui Irmãos?</p>
+
+        <label for="psim"><input type="radio" id="psim" name="irmaos" value="psim"> Sim</label>
+
+        <label for="pnao"><input type="radio" id="pnao" name="irmaos" value="pnao"> Não</label>
+
+        <p>A Criança Mora com Quem?</p>
+        <label for="so_mae"><input type="radio" name="moradia" id="so_mae" value="so_mae"> Só a Mãe</label>
+        <label for="so_pai"><input type="radio" name="moradia" id="so_pai" value="so_pai"> So o Pai</label>
+        <label for="com_pais"><input type="radio" name="moradia" id="com_pais" value="com_pais"> Com os Pais</label>
+        <label for="com_avos"><input type="radio" name="moradia" id="com_avos" value="com_avos"> Com Avos</label>
+        <label for="com_tios"><input type="radio" name="moradia" id="com_tios" value="com-tios"> Com os Tios</label>
+        <label for="com_outros"><input type="radio" name="moradia" id="com_outros" value="outros"> Outros</label>
+       </fieldset>
+
+       <!-- Dados Parentes obs: colocra um else if caso eu tenha um parente perguntar grau de parentesco, se a pessoa reide e o grau de contato -->
+
+       <!-- STEP ANTECEDENTES FAMILIARES -->
+       <fieldset>
+        <legend>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</legend>
+        
+        <p>Deficiencia Mental?</p>
+        <label for="mental_sim"><input type="radio" id="mental_sim" name="mental" value="deficiencia_sim"> Sim</label>
+
+        <label for="mental_nao"><input type="radio" id="mental_nao" name="mental" value="deficiencia_nao"> Não</label>
+
+        <p>Disturbio de Aprendizagem?</p>
+        <label for="aprender_sim"><input type="radio" id="aprender_sim" name="aprender" value="aprender_sim"> Sim</label>
+
+        <label for="aprender_nao"><input type="radio" id="aprender_nao" name="aprender" value="aprender_nao"> Não</label>
+
+        <p>Dificuldades Escolares?</p>
+        <label for="dificuldade_sim"><input type="radio" id="dificuldade_sim" name="dificuldade" value="dificuldade_sim"> Sim</label>
+
+        <label for="dificuldade_nao"><input type="radio" id="dificuldade_nao" name="dificuldade" value="dificuldade_nao"> Não</label>
+
+        <p>Doenças Psiquiatricas</p>
+        <label for="psique_sim"><input type="radio" id="psique_sim" name="psique" value="psique_sim"> Sim</label>
+
+        <label for="psique_nao"><input type="radio" id="psique_nao" name="psique" value="psique_nao"> Não</label>
+
+        <p>Doença Neurologica</p>
+        <label for="neuro_sim"><input type="radio" id="neuro_sim" name="neuro" value="neuro_sim"> Sim</label>
+
+        <label for="neuro_nao"><input type="radio" id="neuro_nao" name="neuro" value="neuro_nao"> Não</label>
+       </fieldset>
+
+       <!-- STEP MOTIVO CONSULTA -->
+       <fieldset>
+        <legend>Motivo da Consulta e Encaminhamento</legend>
+        <label for="queixas">Descreva as Queixas:</label>
+        <textarea name="queixas" id="queixas"></textarea>
+
+        <p>Quem Percebel ou Identificou o Problema?</p>
+        <label for="identificar_mae"><input type="radio" name="identificar" id="identificar_mae" value="mae"> A mãe</label>
+
+        <label for="identificar_pai"><input type="radio" name="identificar" id="identificar_pai" value="pai"> O pai</label>
+
+        <label for="identificar_pais"><input type="radio" name="identificar" id="identificar_pais" value="pais"> Os pais</label>
+
+        <label for="identificar_escola"><input type="radio" name="identificar" id="identificar_escola" value="escola"> Escola</label>
+
+        <label for="identificar_professora"><input type="radio" name="identificar" id="identificar_professora" value="professora"> Professora</label>
+
+        <label for="identificar_outros"><input type="radio" name="identificar" id="identificar_outros" value="outros"> Outros</label>
+
+        <p>Quem encaminhou a Criança?</p>
+        <label for="encaminhar_mae"><input type="radio" name="encaminhar" id="encaminhar_mae" value="mae"> A mãe</label>
+
+        <label for="encaminhar_pai"><input type="radio" name="encaminhar" id="encaminhar_pai" value="encaminhar_pai"> O pai</label>
+
+        <label for="encaminhar_pais"><input type="radio" name="encaminhar" id="encaminhar_pais" value="encaminhar_pais"> Os pais</label>
+
+        <label for="encaminhar_escola"><input type="radio" name="encaminhar" id="encaminhar_escola" value="encaminhar_escola"> Escola</label>
+
+        <label for="encaminhar_professora"><input type="radio" name="encaminhar" id="encaminhar_professora" value="professora"> Professora</label>
+
+        <label for="encaminhar_outros"><input type="radio" name="encaminhar" id="encaminhar_outros" value="encaminhar_outros"> Outros</label>
+       </fieldset>
+
+       <!-- STEP GESTACIONAL -->
+       <fieldset>
+        <legend>Histórico Gestacional e Perinatal</legend>
+        <p>A Gestação foi?</p>
+        <label for="planejada"><input type="radio" name="gestacao" id="planejada" value="planejada"> Planejada</label>
+
+        <label for="indesejada"><input type="radio" name="gestacao" id="indesejada" value="indesejada"> Indesejada</label>
+
+        <label for="intercorrencia"><input type="radio" name="gestacao" id="intercorrencia" value="intercorrencia"> Sem Intercorrência</label>
+
+        <label for="ordem_fisica"><input type="radio" name="gestacao" id="ordem_fisica" value="ordem_fisica"> Problemas de Ordem Física</label>
+
+        <label for="ordem_mental"><input type="radio" name="gestacao" id="ordem_mental" value="ordem_mental"> Problemas de Ordem Mental</label>
+
+        <!-- Atençao, este campo tem logica de diplay caso tenha algum problema -->
+        <div id="campo_problemas" style="display:none;">
+          <label for="problemas">Explique:</label>
+          <textarea id="problemas"></textarea>
+        </div>
+
+        <p>Como Foi a Saúde da Mãe Durante a Gestação?</p>
+        <label for="saude_boa"><input type="radio" name="saude_mae" id="saude_boa" value="boa"> Boa</label>
+
+        <label for="saude_regular"><input type="radio" name="saude_mae" id="saude_regular" value="regular"> Regular com Problemas Comuns</label>
+
+        <label for="saude_pessima"><input type="radio" name="saude_mae" id="saude_pessima" value="pessima"> Péssima</label>
+
+        <!-- Atençao, este campo tem logica de diplay caso tenha algum problema -->
+         <div id="medicacoes" style="display: none;">
+          <label for="medicacoes_gestacao">Medicaçoes e Exames Feitos na Gravidez:</label>
+          <textarea name="medicacoes_gestacao" id="medicacoes_gestacao"></textarea>
+         </div>
+
+        <p>Nascimento:</p>
+        <label for="atermo"><input type="radio" name="tipo_nascimento" id="atermo" value="atermo"> A Termo</label>
+
+        <label for="prematuro"><input type="radio" name="tipo_nascimento" id="prematuro" value="prematuro"> Prematuro</label>
+
+        <label for="meses">Quantos Meses de Gestaçao?
+<input type="number" name="meses" id="meses">
+</label>
+        
+        <p>Como foi o Parto?</p>
+        <label for="parto_cesaria"><input type="radio" name="parto" id="parto_cesaria" value="cesaria"> Cesaria</label>
+
+        <label for="parto_normal"><input type="radio" name="parto" id="parto_normal" value="normal"> Normal</label>
+
+        <label for="parto_prematuro"><input type="radio" name="parto" id="parto_prematuro" value="prematuro"> Prematuro</label>
+
+        <p>Teve intercorrencia?</p>
+        <label for="p_intercorrencia_sim"><input type="radio" id="p_intercorrencia_sim" name="p_intercorrencia" value="p_intercorrencia_sim"> Sim</label>
+
+        <label for="p_intercorrencia_nao"><input type="radio" id="p_intercorrencia_nao" name="p_intercorrencia" value="p_intercorrencia_nao"> Não</label>
+
+        <div id="campo_intercorrencia" style="display:none;">
+          <label for="detalhe">Explique:</label>
+          <textarea id="detalhe"></textarea>
+        </div>
+        <!-- Se sim abrir uma caixa de text area -->
+       </fieldset>
+
+       <!-- STEP DESENVOLVIMENTO LINGUAGEM E PSICOMOTOR -->
+       <fieldset>
+        <legend>Desenvolvimento da Linguagem e Psicomotor</legend>
+        <p>Com que idade a criança falou as:</p>
+        <label for="palavras">Primeiras Palavras
+<input type="number" name="palvras" id="palavras">
+</label>
+
+        <label for="frases">Primeiras Frases
+<input type="number" name="frases" id="frases">
+</label>
+
+        <p>Teve Dificuldades na Aquisiçao da Fala?</p>
+
+        <label for="fala_sim"><input type="radio" name="dificuldae_fala" id="fala_sim" value="sim"> Sim</label>
+
+        <label for="fala_nao"><input type="radio" name="dificuldae_fala" id="fala_nao" value="nao"> Não</label>
+
+        <!-- Exibiçao caso tenha tido alguma dificuldade de fala -->
+        <div id="fala" style="display: none;">
+          <label for="trocas_palavras">Quais foram as trocas?</label>
+          <textarea name="trocas_palavras" id="trocas_palavras"></textarea>
+        </div>
+
+        <p>Com que Idade a Criança:</p>
+
+        <label for="engatinhou">Egatinhou
+<input type="number" name="engatinhou" id="engatinhou">
+</label>
+
+        <label for="andou">Andou
+<input type="number" name="andou" id="andou">
+</label>
+
+        <label for="bicicleta">Andou de Bicicleta
+<input type="number" name="bicicleta" id="bicicleta">
+</label>
+
+        <!-- Com que idade teve controle enurese -->
+        <p>Com que Idade a Criança teve Controle da Enurese:</p>
+
+        <label for="enurese_primaria">Enurese Primária
+<input type="text" name="enurese" id="enurese_primaria">
+</label>
+
+        <label for="enurese_secundaria">Enurese Secundária
+<input type="text" name="enurese" id="enurese_secundaria">
+</label>
+
+        <label>Motivos</label>
+        <textarea name="motivo_enurese"></textarea>
+
+        <!-- Qual mao usa -->
+        <p>Qual mão usa para comer?</p>
+        <label for="direita"><input type="radio" name="mao_comer" value="direita" id="direita"> Direita</label>
+        <label for="esquerda"><input type="radio" name="mao_comer" value="esquerda" id="esquerda"> Esquerda</label>
+
+        <!-- Qual pe usa -->
+        <p>Qual pé utiliza para chutar?</p>
+        <label for="pe_direito"><input type="radio" name="pe_chutar" value="pe_direito" id="pe_direito"> Direito</label>
+        <label for="pe_esquerdo"><input type="radio" name="pe_chutar" value="pe_esquerdo" id="pe_esquerdo"> Esquerdo</label>
+
+        <!-- Se veste sozinho -->
+        <p>Se veste sozinho?</p>
+        <label for="vestir_sim"><input type="radio" id="vestir_sim" name="vestir" value="sim"> Sim</label>
+
+        <label for="vestir_nao"><input type="radio" id="vestir_nao" name="vestir" value="nao"> Não</label>
+
+        <div id="motivo_vestir" style="display:none;">
+          <label>Se há Dificuldades Explique</label>
+          <textarea name="motivo_vestir"></textarea>
+        </div>
+        <!-- Toma banho sozinho -->
+        <p>Toma banho sozinho?</p>
+
+        <label for="banho_sim"><input type="radio" name="banho" id="banho_sim" value="sim"> Sim</label>
+
+        <label for="banho_nao"><input type="radio" name="banho" id="banho_nao" value="nao"> Não</label>
+
+        <!-- Quando se fere pede ajuda -->
+        <p>Quando se fere pede ajuda?</p>
+
+        <label for="ferimento_sim"><input type="radio" name="ferimento" id="ferimento_sim" value="sim"> Sim</label>
+
+        <label for="ferimento_nao"><input type="radio" name="ferimento" id="ferimento_nao" value="nao"> Não</label>
+
+        <!-- Quando está com fome pede ajuda -->
+        <p>Quando está com fome pede ajuda?</p>
+
+        <label for="fome_sim"><input type="radio" name="fome" id="fome_sim" value="sim"> Sim</label>
+
+        <label for="fome_nao"><input type="radio" name="fome" id="fome_nao" value="nao"> Não</label>
+
+        <!-- Quando quer algo pede ajuda -->
+        <p>Quando quer algo pede ajuda?</p>
+
+        <label for="ajuda_sim"><input type="radio" name="ajuda" id="ajuda_sim" value="sim"> Sim</label>
+
+        <label for="ajuda_nao"><input type="radio" name="ajuda" id="ajuda_nao" value="nao"> Não</label>
+        </fieldset>
+
+        <fieldset>
+        <legend>Hábitos alimentares</legend>
+        <p>A criança tem Horarios para se alimentar</p>
+        <label for="hora_sim"><input type="radio" name="hora_alimentar" id="hora_sim" value="sim"> Sim</label>
+
+        <label for="hora_nao"><input type="radio" name="hora_alimentar" id="hora_nao" value="nao"> Não</label>
+        
+        <p>A criança respeita os horarios?</p>
+        <label for="respeita_sim"><input type="radio" name="respeita_hora" id="respeita_sim" value="sim"> Sim</label>
+
+        <label for="respeita_nao"><input type="radio" name="respeita_hora" id="respeita_nao" value="nao"> Não</label>
+
+        <p>A criança faz as refeiçoes junto com outros familiares?</p>
+        <label for="junto_sim"><input type="radio" name="junto_familia" id="junto_sim" value="sim"> Sim</label>
+
+        <label for="junto__nao"><input type="radio" name="junto_familia" id="junto__nao" value="nao"> Não</label>
+
+        <p>A criança recusa-se a comer?</p>
+        <label for="comer_sim"><input type="radio" name="comer" id="comer_sim" value="sim"> Sim</label>
+
+        <label for="comer_nao"><input type="radio" name="comer" id="comer_nao" value="nao"> Não</label>
+
+        <p>Quem oferece a comida a criança?</p>
+        <label for="oferece_mae"><input type="radio" name="oferece_comida" id="oferece_mae" value="mae"> Mãe</label>
+
+        <label for="oferece_pai"><input type="radio" name="oferece_comida" id="oferece_pai" value="pai"> Pai</label>
+
+        <label for="oferece_irmao"><input type="radio" name="oferece_comida" id="oferece_irmao" value="irmao"> Irmão</label>
+
+        <label for="ofere_outros"><input type="radio" name="oferece_comida" id="ofere_outros" value="outros"> Outros</label>
+
+        <div id="preferencias_alimentares">
+          <label for="preferencias">Quais são suas preferêcias alimentares</label>
+          <textarea name="preferencias" id="preferencias"></textarea>
+        </div>
+
+        <p>A criança temdificuldades em relaçao ao peso?</p>
+        <label for="peso_nao"><input type="radio" name="peso" id="peso_nao" value="nao"> Não</label>
+
+        <label for="peso_sim"><input type="radio" name="peso" id="peso_sim" value="sim"> Sim</label>
+
+        <!-- Se sim excesso de peso ou abaixo do peso -->
+            <div id="peso_carcteristicas">
+              <label for="caracteristicas">Diga se o peso esta abaixo ou acima e se possivel de detalhes</label>
+              <textarea name="caracteristicas" id="caracteristicas"></textarea>
+            </div>
+        </fieldset>
+
+        <!-- STEP SONO -->
+        <fieldset>
+          <legend>Sono da Criança</legend>
+            <p>A criança dorme sozinha?</p>
+            <label for="dorme_sim"><input type="radio" name="dorme" id="dorme_sim" value="sim"> Sim</label>
+
+            <label for="dorme_nao"><input type="radio" name="dorme" id="dorme_nao" value="nao"> Não</label>
+
+            <label for="dorme_irmaos"><input type="radio" name="dorme" id="dorme_irmaos" value="irmaos"> Com irmaos</label>
+
+            <label for="dorme_pais"><input type="radio" name="dorme" id="dorme_pais" value="pais"> Com os pais</label>
+
+            <label for="dorme_mae"><input type="radio" name="dorme" id="dorme_mae" value="mae"> Com a mae</label>
+
+            <label for="dorme_pai"><input type="radio" name="dorme" id="dorme_pai" value="pai"> Com a mae</label>
+
+            <label for="dorme_outros"><input type="radio" name="dorme" id="dorme_outros" value="outros"> Com outros</label>
+
+            <!-- Se com outros com quem? -->
+            <div id="dorme_com_outros">
+              <label for="dorme_outro">Com quem?</label>
+              <textarea name="dorme_outro" id="dorme_outro"></textarea>
+            </div>
+
+            <p>A criança tem o próprio quarto?</p>
+            <label for="quarto_sim"><input type="radio" name="quarto" id="quarto_sim" value="sim"> Sim</label>
+
+            <label for="quarto_nao"><input type="radio" name="quarto" id="quarto_nao" value="nao"> Não</label>
+
+            <p>Dorme com outros irmãos?</p>
+            <input type="radio" name="irmao" id="irmao_sim" value="sim">
+            <label for="irmao_sim">Sim
+<input type="radio" name="irmao" id="dorme_nao" value="nao">
+</label>
+            <label for="irmao_nao">Não</label>
+
+            <p>A criança se levanta durante a noite e vai para o quarto dos pais?</p>
+            <label for="dorme_pais_sim"><input type="radio" name="dorme_pais" id="dorme_pais_sim" value="sim"> Sim</label>
+
+            <label for="dorme_pais_nao"><input type="radio" name="dorme_pais" id="dorme_pais_nao" value="nao"> Não</label>
+
+            <!-- Se sim crie um text area -->
+            <div id="atitude" style="display: none;">
+            <label for="atitude_pais"> Qual a atitude dos pais?</label>
+            <textarea name="atitude_pais" id="atitude_pais"></textarea>
+            </div>
+
+            <p>A criança tem pesadelos?</p>
+            <label for="pesadelo_sim"><input type="radio" name="pesadelo" id="pesadelo_sim" value="sim"> Sim</label>
+
+            <label for="pesadelo_nao"><input type="radio" name="pesadelo" id="pesadelo_nao" value="nao"> Não</label>
+
+            <!-- Se sim crie um text area -->
+            <div id="atitude_pesadelo" style="display: none;">
+            <label for="pesadelo"> Qual a atitude dos pais?</label>
+            <textarea name="pesadelo" id="dormir"></textarea>
+            </div>
+
+            <!-- se sim para pesadelos abrir esta opçao para ver a frequencia -->
+            <div class="frequencia_pesadelo">
+              <p>Qual a frequencia que tem pesadelos?</p>
+              <label for="frequencia_as_vezes"><input type="radio" name="frequencia" id="frequencia_as_vezes" value="sim"> As vezes</label>
+
+              <label for="frequencia_sempre"><input type="radio" name="frequencia" id="frequencia_sempre" value="nao"> Frequentemente</label>
+
+              <div id="atitude_frequencia" style="display: none;">
+                <label for="atitude_freque"> Qual a atitude dos pais?</label>
+                <textarea name="atitude_freque" id="atitude_freque"></textarea>
+              </div>
+
+              <div id="tema_pesadelo" style="display: none;">
+                <label for="tema"> Qual o tema mais frequente do pesadelo?</label>
+                <textarea name="tema" id="tema"></textarea>
+              </div>
+            </div>
+
+            <p>Qual a qualidade de sono da criança?</p>
+            <label for="qualidade_sono_pessimo"><input type="radio" name="qualidade_sono" id="qualidade_sono_pessimo" value="pessimo"> Péssimo</label>
+
+            <label for="qualidade_sono_regular"><input type="radio" name="qualidade_sono" id="qualidade_sono_regular" value="regular"> Regular</label>
+
+            <label for="qualidade_sono_bom"><input type="radio" name="qualidade_sono" id="qualidade_sono_bom" value="bom"> Bom</label>
+
+            <label for="qualidade_sono_otimo"><input type="radio" name="qualidade_sono" id="qualidade_sono_otimo" value="otimo"> Ótimo</label>
+
+            <label for="acorda_olheiras"><input type="checkbox" name="acorda_olheiras" id="acorda_olheiras"> Acorda com olheiras, irritada, não quer levantar</label>
+
+            <label for="dificuldade_sono"><input type="checkbox" name="dificuldade_sono" id="dificuldade_sono"> Tem dificuldade para conciliar sono</label>
+
+            <label for="sono_regular"><input type="checkbox" name="sono_regular" id="sono_regular"> Regular, dorme rapidamente, mas levanta-se ou agita-se muito rápido durante a noite</label>
+
+            <label for="dificuldade_conciliar_sono"><input type="checkbox" name="dificuldade_conciliar_sono" id="dificuldade_conciliar_sono"> Tem dificuldade para conciliar sono, mas depois dorme rapidamente</label>
+
+            <label for="facilidade_sono"><input type="checkbox" name="facilidade_sono" id="facilidade_sono"> Dorme sempre pesadamente</label>
+        </fieldset>
+
+        <!-- STEPA SAUDE -->
+
+        <fieldset>
+          <legend>Saúde Geral</legend>
+          <p>Qual a saude geral da criança atualmente?</p>
+            <label for="saude-atual_otimo"><input type="radio" name="saude-atual" id="saude-atual_otimo" value="otimo"> Ótimo</label>
+
+            <label for="saude-atual_bom"><input type="radio" name="saude-atual" id="saude-atual_bom" value="bom"> Bom</label>
+
+            <label for="saude-atual_regular"><input type="radio" name="saude-atual" id="saude-atual_regular" value="regular"> Regular</label>
+
+            <label for="saude-atual_pessimo"><input type="radio" name="saude-atual" id="saude-atual_pessimo" value="pessimo"> Péssimo</label>             
+
+            <div id="detalhes_doencas">
+              <label for="doenca_primeiro">Doença importantes no primeiro ano de vida:</label>
+              <textarea name="doenca_primeiro" id="doenca_primeiro"></textarea>
+
+              <label for="medicamentos_primeiro">Medicações usadas</label>
+              <textarea name="medicamentos_primeiro" id="medicamentos_primeiro"></textarea>
+
+              <label for="doenca_segundo">Doença importantes no segundo ano de vida:</label>
+              <textarea name="doenca_segundo" id="doenca_segundo"></textarea>
+
+              <label for="medicamentos_segundo">Medicações usadas</label>
+              <textarea name="medicamentos_segundo" id="medicamentos_segundo"></textarea>
+
+              <label for="doenca_terceiro">Doença importantes no terceiro ano de vida:</label>
+              <textarea name="doenca_terceiro" id="doenca_terceiro"></textarea>
+
+              <label for="medicamentos_terceiro">Medicações usadas</label>
+              <textarea name="medicamentos_terceiro" id="medicamentos_terceiro"></textarea>
+
+              <label for="doenca_quarto">Doença importantes no quarto ano de vida:</label>
+              <textarea name="doenca_quarto" id="doenca_quarto"></textarea>
+
+              <label for="medicamentos_quarto">Medicações usadas</label>
+              <textarea name="medicamentos_quarto" id="medicamentos_quarto"></textarea>
+
+              <label for="doenca_quinto">Doença importantes no quinto ano de vida:</label>
+              <textarea name="doenca_quinto" id="doenca_quinto"></textarea>
+
+              <label for="medicamentos_quinto">Medicações usadas</label>
+              <textarea name="medicamentos_quinto" id="medicamentos_quinto"></textarea>
+
+              <label for="doenca_sexto">Doença importantes no sexto ano de vida:</label>
+              <textarea name="doenca_sexto" id="doenca_sexto"></textarea>
+
+              <label for="medicamentos_sexto">Medicações usadas</label>
+              <textarea name="medicamentos_sexto" id="medicamentos_sexto"></textarea>
+
+              <label for="doenca_sete_doze">Doença importantes entre 7 e 12 anos de vida:</label>
+              <textarea name="doenca_sete_doze" id="doenca_sete_doze"></textarea>
+              <label for="medicamentos_sete_doze">Medicações usadas</label>
+              <textarea name="medicamentos_sete_doze" id="medicamentos_sete_doze"></textarea>
+
+               <p>Medicações usadas atualmente?</p>             
+               <label for="medicacoes_sim"><input type="radio" name="medicacoes" id="medicacoes_sim" value="sim"> Sim</label>
+              
+               <label for="medicacoes_nao"><input type="radio" name="medicacoes" id="medicacoes_nao" value="nao"> Não</label>
+
+               <!-- Se sim aparecer este bloco -->
+              <div id="medicacoes_atuais" style="display: none;">
+                <label for="medicamentos_atuais">Quais?</label>
+                <textarea name="medicamentos_atuais" id="medicamentos_atuais"></textarea></div>
+              </div>
+            
+              <label for="doenca_crinca">Como a criança enfrentou os problemas de saúde?
+              <input type="text" name="doenca_crinca" id="doenca_crinca">
+              </label>
+
+              <label for="doenca_pais">Como os pais enfrentaram os problemas de saúde?
+              <input type="text" name="doenca_pais" id="doenca_pais">
+              </label>
+
+              <p>Alguma cirurgia importante?</p>              
+              <label for="cirurgia_sim"><input type="radio" name="cirurgia" id="cirurgia_sim" value="sim"> Sim</label>
+
+              <label for="cirurgia_nao"><input type="radio" name="cirurgia" id="cirurgia_nao" value="nao"> Não</label>
+
+              <!-- QUAL CIRUGIA E COM AUNTOS ANOS -->
+               <div id="detalhe_cirugia" style="display: none;">
+                <label for="descricao_cirurgia">Que tipo de cirugia e com que idade?</label>
+                <textarea name="descricao_cirurgia" id="descricao_cirurgia"></textarea>
+               </div>
+
+              <p>Já teve convulsões?</p>
+              
+              <label for="convulsoes_sim"><input type="radio" name="convulsoes" id="convulsoes_sim" value="sim"> Sim</label>
+
+              <label for="convulsoes_nao"><input type="radio" name="convulsoes" id="convulsoes_nao" value="nao"> Não</label>
+             
+              <!-- Se sim abrir textarea -->
+              <div id="detalhes_convlucao" style="display: none;">
+                <label for="descricao_convulsao">Quando?</label>
+                <textarea name="descricao_convulsao" id="descricao_convulsao"></textarea>
+              </div>
+
+              <p>Já teve desmaios?</p>
+             
+              <label for="desmaios_sim"> <input type="radio" name="desmaios" id="desmaios_sim" value="sim"> Sim</label>
+
+              
+              <label for="desmaios_nao"><input type="radio" name="desmaios" id="desmaios_nao" value="nao"> Não</label>
+              
+              <!-- Se sim abrir um textarea -->
+              <div id="detalhes_desmaio" style="display: none;">
+                <label for="descricao_desmaio">Quando?</label>
+                <textarea name="descricao_desmaio" id="descricao_desmaio"></textarea>
+              </div>
+             
+              <p>Já ficou em coma por algum motivo?</p>
+              
+              <label for="ficar_coma_sim"><input type="radio" name="ficar_coma" id="ficar_coma_sim" value="sim"> Sim</label>
+
+              
+              <label for="ficar_coma_nao"><input type="radio" name="ficar_coma" id="ficar_coma_nao" value="nao"> Não</label>
+              
+              <!-- Se sim abrir um textarea -->
+              <div id="detalhes_coma" style="display: none;">
+                <label for="descricao_coma">Quando e quanto tempo?</label>
+                <textarea name="descricao_coma" id="descricao_coma"></textarea>
+              </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Quais tipos de tratamento de que a criança já necessitou ou necessita?</legend>
+
+          <p>Fonoaudiologia?</p>
+          <label for="fonaudiologa_sim"><input type="radio" name="fonaudiologa" id="fonaudiologa_sim" value="sim"> Sim</label>
+
+          <label for="fonaudiologa_nao"><input type="radio" name="fonaudiologa" id="fonaudiologa_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_fono" style="display: none;">
+            <label for="motivo_fono">Qual motivo?
+<input type="text" name="motivo_fono" id="motivo_fono">
+</label>
+
+            <label for="tratamento_fono">Quanto tempo de tratamento?
+<input type="text" name="tratamento_fono" id="tratamento_fono">
+</label>
+
+            <label for="nome_fono">Qual o nome da profissional?
+<input type="text" name="nome_fono" id="nome_fono">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_fono_sim"><input type="radio" name="melhora_fono" id="melhora_fono_sim"> Sim</label>
+
+           <label for="melhora_fono_nao"><input type="radio" name="melhora_fono" id="melhora_fono_nao"> Não</label>
+
+            <label for="melhora_fono_regular"><input type="radio" name="melhora_fono" id="melhora_fono_regular"> Regular</label>
+          </div>
+
+          <p>Terapia ocupacional??</p>
+          <label for="terapia_ocupa_sim"><input type="radio" name="terapia_ocupa" id="terapia_ocupa_sim" value="sim"> Sim</label>
+
+          <label for="terapia_ocupa_nao"><input type="radio" name="terapia_ocupa" id="terapia_ocupa_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_terapeuta_ocupacional" style="display: none;">
+            <label for="motivo_terapeuta_ocupacional">Qual motivo?
+<input type="text" name="motivo_terapeuta_ocupacional" id="motivo_terapeuta_ocupacional">
+</label>
+
+            <label for="tratamento_terapeuta_ocupacional">Quanto tempo de tratamento?
+<input type="text" name="tratamento_terapeuta_ocupacional" id="tratamento_terapeuta_ocupacional">
+</label>
+
+            <label for="nome_terapeuta_ocupacional">Qual o nome da profissional?
+<input type="text" name="nome_terapeuta_ocupacional" id="nome_terapeuta_ocupacional">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_terapeuta_ocupacional_sim"><input type="radio" name="melhora_terapeuta_ocupacional" id="melhora_terapeuta_ocupacional_sim"> Sim</label>
+
+           <label for="melhora_terapeuta_ocupacional_nao"><input type="radio" name="melhora_terapeuta_ocupacional" id="melhora_terapeuta_ocupacional_nao"> Não</label>
+
+            <label for="melhora_terapeuta_ocupacional_regular"><input type="radio" name="melhora_terapeuta_ocupacional" id="melhora_terapeuta_ocupacional_regular"> Regular</label>
+          </div>
+
+          <p>Fisioterapia?</p>
+          <label for="fisioterapia_sim"><input type="radio" name="fisioterapia" id="fisioterapia_sim" value="sim"> Sim</label>
+
+          <label for="fisioterapia_nao"><input type="radio" name="fisioterapia" id="fisioterapia_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_fisio" style="display: none;">
+            <label for="motivo_fisio">Qual motivo?
+<input type="text" name="motivo_fisio" id="motivo_fisio">
+</label>
+
+            <label for="tratamento_fisio">Quanto tempo de tratamento?
+<input type="text" name="tratamento_fisio" id="tratamento_fisio">
+</label>
+
+            <label for="nome_fisio">Qual o nome da profissional?
+<input type="text" name="nome_fisio" id="nome_fisio">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_fisio_sim"><input type="radio" name="melhora_fisio" id="melhora_fisio_sim"> Sim</label>
+
+           <label for="melhora_fisio_nao"><input type="radio" name="melhora_fisio" id="melhora_fisio_nao"> Não</label>
+
+            <label for="melhora_fisio_regular"><input type="radio" name="melhora_fisio" id="melhora_fisio_regular"> Regular</label>
+          </div>
+
+          <p>Psicoterapia?</p>
+          <label for="psicoterapia_sim"><input type="radio" name="psicoterapia" id="psicoterapia_sim" value="sim"> Sim</label>
+
+          <label for="psicoterapia_nao"><input type="radio" name="psicoterapia" id="psicoterapia_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_psico" style="display: none;">
+            <label for="motivo_psico">Qual motivo?
+<input type="text" name="motivo_psico" id="motivo_psico">
+</label>
+
+            <label for="tratamento_psico">Quanto tempo de tratamento?
+<input type="text" name="tratamento_psico" id="tratamento_psico">
+</label>
+
+            <label for="nome_psico">Qual o nome da profissional?
+<input type="text" name="nome_psico" id="nome_psico">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_psico_sim"><input type="radio" name="melhora_psico" id="melhora_psico_sim"> Sim</label>
+
+           <label for="melhora_psico_nao"><input type="radio" name="melhora_psico" id="melhora_psico_nao"> Não</label>
+
+            <label for="melhora_psico_regular"><input type="radio" name="melhora_psico" id="melhora_psico_regular"> Regular</label>
+          </div>
+
+          <p>Psicopedagoga?</p>
+          <label for="psicopedagoga_sim"><input type="radio" name="psicopedagoga" id="psicopedagoga_sim" value="sim"> Sim</label>
+
+          <label for="psicopedagoga_nao"><input type="radio" name="psicopedagoga" id="psicopedagoga_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_psico_pedago" style="display: none;">
+            <label for="motivo_psico_pedago">Qual motivo?
+<input type="text" name="motivo_psico_pedago" id="motivo_psico_pedago">
+</label>
+
+            <label for="tratamento_psico_pedago">Quanto tempo de tratamento?
+<input type="text" name="tratamento_psico_pedago" id="tratamento_psico_pedago">
+</label>
+
+            <label for="nome_psico_pedago">Qual o nome da profissional?
+<input type="text" name="nome_psico_pedago" id="nome_psico_pedago">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_psico_pedago_sim"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_sim"> Sim</label>
+
+           <label for="melhora_psico_pedago_nao"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_nao"> Não</label>
+
+            <label for="melhora_psico_pedago_regular"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_regular"> Regular</label>
+          </div>
+
+          <p>Psiquiatra?</p>
+          <label for="psiquiatra_sim"><input type="radio" name="psiquiatra" id="psiquiatra_sim" value="sim"> Sim</label>
+
+          <label for="psiquiatra_nao"><input type="radio" name="psiquiatra" id="psiquiatra_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_psiqui" style="display: none;">
+            <label for="motivo_psiqui">Qual motivo?
+<input type="text" name="motivo_psiqui" id="motivo_psiqui">
+</label>
+
+            <label for="tratamento_psiqui">Quanto tempo de tratamento?
+<input type="text" name="tratamento_psiqui" id="tratamento_psiqui">
+</label>
+
+            <label for="nome_psiqui">Qual o nome da profissional?
+<input type="text" name="nome_psiqui" id="nome_psiqui">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_psiqui_sim"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_sim"> Sim</label>
+
+           <label for="melhora_psiqui_nao"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_nao"> Não</label>
+
+            <label for="melhora_psiqui_regular"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_regular"> Regular</label>
+          </div>
+
+          <p>Outros?</p>
+          <label for="outros_tratamentos_sim"><input type="radio" name="outros_tratamentos" id="outros_tratamentos_sim" value="sim"> Sim</label>
+
+          <label for="outros_tratamentos_nao"><input type="radio" name="outros_tratamentos" id="outros_tratamentos_nao" value="nao"> Não</label>
+
+          <!-- Se sim exibir este bloco -->
+          <div id="detalhes_outros" style="display: none;">
+            <label for="motivo_outros">Qual motivo?
+<input type="text" name="motivo_outros" id="motivo_outros">
+</label>
+
+            <label for="tratamento_outros">Quanto tempo de tratamento?
+<input type="text" name="tratamento_outros" id="tratamento_outros">
+</label>
+
+            <label for="nome_outros">Qual o nome da profissional?
+<input type="text" name="nome_outros" id="nome_outros">
+</label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_outros_sim"><input type="radio" name="melhora_outros" id="melhora_outros_sim"> Sim</label>
+
+           <label for="melhora_outros_nao"><input type="radio" name="melhora_outros" id="melhora_outros_nao"> Não</label>
+
+            <label for="melhora_outros_regular"><input type="radio" name="melhora_outros" id="melhora_outros_regular"> Regular</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Vida Acadêmica da Criança</legend>
+          <P>Com qunatos anos a criança iniciou a vida escolar?</P>         
+            <label for="idade1"><input type="radio" name="inicio_escola" id="idade1"> 1 ano</label>
+            <label for="idade2"><input type="radio" name="inicio_escola" id="idade2"> 2 anos</label>
+            <label for="idade3"><input type="radio" name="inicio_escola" id="idade3"> 3 anos</label>
+            <label for="idade4"><input type="radio" name="inicio_escola" id="idade4"> 4 anos</label>
+            <label for="idade5"><input type="radio" name="inicio_escola" id="idade5"> 5 anos</label>
+            <label for="idade6"><input type="radio" name="inicio_escola" id="idade6"> 6 anos</label>
+            <label for="idade7"><input type="radio" name="inicio_escola" id="idade7"> 7 anos</label>
+            <label for="outra_idade"><input type="radio" name="inicio_escola" id="outra_idade"> Outra idade</label>
+            <p>A criança cursou?</p>
+            <label for="maternal"><input type="radio" name="series" id="maternal"> Maternal</label>
+          </div>
+          <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div id="detalhes_escola" style="display: none;">
+            <label for="onde_maternal">Onde?
+<input type="text" name="onde_maternal" id="onde_maternal">
+</label>
+          </div>
+
+          <label for="jardim_I"><input type="radio" name="series" id="jardim_I"> Jardim I</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div id="detalhes_escola" style="display: none;">
+            <label for="onde_jardimI">Onde?
+<input type="text" name="onde_jardimI" id="onde_jardimI">
+</label>
+          </div>
+
+          <label for="jardim_II"><input type="radio" name="series" id="jardim_II"> Jardim II</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="ondejardimII">Onde?
+<input type="text" name="ondejardimII" id="ondejardimII">
+</label>
+          </div>
+
+          <label for="jardim_III"><input type="radio" name="series" id="jardim_III"> Jardim III</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_jardimIII">Onde?
+<input type="text" name="onde_jardimIII" id="onde_jardimIII">
+</label>
+          </div>
+
+          <label for="pre_escola"><input type="radio" name="series" id="pre_escola"> Pré escola</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_preescola">Onde?
+<input type="text" name="onde_preescola" id="onde_preescola">
+</label>
+          </div>
+
+          <label for="primeira_serie"><input type="radio" name="series" id="primeira_serie"> 1ª série</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_primeiraSerie">Onde?
+<input type="text" name="onde_primeiraSerie" id="onde_primeiraSerie">
+</label>
+          </div>
+
+          <label for="segunda_serie"><input type="radio" name="series" id="segunda_serie"> 2ª série</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_segundaSerie">Onde?
+<input type="text" name="onde_segundaSerie" id="onde_segundaSerie">
+</label>
+          </div>
+
+          <label for="terceira_serie"><input type="radio" name="series" id="terceira_serie"> 3ª série</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_terceiraSerie">Onde?
+<input type="text" name="onde_terceiraSerie" id="onde_terceiraSerie">
+</label>
+          </div>
+
+          <label for="quarta_serie"><input type="radio" name="series" id="quarta_serie"> 4ª série</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_quartaSerie">Onde?
+<input type="text" name="onde_quartaSerie" id="onde_quartaSerie">
+</label>
+          </div>
+
+          <label for="quinta_serie"><input type="radio" name="series" id="quinta_serie"> 5ª série</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_quintaSerie">Onde?
+<input type="text" name="onde_quintaSerie" id="onde_quintaSerie">
+</label>
+          </div>
+
+          <label for="sexta_serie"><input type="radio" name="series" id="sexta_serie"> 6ª série</label>
+           <!-- Caso marque a opção pedir para dizer onde a criança estudou -->
+          <div class="detalhes_escola" style="display: none;">
+            <label for="onde_sextaSerie">Onde?
+<input type="text" name="onde_sextaSerie" id="onde_sextaSerie">
+</label>
+          </div>
+
+          <p>Já reprovou?</p>
+          <label for="reprovou_sim"><input type="radio" name="reprovou" id="reprovou_sim"> Sim</label>
+
+          <label for="reprovou_nao"><input type="radio" name="reprovou" id="reprovou_nao"> Não</label>
+
+          <!-- Se reprovou exibir esses campos -->
+          <div id="detalhes_reprovacao" style="display: none;">
+            <label for="quando_reprovou">Quais séries reprovou?
+            <input type="text" name="quando_reprovou" id="quando_reprovou">
+            </label>
+            <label for="motivos_reprovou">Qual(is) motivo(s) reprovou?
+            <input type="text" name="motivos_reprovou" id="motivos_reprovou">
+            </label>
+            <label for="reacao_crianca">Qual a reação da criança?
+            <input type="text" name="reacao_crianca" id="reacao_crianca">
+            </label>
+            <label for="reacao_pais">Qual a reação dos pais?
+            <input type="text" name="reacao_pais" id="reacao_pais">
+            </label>
+          </div>
+
+          <p>Qual o tipo de dificuldae da criança?</p>
+          <label><input type="radio" name="dificuldade_escolar" value="leitura"> Leitura</label>
+          <label><input type="radio" name="dificuldade_escolar" value="escrita"> Escrita</label>
+          <label><input type="radio" name="dificuldade_escolar" value="matematica"> Matemática</label>
+          <label><input type="radio" name="dificuldade_escolar" value="outras"> Outros</label>
+
+          <p>Quais matérias a criança tem dificuldade?</p>
+            <label><input type="checkbox" name="difi_matematia" id="difi_matematia" value="matematica"> Matemática</label>
+            <label><input type="checkbox" name="difi_portugues" id="difi_portugues" value="portugues"> Português</label>
+            <label><input type="checkbox" name="difi_ciencias" id="difi_ciencias" value="ciencias"> Ciências</label>
+            <label><input type="checkbox" name="difi_historia" id="difi_historia" value="historia"> História</label>
+            <label><input type="checkbox" name="difi_geografia" id="difi_geografia" value="geografia"> Geografia</label>
+            <label><input type="checkbox" name="difi_ingles" id="difi_ingles" value="ingles">Inglês</label>
+            <label><input type="checkbox" name="difi_outra_lingua" id="difi_outa_lingua" value="outra_lingua"> Outra língua</label>
+            <label><input type="checkbox" name="difi_outra" id="difi_outra" value="outra"> Outra matéria</label>
+            <!--Exibir caso seja outra materia  -->
+          <div id="difi_outro" style="display: none;">
+            <label for="detalhes_difi">Diga qual: <textarea name="detalhes_desmaio" id="detalhes_difi"></textarea></label>
+          </div>
+
+          <p>A criança sempre apresentou dificuldade ou passou a apresentar dificuldade na escola recentemente?</p>
+      
+          <label><input type="radio" name="apresentar_difi" value="sempre"> Sempre</label>
+          <label><input type="radio" name="apresentar_difi" value="recentemente"> Recentemente</label>
+
+          <!-- Se recentemente exibir -->
+           <div id="detalhes_difi_escolar">
+            <p>Qundo a criança passou a apresentar dificuldade?</p>
+            <label><input type="radio" name="aprsentou_difi" value="I_serie"> 1ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="II_serie"> 2ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="III_serie"> 3ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="IV_serie"> 4ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="IV_serie"> 5ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="VI_serie"> 6ª série</label>
+           </div>
+
+           <p>Quais os motivos que possivelmente desencadearam a dificuldade?</p>
+           <span>Problemas emocionais:</span>
+           <label><input type="checkbox" name="perda" value="perda"> Perda de alguém próximo</label>
+           <label><input type="checkbox" name="morte" value="morte"> Morte de alguém próximo</label>
+           <label><input type="checkbox" name="nascimento_irmao" value="nascimento_irmao"> Nascimento de um irmão</label>
+           <label><input type="checkbox" name="depressao" value="depressao"> Depressão</label>
+           <label><input type="checkbox" name="ansiedade" value="ansiedade"> Ansiedade</label>
+           <label><input type="checkbox" name="outro_emocao" value="outro_emocao"> Outro</label>
+
+           <!-- Caso seja outra emoção -->
+           <div id="detalhe_emocao" style="display: none;">
+            <label for="outra_emocao"> Que outra(s) emoção(es)?<input type="text" name="outra_emocao" id="outra_emocao"></label>
+           </div>
+
+           <span>Outros problemas:</span>
+
+           <label><input type="checkbox" name="mudanca_escola" value="mudou_escola"> Mudou de escola</label>
+           <label><input type="checkbox" name="mudanca_professor" value="mudou_professor"> Mudou de professor
+          </label>
+          <label><input type="checkbox" name="mudanca_cidade" value="mudou_cidade"> Mudou de cidade</label>
+          <label><input type="checkbox" name="mudanca_casa" value="mudou_casa"> Mudou de casa</label>
+          <label><input type="checkbox" name="mudanca_bairro" value="mudou_casa"> Mudou de bairro</label>
+          <label><input type="checkbox" name="outro_problema" value="outros_problemas"> Outro problema</label>
+           <div id="detalhe_problema" style="display: none;">
+            <label for="outra_problema"> Que outro(s) problema(s)?<input type="text" name="outra_problema" id="outra_problema"></label>
+           </div>
+
+           <p>Como é a letra da criança?</p>
+           <label><input type="radio" name="letra_pessima"> Péssima</label><label><input type="radio" name="letra_regular"> Regular</label><label><input type="radio" name="letra_boa"> Boa</label>
+
+           <p>A letra da criança apresenta?</p>
+           <label><input type="checkbox" name="trocas_letras"> Trocas de letras</label>
+
+           <!-- Se tiver trocas exibir esta caixa -->
+           <div id="detalhes_letras" style="display: none;">
+            <label for="letras">Quais trocas:<input type="text" name="letras" id="letras"></label>
+          </div>
+
+          <p>Omissões?</p>
+          <label><input type="radio" name="omissao_letra" value="sim"> Sim</label>
+          <label><input type="radio" name="omissao_letra" value="nao"> Não</label>
+          <!-- Exibir em caso de sim -->
+          <div id="detalhes_omissoes" style="display: none;">
+            <label>Quais omissoes:<input type="text" name="omissoes" id="omissoes"></label>
+          </div>
+
+          <p>Aglutinações?</p>
+          <label><input type="radio" name="aglutinacao_letra" value="sim"> Sim</label>
+          <label><input type="radio" name="aglutinacao_letra" value="nao"> Não</label>
+          <!-- Exibir em caso de sim -->
+          <div id="detalhes_aglutinacoes" style="display: none;">
+            <label>Quais aglutinações:<input type="text" name="aglutinacoes" id="aglutinacoes"></label>
+          </div>
+          
+          <p>Escrita em espelho?</p>
+          <label><input type="radio" name="escrita_espelho" value="sim"> Sim</label>
+          <label><input type="radio" name="escrita_espelho" value="nao"> Não</label>
+          <!-- Exibir em caso de sim -->
+          <div id="detalhes_espelhos" style="display: none;">
+            <label>Quais:<input type="text" name="espelhos" id="espelhos"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dinâmica Familiar</legend>
+          <p>Qual o principal cuidador da criança?</p>
+          <label><input type="radio" name="cuidador_principal" value="mae"> Mãe</label>
+          <label><input type="radio" name="cuidador_principal" value="pai"> Pai</label>
+          <label><input type="radio" name="cuidador_principal" value="irmao"> Irmão</label>
+          <label><input type="radio" name="cuidador_principal" value="empregada"> Empregada</label>
+          <label><input type="radio" name="cuidador_principal" value="outro"> Outro</label>
+
+          <label> Com quem a criança se relaciona melhor?<input type="text" name="relacao_crianca_melhor"></label>
+
+          <label> Com quem a criança tem o relacionamento mais problemático?<input type="text" name="relacao_crianca_pior"></label>
+
+          <label> Qual o motivo? <input type="text" name="motivo_relacao" id="motivo_relacao"></label>
+
+        </fieldset>
+
+      <button type="submit">Enviar ficha</button>
+
+    </form>
+  </main>
+
+</body>
+</html>
