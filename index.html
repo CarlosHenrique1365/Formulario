@@ -11,7 +11,7 @@
   <main>
     <h1>Anamnese Infantil</h1>
 
-    <form action="" method="post">
+    <form id="formulario" action="" method="post">
 
       <!-- Identificação da criança -->
       <fieldset>
@@ -1064,6 +1064,115 @@
 
           <label> Qual o motivo? <input type="text" name="motivo_relacao" id="motivo_relacao"></label>
 
+          <p>Os pais tem o hábito de brincar com a criança?</p>
+          <label><input type="radio" name="brincar_crianca"> Sim</label>
+          <label><input type="radio" name="brincar_crianca"> Não</label>
+
+          <p>Quantas vezes por semana?</p>
+          <label><input type="radio" name="vezes" value="uma"> Uma vez</label>
+          <label><input type="radio" name="vezes" value="duas"> Duas vezes</label>
+          <label><input type="radio" name="vezes" value="tres"> Três vezes ou mais</label>
+          <label><input type="radio" name="vezes" value="diariamente"> Todos os dias</label>
+
+          <p>Quem brinca mais com a criança?</p>
+          <label><input type="radio" name="quem_brinca" value="mae_brinca"> Mãe</label>
+          <label><input type="radio" name="quem_brinca" value="pai_brinca"> Pai</label>
+          <label><input type="radio" name="quem_brinca" value="os_dois_brinca"> Os dois</label>
+          <label><input type="radio" name="quem_brinca" value="irmaos"> Irmãos</label>
+
+          <label>Que tipo de brincadeiras?<input type="text" name="brincadeiras"></label>
+
+          <p>Os irmãos brincam com a criança?</p>
+          <label><input type="radio" name="irmao_brinca" value="irmao_brinca_sim"> Sim</label>
+          <label><input type="radio" name="irmao_brinca" value="irmao_brinca_nao"> Não</label>
+
+          <!-- Se sim exibir este trecho -->
+          <div id="detalhes_brincadeiras" style="display: none;">
+            <label> Que tipos de brincadeiras?<input type="text" name="descricao_brincadeira"></label>
+          </div>
+
+          <p>Outra pessoa da casa brinca com a criança?</p>
+          <label><input type="radio" name="outros_brinca" value="outros_brinca_sim"> Sim</label>
+          <label><input type="radio" name="outros_brinca" value="outros_brinca_nao"> Não</label>
+
+          <!-- Se sim exibir este trecho -->
+          <div id="detalhes_brincadeiras_outros" style="display: none;">
+            <label> Que tipos de brincadeiras?<input type="text" name="descricao_brincadeira_outros"></label>
+          </div>
+
+          <p>Quem acompanha intimamente a vida acadêmica da criança</p>
+          <label><input type="radio" name="vida_academica" value="mae_acompanha"> Mãe</label>
+          <label><input type="radio" name="vida_academica" value="pai_acompanha"> Pai</label>
+          <label><input type="radio" name="vida_academica" value="irmao_acompanha"> Irmão</label>
+          <label><input type="radio" name="vida_academica" value="empregada_acompanha"> Empregada</label>
+          <label><input type="radio" name="vida_academica" value="outro_acompanha"> Outros</label>
+
+          <p>Quem vai as reuniões escolares?</p>
+          <label><input type="radio" name="reuniao_escolar" value="mae_vai_reuniao"> Mãe</label>
+          <label><input type="radio" name="reuniao_escolar" value="pai_vai_reuniao"> Pai</label>
+          <label><input type="radio" name="reuniao_escolar" value="irmao_vai_reuniao"> Irmão</label>
+          <label><input type="radio" name="reuniao_escolar" value="empregada_vai_reuniao"> Empregada</label>
+          <label><input type="radio" name="reuniao_escolar" value="outro_vai_reuniao"> Outros</label>
+
+          <p>Com quem a criança faz a tarefa da escola?</p>
+          <label><input type="radio" name="tarefa_escolar" value="sozinha_tarefa"> Sozinha</label>
+          <label><input type="radio" name="tarefa_escolar" value="mae_tarefa"> Com a mãe</label>
+          <label><input type="radio" name="tarefa_escolar" value="pai_tarefa"> Com o pai</label>
+          <label><input type="radio" name="tarefa_escolar" value="irmao_tarefa"> Irmã(o) mais velho</label>
+          <label><input type="radio" name="tarefa_escolar" value="empregada_tarefa"> Com a empregada</label>
+          <label><input type="radio" name="tarefa_escolar" value="professora_tarefa"> Professora particular</label>
+          <label><input type="radio" name="tarefa_escolar" value="outro_tarefa"> Outro</label>
+
+          <label> Qual é o comportamento da criança na hora da tarefa?<input type="text" name="comportamento_tarefa"></label>
+
+          <p>Como a criança cuida do material escolar?</p>
+          <label><input type="radio" name="cuidado_material" value="muito_cuidado"> Muito cuidado</label>
+          <label><input type="radio" name="cuidado_material" value="cuidado_regular"> Cuidado regular</label>
+          <label><input type="radio" name="cuidado_material" value="pessimo_cuidado"> Péssimo cuidado</label>
+
+          <p> A famìlia possui o hábito de sair juntos?</p>
+          <label><input type="radio" name="habito_sair" value="habito_sim"> Sim</label><label><input type="radio" name="habito_sair" value="habito_nao"> Não</label>
+
+          <p>Quais tipos de passeios?</p>
+          <label><input type="checkbox" name="parque" value="parque"> Ir ao parque ou circo</label>
+          <label><input type="checkbox" name="shopping" value="shopping"> Ir ao shopping</label>
+          <label><input type="checkbox" name="cinema" value="cinema"> Ir ao cinema</label>
+          <label><input type="checkbox" name="viagens" value="viagens"> Viajens</label>
+          <label><input type="checkbox" name="visitas" value="visitas"> Visitar parentes</label>
+          <label><input type="checkbox" name="amigos" value="amigos"> Visitar amigos</label>
+          <label><input type="checkbox" name="igreja" value="igreja"> Ir à igreja</label>
+          <label><input type="checkbox" name="festas" value="festas"> Ir a festas de amigos dos pais</label>
+          <label><input type="checkbox" name="festas_infantis" value="festas_infantis"> Ir a festas infantis</label>
+          <label><input type="checkbox" name="outros_lugares" value="outros_lugares"> Ir a outos lugares</label>
+
+          <p>Os pais tem amigos ou contato com outros casais que possuem crianças?</p>
+          <label><input type="radio" name="contato_crianca" value="contato_crianca_sim"> Sim</label>
+          <label><input type="radio" name="contato_crianca" value="contato_crianca_nao"> Não</label>
+
+          <p>Os pais conhecem os pais dos amigos dos seus filhoa?</p>
+          <label><input type="radio" name="contato_crianca_pais_amigos" value="contato_sim"> Sim</label>
+          <label><input type="radio" name="contato_crianca_pais_amigos" value="contato_nao"> Não</label>
+
+          <p>Os pais tem dúvidas a cerca da educação dos seus filhos</p>
+          <label><input type="radio" name="duvida_educacao" value="duvida_sim"> Sim</label>
+          <label><input type="radio" name="duvida_educacao" value="duvida_nao"> Não</label>
+
+          <p>Com quem os pais se aconselham a cerca da educação dos seus filhos?</p>
+          <label><input type="checkbox" name="conselho_pais" value="conselho_pais"> Com os próprios pais "avós da criança"</label>
+          <label><input type="checkbox" name="conselho_parente" value="conselho_parente"> Com parentes próximos</label>
+          <label><input type="checkbox" name="conselho_amigo_sem_crianca" value="conselho_amigo_sem_crianca"> Com amigos que não possuem crianças</label>
+          <label><input type="checkbox" name="conselho_amigo_com_crianca" value="conselho_amigo_com_crianca"> Com amigos que possuem crianças</label>
+          <label><input type="checkbox" name="conselho_especialista" value="conselho_especialista"> Com especialistas (psicólogo, psicopedagogo, médicos, etc)</label>
+          <label><input type="checkbox" name="conselho_outros" value="conselho_outros"> Outras pessoas</label>
+
+          <!-- Se marcar outros exibir este bloco -->
+          <div id="detalhes_conselho">
+            <label> Quais essas outras pessoas?<input type="text" name="descricao_outros"></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Personalidade Criança</legend>
         </fieldset>
 
       <button type="submit">Enviar ficha</button>

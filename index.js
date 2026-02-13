@@ -1,3 +1,4 @@
+
 function mudarColor() {
     const sexoCriança = document.querySelector('input[name="sexo_crianca"]:checked');
     if (!sexoCriança) return; // se nenhum estiver marcado, não faz nada
@@ -16,4 +17,19 @@ function mudarColor() {
     }
 }
 
-mudarColor()
+
+
+const form = document.getElementById('formulario');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const dados = new FormData(form);
+
+    const objeto = Object.fromEntries(dados.entries());
+    console.log(dados)
+
+    console.log(objeto);
+
+    enviarParaBackend(objeto);
+});
