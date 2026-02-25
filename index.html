@@ -60,20 +60,12 @@
         </label>
 
         <label for="idade_pai">Idade
-        <input type="number" id="idade_pai" name="idade_pai" min="0">
+        <input type="text" id="idade_pai" name="idade_pai" min="0">
         </label>
 
         <label for="profissao_pai">Profissão
         <input type="text" id="profissao_pai" name="profissao_pai">
         </label>
-
-        <label for="mao_dominante_pai">Mão Dominante</label>
-        <select id="mao_dominante_pai" name="mao_dominante_pai">
-          <option value="">Selecione</option>
-          <option value="destro">Destro</option>
-          <option value="canhoto">Canhoto</option>
-          <option value="ambidestro">Ambidestro</option>
-        </select>
       </fieldset>
 
       <!-- dados da mae -->
@@ -85,20 +77,12 @@
         </label>
 
         <label for="idade_mae">Idade
-        <input type="number" id="idade_mae" name="idade_mae" min="0">
+        <input type="text" id="idade_mae" name="idade_mae" min="0">
         </label>
 
         <label for="profissao_mae">Profissão
-<input type="text" id="profissao_mae" name="profissao_mae">
-</label>
-
-        <label for="mao_dominante_mae">Mão Dominante</label>
-        <select id="mao_dominante_mae" name="mao_dominante_mae">
-          <option value="">Selecione</option>
-          <option value="destro">Destro</option>
-          <option value="canhoto">Canhoto</option>
-          <option value="ambidestro">Ambidestro</option>
-        </select>
+        <input type="text" id="profissao_mae" name="profissao_mae">
+        </label>
       </fieldset>
 
       <!--STEP Dados da Criança -->
@@ -146,7 +130,7 @@
           <label><input type="radio" name="dificuldade_escolar_irmao" value="nao"> Não</label>
         </div>
 
-        <p>A Criança Mora com Quem?</p>
+        <p>A Criança mora com quem?</p>
           <label for="so_mae"><input type="radio" name="moradia" id="so_mae" value="so_mae"> Só a Mãe</label>
           <label for="so_pai"><input type="radio" name="moradia" id="so_pai" value="so_pai"> So o Pai</label>
           <label for="com_pais"><input type="radio" name="moradia" id="com_pais" value="com_pais"> Com os Pais</label>
@@ -159,7 +143,7 @@
        <fieldset>
         <legend>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</legend>
         <h2>Algum familiar já foi diagnosticado com alguma das doenças abaixo?</h2>
-        <p>Deficiencia Mental?</p>
+        <p>Deficiência Mental?</p>
           <label for="mental_sim"><input type="radio" id="mental_sim" name="mental" value="sim" data-target="deficiencia_mental"> Sim</label>
 
           <label for="mental_nao"><input type="radio" id="mental_nao" name="mental" value="nao"> Não</label>
@@ -171,31 +155,7 @@
           <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_mental"></label>
         </div>
 
-        <p>Disturbio de Aprendizagem?</p>
-          <label for="aprender_sim"><input type="radio" id="aprender_sim" name="aprender" value="sim" data-target="disturbio_aprender"> Sim</label>
-
-          <label for="aprender_nao"><input type="radio" id="aprender_nao" name="aprender" value="nao"> Não</label>
-
-        <!-- Exibir descricao -->
-        <div id="disturbio_aprender" class="ocultar">
-          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_aprender"></label>
-
-          <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_aprender"></label>
-        </div>
-
-        <p>Dificuldades Escolares?</p>
-          <label for="dificuldade_sim"><input type="radio" id="dificuldade_sim" name="dificuldade" value="sim" data-target="dificuldades_escolares"> Sim</label>
-
-          <label for="dificuldade_nao"><input type="radio" id="dificuldade_nao" name="dificuldade" value="nao"> Não</label>
-
-        <!-- Exibir descricao -->
-         <div id="dificuldades_escolares" class="ocultar">
-          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_mental"></label>
-
-          <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_mental"></label>
-        </div>
-
-        <p>Doenças Psiquiatricas</p>
+        <p>Doenças Psiquiátricas</p>
           <label for="psique_sim"><input type="radio" id="psique_sim" name="psique" value="sim" data-target="doenca_psiquiatrica"> Sim</label>
 
           <label for="psique_nao"><input type="radio" id="psique_nao" name="psique" value="nao"> Não</label>
@@ -207,7 +167,7 @@
           <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_psiqui"></label>
         </div>
 
-        <p>Doença Neurologica</p>
+        <p>Doença Neurológica</p>
           <label for="neuro_sim"><input type="radio" id="neuro_sim" name="neuro" value="sim" data-target="doenca_neuro"> Sim</label>
 
           <label for="neuro_nao"><input type="radio" id="neuro_nao" name="neuro" value="nao"> Não</label>
@@ -228,7 +188,7 @@
        <fieldset>
         <legend>Motivo da Consulta e Encaminhamento</legend>
 
-        <p>Quem Percebel ou Identificou o Problema?</p>
+        <p>Quem percebeu ou identificou o problema?</p>
         <label for="identificar_mae"><input type="radio" name="identificar" id="identificar_mae" value="mae"> A mãe</label>
 
         <label for="identificar_pai"><input type="radio" name="identificar" id="identificar_pai" value="pai"> O pai</label>
@@ -242,7 +202,7 @@
         <label for="identificar_outros"><input type="radio" name="identificar" id="identificar_outros" value="outros" data-target="identificar_problema"> Outros</label>
 
         <div id="identificar_problema" class="ocultar">
-          <label> Quem foi essa pessoa?<input type="text" name="decricao_outros_identificou"></label>
+          <label> Quem foi essa pessoa?<input type="text" name="descricao_outros_identificou"></label>
         </div>
 
         <p>Quem encaminhou a Criança?</p>
@@ -259,7 +219,7 @@
         <label for="encaminhar_outros"><input type="radio" name="encaminhar" id="encaminhar_outros" value="outros" data-target="encaminhar_problema"> Outros</label>
 
         <div id="encaminhar_problema" class="ocultar">
-          <label> Quem foi essa pessoa?<input type="text" name="decricao_outros_encaminhar"></label>
+          <label> Quem foi essa pessoa?<input type="text" name="descricao_outros_encaminhar"></label>
         </div>
 
         <label for="queixas">Descreva as Queixas: <input type="text" name="queixas" id="queixas"></input></label>
@@ -293,7 +253,7 @@
         </div>
 
 
-        <p>Como Foi a Saúde da Mãe Durante a Gestação?</p>
+        <p>Como foi a saúde da mãe durante a gestação?</p>
         <label for="saude_boa"><input type="radio" name="saude_mae" id="saude_boa" value="boa"> Boa</label>
 
         <label for="saude_regular"><input type="radio" name="saude_mae" id="saude_regular" value="regular"> Regular com Problemas Comuns</label>
@@ -301,7 +261,7 @@
         <label for="saude_pessima"><input type="radio" name="saude_mae" id="saude_pessima" value="pessima"> Péssima</label>
 
         <label for="observacao_getacao"> Fale sobre:</label>
-        <textarea name="observacao_getacao" id="observacao_getacao"></textarea>
+        <textarea name="observacao_gestacao" id="observacao_gestacao"></textarea>
 
         <label for="medicacoes_gestacao">Medicações e Exames Feitos na Gravidez:</label>
         <textarea name="medicacoes_gestacao" id="medicacoes_gestacao"></textarea>
@@ -646,52 +606,8 @@
 
             <div class="detalhes_doencas">
               <div class="doencas_importantes">
-                <label for="doenca_primeiro">Doenças importantes no primeiro ano de vida:</label>
-                <textarea name="doenca_primeiro" id="doenca_primeiro"></textarea>
-                <label for="medicamentos_primeiro">Medicações usadas:</label>
-                <textarea name="medicamentos_primeiro" id="medicamentos_primeiro"></textarea>
-              </div>
-
-              <div class="doencas_importantes">
-                <label for="doenca_segundo">Doenças importantes no segundo ano de vida:</label>
-                <textarea name="doenca_segundo" id="doenca_segundo"></textarea>
-                <label for="medicamentos_segundo">Medicações usadas:</label>
-                <textarea name="medicamentos_segundo" id="medicamentos_segundo"></textarea>
-              </div>
-
-              <div class="doencas_importantes">
-                <label for="doenca_terceiro">Doenças importantes no terceiro ano de vida:</label>
-                <textarea name="doenca_terceiro" id="doenca_terceiro"></textarea>
-                <label for="medicamentos_terceiro">Medicações usadas:</label>
-                <textarea name="medicamentos_terceiro" id="medicamentos_terceiro"></textarea>
-              </div>
-
-              <div class="doencas_importantes">
-                <label for="doenca_quarto">Doenças importantes no quarto ano de vida:</label>
-                <textarea name="doenca_quarto" id="doenca_quarto"></textarea>
-                <label for="medicamentos_quarto">Medicações usadas:</label>
-                <textarea name="medicamentos_quarto" id="medicamentos_quarto"></textarea>
-              </div>
-
-              <div class="doencas_importantes">
-                <label for="doenca_quinto">Doenças importantes no quinto ano de vida:</label>
-                <textarea name="doenca_quinto" id="doenca_quinto"></textarea>
-                <label for="medicamentos_quinto">Medicações usadas:</label>
-                <textarea name="medicamentos_quinto" id="medicamentos_quinto"></textarea>
-              </div>
-
-              <div class="doencas_importantes">
-                <label for="doenca_sexto">Doenças importantes no sexto ano de vida:</label>
-                <textarea name="doenca_sexto" id="doenca_sexto"></textarea>
-                <label for="medicamentos_sexto">Medicações usadas:</label>
-                <textarea name="medicamentos_sexto" id="medicamentos_sexto"></textarea>
-              </div>
-
-              <div class="doencas_importantes">
-                <label for="doenca_sete_doze">Doenças importantes entre 7 e 12 anos de vida:</label>
-                <textarea name="doenca_sete_doze" id="doenca_sete_doze"></textarea>
-                <label for="medicamentos_sete_doze">Medicações usadas:</label>
-                <textarea name="medicamentos_sete_doze" id="medicamentos_sete_doze"></textarea>
+                <label for="doenca_importante_medicamentos">Doença importante registrada e uso de medicamentos:</label>
+                <textarea name="doenca_importante_medicamentos" id="doenca_importante_medicamentos"></textarea>
               </div>
 
                <div class="doencas_importantes">
@@ -719,7 +635,7 @@
               <label for="cirurgia_nao"><input type="radio" name="cirurgia" id="cirurgia_nao" value="nao"> Não</label>
 
                <div id="descricao_cirurgia" class="ocultar">
-                <label for="descricao_cirurgia">Que tipo de cirugia e com que idade?</label>
+                <label for="descricao_cirurgia">Que tipo de cirurgia e com que idade ocorreu?</label>
                 <textarea name="descricao_cirurgia" id="descricao_cirurgia"></textarea>
                </div>
 
@@ -1181,7 +1097,7 @@
           <label><input type="radio" name="omissao_letra" value="nao"> Não</label>
           <!-- Exibir em caso de sim -->
           <div id="detalhes_omissoes" style="display: none;">
-            <label>Quais omissoes:<input type="text" name="omissoes" id="omissoes"></label>
+            <label>Quais omissões:<input type="text" name="omissoes" id="omissoes"></label>
           </div>
 
           <p>Aglutinações?</p>
