@@ -142,7 +142,7 @@
        <!-- STEP ANTECEDENTES FAMILIARES -->
        <fieldset>
         <legend>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</legend>
-        <h2>Algum familiar já foi diagnosticado com alguma das doenças abaixo?</h2>
+
         <p>Deficiência Mental?</p>
           <label for="mental_sim"><input type="radio" id="mental_sim" name="mental" value="sim" data-target="deficiencia_mental"> Sim</label>
 
@@ -179,9 +179,9 @@
           <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_neuro"></label>
         </div>
 
-        <label> Queixa(s) principal(is):<input type="text" name="queixas_principais"></label>
+        <label> Queixas principais:<textarea class="observacoes" name="queixas_principais"></textarea></label>
 
-        <label> Outra(s) queixa(s):<input type="text" name="queixas_secundarias"></label>
+        <label> Outras queixas:<textarea class="observacoes" name="queixas_secundarias"></textarea></label>
        </fieldset>
 
        <!-- STEP MOTIVO CONSULTA -->
@@ -222,7 +222,7 @@
           <label> Quem foi essa pessoa?<input type="text" name="descricao_outros_encaminhar"></label>
         </div>
 
-        <label for="queixas">Descreva as Queixas: <input type="text" name="queixas" id="queixas"></input></label>
+        <label for="queixas">Descreva as Queixas: <textarea class="observacoes" name="queixas" id="queixas"></textarea></label>
         
        </fieldset>
 
@@ -260,8 +260,9 @@
 
         <label for="saude_pessima"><input type="radio" name="saude_mae" id="saude_pessima" value="pessima"> Péssima</label>
 
-        <label for="observacao_getacao"> Fale sobre:</label>
+        <label for="observacao_gestacao">Fale sobre:</label>
         <textarea name="observacao_gestacao" id="observacao_gestacao"></textarea>
+        
 
         <label for="medicacoes_gestacao">Medicações e Exames Feitos na Gravidez:</label>
         <textarea name="medicacoes_gestacao" id="medicacoes_gestacao"></textarea>
@@ -314,22 +315,22 @@
           <textarea name="trocas_palavras" id="trocas_palavras"></textarea>
         </div>
 
-        <p>Com que Idade a Criança:</p>
+        <p>Com que idade a criança:</p>
 
-        <label for="engatinhou">Egatinhou:
+        <label for="engatinhou">Engatinhou:
         <input type="text" name="engatinhou" id="engatinhou">
         </label>
 
-        <label for="andou">Andou:
+        <label for="andou"> Andou:
         <input type="text" name="andou" id="andou">
         </label>
 
-        <label for="bicicleta">Andou de Bicicleta:
+        <label for="bicicleta"> Andou de bicicleta:
         <input type="text" name="bicicleta" id="bicicleta">
         </label>
 
         <h2>Controle Urinário Noturno</h2>
-        <label>Com que Idade a Criança teve Controle da Enurese? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese"></label>
+        <label>Com que idade a criança teve controle da enurese(urinar na roupa/cama)? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese"></label>
 
         <p>A criança já permaneceu seca durante a noite por 6 meses consecutivos?</p>
         <label>
@@ -341,12 +342,12 @@
         </label>
 
         <h2>Classificação do quadro</h2>
-        <label for="enurese_primaria"><input type="radio" name="enurese" id="enurese_primaria" value="enurese_primaria"> Enurese Primária (nunca houve controle noturno prolongado)
+        <label for="enurese_primaria"><input type="radio" name="enurese" id="enurese_primaria" value="enurese_primaria"> Enurese primária (nunca houve controle noturno prolongado)
        
         </label>
 
         <label for="enurese_secundaria">
-        <input type="radio" name="enurese" id="enurese_secundaria" data-target="fatores_associados"="enurese_secundaria"> Enurese Secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)
+        <input type="radio" name="enurese" id="enurese_secundaria" data-target="fatores_associados" id="enurese_secundaria"> Enurese secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)
         </label>
 
         <div id="fatores_associados" class="ocultar">
@@ -355,7 +356,7 @@
         </div>
 
          <h2>Controle Intestinal</h2>
-        <label>Com que Idade a Criança teve Controle da Encoprese? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese"></label>
+        <label>Com que idade a criança teve controle da encoprese(sujar a roupa com fezes)? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese"></label>
 
         <p>A criança já manteve controle intestinal por 6 meses consecutivos?</p>
         <label>
@@ -367,12 +368,12 @@
         </label>
 
         <h2>Classificação do quadro</h2>
-        <label for="encoprese_primaria"><input type="radio" name="encoprese" id="encoprese_primaria" value="encoprese_primaria"> Encoprese Primária (nunca houve controle noturno prolongado)
+        <label for="encoprese_primaria"><input type="radio" name="encoprese" id="encoprese_primaria" value="encoprese_primaria"> Encoprese primária (nunca houve controle noturno prolongado)
        
         </label>
 
         <label for="encoprese_secundaria">
-        <input type="radio" name="encoprese" id="encoprese_secundaria" data-target="fatores_associados_encoprese" value="encoprese_secundaria"> Encoprese Secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)
+        <input type="radio" name="encoprese" id="encoprese_secundaria" data-target="fatores_associados_encoprese" value="encoprese_secundaria"> Encoprese secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)
         </label>
 
         <div id="fatores_associados_encoprese" class="ocultar">
@@ -483,7 +484,7 @@
 
         <div id="preferencias_alimentares">
           <label for="preferencias">Quais são suas preferêcias alimentares:</label>
-          <textarea name="preferencias" id="preferencias"></textarea>
+          <textarea class="observacoes" name="preferencias" id="preferencias"></textarea>
         </div>
 
         <p>A criança está com dificuldades em relaçao ao peso?</p>
