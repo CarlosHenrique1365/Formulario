@@ -13,7 +13,6 @@
 
     <form id="formulario" action="" method="post">
 
-      <!-- Identificação da criança -->
       <fieldset>
         <legend>Identificação da Criança</legend>
 
@@ -34,7 +33,6 @@
        
       </fieldset>
 
-      <!-- Dados da escola -->
       <fieldset>
         <legend>Dados da Escola</legend>
 
@@ -51,7 +49,6 @@
         <label for="municipal"><input type="radio" id="municipal" name="tipo_escola" value="municipal"> Municipal</label>
       </fieldset>
 
-      <!-- Dados do pai -->
       <fieldset>
         <legend>Dados do Pai</legend>
 
@@ -68,7 +65,6 @@
         </label>
       </fieldset>
 
-      <!-- dados da mae -->
       <fieldset>
         <legend>Dados da Mãe</legend>
 
@@ -85,7 +81,6 @@
         </label>
       </fieldset>
 
-      <!--STEP Dados da Criança -->
        <fieldset>
         <legend>Sobre a Criança</legend>
         <p>A criança é?</p>
@@ -139,7 +134,6 @@
           <label for="com_outros"><input type="radio" name="moradia" id="com_outros" value="outros"> Outros</label>
        </fieldset>
 
-       <!-- STEP ANTECEDENTES FAMILIARES -->
        <fieldset>
         <legend>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</legend>
 
@@ -148,7 +142,6 @@
 
           <label for="mental_nao"><input type="radio" id="mental_nao" name="mental" value="nao"> Não</label>
 
-        <!-- Exibir descricao -->
         <div id="deficiencia_mental" class="ocultar">
           <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_mental"></label>
 
@@ -160,7 +153,6 @@
 
           <label for="psique_nao"><input type="radio" id="psique_nao" name="psique" value="nao"> Não</label>
 
-        <!-- Exibir descricao -->
          <div id="doenca_psiquiatrica" class="ocultar">
           <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_psiqui"></label>
 
@@ -172,7 +164,6 @@
 
           <label for="neuro_nao"><input type="radio" id="neuro_nao" name="neuro" value="nao"> Não</label>
 
-        <!-- Exibir descricao -->
          <div id="doenca_neuro" class="ocultar">
           <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_neuro"></label>
 
@@ -184,7 +175,6 @@
         <label> Outras queixas:<textarea class="observacoes" name="queixas_secundarias"></textarea></label>
        </fieldset>
 
-       <!-- STEP MOTIVO CONSULTA -->
        <fieldset>
         <legend>Motivo da Consulta e Encaminhamento</legend>
 
@@ -205,7 +195,7 @@
           <label> Quem foi essa pessoa?<input type="text" name="descricao_outros_identificou"></label>
         </div>
 
-        <p>Quem encaminhou a Criança?</p>
+        <p>Quem encaminhou a criança?</p>
         <label for="encaminhar_mae"><input type="radio" name="encaminhar" id="encaminhar_mae" value="mae"> A mãe</label>
 
         <label for="encaminhar_pai"><input type="radio" name="encaminhar" id="encaminhar_pai" value="encaminhar_pai"> O pai</label>
@@ -222,11 +212,10 @@
           <label> Quem foi essa pessoa?<input type="text" name="descricao_outros_encaminhar"></label>
         </div>
 
-        <label for="queixas">Descreva as Queixas: <textarea class="observacoes" name="queixas" id="queixas"></textarea></label>
+        <label for="queixas">Descreva as queixas: <textarea class="observacoes" name="queixas" id="queixas"></textarea></label>
         
        </fieldset>
 
-       <!-- HISTORICO GESTACIONAL -->
        <fieldset>
         <legend>Histórico Gestacional e Perinatal</legend>
         <p>A Gestação foi?</p>
@@ -304,7 +293,7 @@
         <input type="text" name="frases" id="frases">
         </label>
 
-        <p>Teve dificuldades na aquisiçao da fala?</p>
+        <p>Teve dificuldades na aquisição da fala?</p>
 
         <label for="fala_sim"><input type="radio" name="dificuldae_fala" id="fala_sim" value="sim" data-target="descricao_dificuldade_fala"> Sim</label>
 
@@ -473,7 +462,7 @@
         <label><input type="radio" name="alimentacao_crianca" value="regular"> Regular</label>
         <label><input type="radio" name="alimentacao_crianca" value="pessima"> Péssima</label>
 
-        <p>Quem oferece a comida a criança?</p>
+        <p>Quem oferece a comida à criança?</p>
         <label for="oferece_mae"><input type="radio" name="oferece_comida" id="oferece_mae" value="mae"> Mãe</label>
 
         <label for="oferece_pai"><input type="radio" name="oferece_comida" id="oferece_pai" value="pai"> Pai</label>
@@ -506,13 +495,11 @@
 
             <label for="dorme_nao"><input type="radio" name="dorme" id="dorme_nao" value="nao"> Não</label>
 
-            <label for="dorme_irmaos"><input type="radio" name="dorme" id="dorme_irmaos" value="irmaos"> Com irmaos</label>
+            <label for="dorme_irmaos"><input type="radio" name="dorme" id="dorme_irmaos" value="irmaos"> Com irmãos</label>
 
             <label for="dorme_pais"><input type="radio" name="dorme" id="dorme_pais" value="pais"> Com os pais</label>
 
-            <label for="dorme_mae"><input type="radio" name="dorme" id="dorme_mae" value="mae"> Com a mae</label>
-
-            <label for="dorme_pai"><input type="radio" name="dorme" id="dorme_pai" value="pai"> Com a mae</label>
+            <label for="dorme_mae"><input type="radio" name="dorme" id="dorme_mae" value="mae"> Com a mãe</label>
 
             <label for="dorme_outros"><input type="radio" name="dorme" id="dorme_outros" value="outros" data-target="dorme_com_outros"> Com outros</label>
 
@@ -591,8 +578,6 @@
 
             <label for="facilidade_sono"><input type="checkbox" name="descricao_sono_crianca[]" id="facilidade_sono"> Dorme sempre pesadamente</label>
         </fieldset>
-
-        <!-- STEP SAUDE -->
 
         <fieldset>
           <legend>Saúde Geral</legend>
@@ -998,7 +983,6 @@
 
           <label for="reprovou_nao"><input type="radio" name="reprovou" id="reprovou_nao"> Não</label>
 
-          <!-- Se reprovou exibir esses campos -->
           <div id="detalhes_reprovacao" class="ocultar">
             <label for="quando_reprovou">Quais séries reprovou?
             <input type="text" name="quando_reprovou" id="quando_reprovou">
@@ -1029,7 +1013,7 @@
             <label><input type="checkbox" name="difi_ingles" id="difi_ingles" value="ingles">Inglês</label>
             <label><input type="checkbox" name="difi_outra_lingua" id="difi_outa_lingua" value="outra_lingua"> Outra língua</label>
             <label><input type="checkbox" name="difi_outra" id="difi_outra" value="outra"> Outra matéria</label>
-            <!--Exibir caso seja outra materia  -->
+            
           <div id="difi_outro" style="display: none;">
             <label for="detalhes_difi">Diga qual: <textarea name="detalhes_desmaio" id="detalhes_difi"></textarea></label>
           </div>
@@ -1075,44 +1059,46 @@
           <label><input type="checkbox" name="mudanca_cidade" value="mudou_cidade"> Mudou de cidade</label>
           <label><input type="checkbox" name="mudanca_casa" value="mudou_casa"> Mudou de casa</label>
           <label><input type="checkbox" name="mudanca_bairro" value="mudou_casa"> Mudou de bairro</label>
-          <label><input type="checkbox" name="outro_problema" value="outros_problemas" data-target="detalhe_problema"> Outro problema</label>
+          <label><input type="checkbox" name="outro_problema" value="outros_problemas" data-target="detalhe_problema"> Outros</label>
            <div id="detalhe_problema" class="ocultar">
-            <label for="outra_problema"> Que outro(s) problema(s)?<input type="text" name="outra_problema" id="outra_problema"></label>
+            <label for="outra_problema"> Que outros problemas?<input type="text" name="outra_problema" id="outra_problema"></label>
            </div>
 
            <p>Como é a letra da criança?</p>
            <label><input type="radio" name="letra_pessima"> Péssima</label><label><input type="radio" name="letra_regular"> Regular</label><label><input type="radio" name="letra_boa"> Boa</label>
 
-           <p>A letra da criança apresenta?</p>
-           <label><input type="checkbox" name="trocas_letras"> Trocas de letras</label>
+           <p>A letra da criança apresenta:</p>
+           <p>Trocas de letras (substitui uma letra por outra ao escrever uma palavra)?</p>
+           <label><input type="radio" name="trocas_letras" value="sim" data-target="detalhes_letras"> Sim</label>
 
-           <!-- Se tiver trocas exibir esta caixa -->
-           <div id="detalhes_letras" style="display: none;">
-            <label for="letras">Quais trocas:<input type="text" name="letras" id="letras"></label>
+            <label><input type="radio" name="trocas_letras" value="nao"> Não</label>
+
+           <div id="detalhes_letras" class="ocultar">
+            <label for="letras">Quais?<input type="text" name="letras" id="letras"></label>
           </div>
 
-          <p>Omissões?</p>
-          <label><input type="radio" name="omissao_letra" value="sim"> Sim</label>
+          <p>Omissões (deixa de escrever letras ou sílabas que deveriam estar na palavra)?</p>
+          <label><input type="radio" name="omissao_letra" value="sim" data-target="detalhes_omissoes"> Sim</label>
           <label><input type="radio" name="omissao_letra" value="nao"> Não</label>
-          <!-- Exibir em caso de sim -->
-          <div id="detalhes_omissoes" style="display: none;">
-            <label>Quais omissões:<input type="text" name="omissoes" id="omissoes"></label>
+   
+          <div id="detalhes_omissoes" class="ocultar">
+            <label>Quais?<input type="text" name="omissoes" id="omissoes"></label>
           </div>
 
-          <p>Aglutinações?</p>
-          <label><input type="radio" name="aglutinacao_letra" value="sim"> Sim</label>
+          <p>Aglutinações (junta palavras que deveriam estar separadas)?</p>
+          <label><input type="radio" name="aglutinacao_letra" value="sim" data-target="detalhes_aglutinacoes"> Sim</label>
           <label><input type="radio" name="aglutinacao_letra" value="nao"> Não</label>
-          <!-- Exibir em caso de sim -->
-          <div id="detalhes_aglutinacoes" style="display: none;">
-            <label>Quais aglutinações:<input type="text" name="aglutinacoes" id="aglutinacoes"></label>
+  
+          <div id="detalhes_aglutinacoes" class="ocultar">
+            <label>Quais?<input type="text" name="aglutinacoes" id="aglutinacoes"></label>
           </div>
           
-          <p>Escrita em espelho?</p>
-          <label><input type="radio" name="escrita_espelho" value="sim"> Sim</label>
+          <p>Escrita em espelho (escreve letras, números ou palavras invertidos)?</p>
+          <label><input type="radio" name="escrita_espelho" value="sim" data-target="detalhes_escrita_espelho"> Sim</label>
           <label><input type="radio" name="escrita_espelho" value="nao"> Não</label>
-          <!-- Exibir em caso de sim -->
-          <div id="detalhes_espelhos" style="display: none;">
-            <label>Quais:<input type="text" name="espelhos" id="espelhos"></label>
+      
+          <div id="detalhes_escrita_espelho" class="ocultar">
+            <label>Quais?<input type="text" name="espelhos" id="espelhos"></label>
           </div>
         </fieldset>
 
@@ -1355,7 +1341,6 @@
           <label><input type="radio" name="briga_crianca" value="sim" data-target="detalhe_confito"> Sim</label>
           <label><input type="radio" name="briga_crianca" value="nao"> Não</label>
 
-          <!-- Exibir caso a resposta seja sim -->
           <div id="detalhe_confito" class="ocultar">
             <label> Qual o motivo?<input type="text" name="descricao_confito"></label>
           </div>
@@ -1403,24 +1388,24 @@
 
           <h2>Atividades de lazer:</h2>
           <p>Televisão</p>
-          <label><input type="radio" name="passatempo_tv" value="sim_muito"> Sim,muito</label>
-          <label><input type="radio" name="passatempo_tv" value="sim_razoavel"> Sim razoável</label>
+          <label><input type="radio" name="passatempo_tv" value="sim_muito"> Sim, muito</label>
+          <label><input type="radio" name="passatempo_tv" value="sim_razoavel"> Sim, razoável</label>
           <label><input type="radio" name="passatempo_tv" value="raramente"> Raramente</label>
           <label><input type="radio" name="passatempo_tv" value="nunca_assiste"> Nunca</label>
 
           <p>Computador</p>
-          <label><input type="radio" name="passatempo_computador" value="sim_muito"> Sim,muito</label>
-          <label><input type="radio" name="passatempo_computador" value="sim_razoavel"> Sim razoável</label>
+          <label><input type="radio" name="passatempo_computador" value="sim_muito"> Sim, muito</label>
+          <label><input type="radio" name="passatempo_computador" value="sim_razoavel"> Sim, razoável</label>
           <label><input type="radio" name="passatempo_computador" value="raramente"> Raramente</label>
           <label><input type="radio" name="passatempo_computador" value="nunca_assiste"> Nunca</label>
 
           <p>Brincadeiras</p>
-          <label><input type="radio" name="brincadeiras" value="sim_muito"> Sim,muito</label>
-          <label><input type="radio" name="brincadeiras" value="sim_razoavel"> Sim razoável</label>
+          <label><input type="radio" name="brincadeiras" value="sim_muito"> Sim, muito</label>
+          <label><input type="radio" name="brincadeiras" value="sim_razoavel"> Sim, razoável</label>
           <label><input type="radio" name="brincadeiras" value="raramente"> Raramente</label>
           <label><input type="radio" name="brincadeiras" value="nunca_brinca"> Não gosta de brincar</label>
 
-          <p> Assiste Filmes?</p>
+          <p> Assiste filmes?</p>
           <label><input type="radio" name="tipos_filmes" value="sim" data-target="detalhes_filmes"> Sim</label>
           <label><input type="radio" name="tipos_filmes" value="nao" > Não</label>
 
@@ -1450,7 +1435,7 @@
 
           <label><input type="checkbox" name="brincadeiras[]" value="dentro_de_casa"> Somente dentro de casa</label>
           <label><input type="checkbox" name="brincadeiras[]" value="video_game"> Vídeo Game</label>
-          <label><input type="checkbox" name="brincadeiras[]" value="na_rua"> De rua</label>
+          <label><input type="checkbox" name="brincadeiras[]" value="na_rua"> Na rua</label>
           <label><input type="checkbox" name="brincadeiras[]" value="lutas"> Lutas</label>
           <label><input type="checkbox" name="brincadeiras[]" value="futebol_boneca"> Futebol ou Boneca</label>
           <label><input type="checkbox" name="brincadeiras[]" value="jogos_de_montar"> Jogos de Montar</label>
@@ -1509,7 +1494,7 @@
             <label><input type="radio" name="esportes_pais_incentivar" value="sim"> Sim</label><label><input type="radio" name="esportes_pais_incentivar" value="nao"> Não</label>
             </div>
 
-          <label for="observacoes">Observações importantes<textarea name="observacoes" id="observacoes"></textarea></label>
+          <label for="observacoes">Observações importantes:<textarea name="observacoes" id="observacoes"></textarea></label>
 
         </fieldset>
 
