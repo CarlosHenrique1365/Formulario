@@ -7,8 +7,7 @@ export default function controlarRadios() {
     const nomeGrupo = input.name;
 
     const inputsDoGrupo = document.querySelectorAll(`input[name="${nomeGrupo}"]`);
-
-    // 🔹 Primeiro: esconder TODAS as divs ligadas ao grupo
+    
     inputsDoGrupo.forEach(item => {
       const targetId = item.dataset.target;
       if (!targetId) return;
@@ -20,7 +19,6 @@ export default function controlarRadios() {
       div.classList.add('ocultar');
     });
 
-    // 🔹 Depois: mostrar apenas as que devem aparecer
     inputsDoGrupo.forEach(item => {
       if (!item.checked) return;
 

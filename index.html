@@ -13,7 +13,11 @@
 
     <form id="formulario" action="" method="post">
 
-      <fieldset>
+       <div class="contador-steps">
+          Passo <span id="step-atual">1</span> de <span id="total-steps">5</span>
+        </div>
+      <fieldset class="step ativo">
+       
         <legend>Identificação da Criança</legend>
 
         <label for="nome_crianca"> Nome da Criança <input type="text" id="nome_crianca" name="nome_crianca" required></label>
@@ -30,10 +34,11 @@
 
         <label for="feminino"><input type="radio" name="sexo_crianca" id="feminino" value="feminino"> Feminino</label>
 
+        <button type="button" class="proximo">Próximo</button>
        
       </fieldset>
 
-      <fieldset>
+      <fieldset class="step">
         <legend>Dados da Escola</legend>
 
         <label for="escola">Nome da Escola
@@ -47,41 +52,41 @@
         <label for="estadual"><input type="radio" id="estadual" name="tipo_escola" value="estadual"> Estadual</label>
 
         <label for="municipal"><input type="radio" id="municipal" name="tipo_escola" value="municipal"> Municipal</label>
+
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
       </fieldset>
 
-      <fieldset>
-        <legend>Dados do Pai</legend>
+      <fieldset class="step">
+        <legend>Dados dos Pais:</legend>
+        <div class="dados-pais">
+          <label for="nome_pai">Nome do Pai
+          <input type="text" id="nome_pai" name="nome_pai">
+          </label>
+          <label for="idade_pai">Idade
+          <input type="text" id="idade_pai" name="idade_pai" min="0">
+          </label>
+          <label for="profissao_pai">Profissão
+          <input type="text" id="profissao_pai" name="profissao_pai">
+          </label>
+        </div >
 
-        <label for="nome_pai">Nome do Pai
-        <input type="text" id="nome_pai" name="nome_pai">
-        </label>
-
-        <label for="idade_pai">Idade
-        <input type="text" id="idade_pai" name="idade_pai" min="0">
-        </label>
-
-        <label for="profissao_pai">Profissão
-        <input type="text" id="profissao_pai" name="profissao_pai">
-        </label>
+        <div class="dados-pais">
+          <label for="nome_mae">Nome da Mãe
+          <input type="text" id="nome_mae" name="nome_mae">
+          </label>
+          <label for="idade_mae">Idade
+          <input type="text" id="idade_mae" name="idade_mae" min="0">
+          </label>
+          <label for="profissao_mae">Profissão
+          <input type="text" id="profissao_mae" name="profissao_mae">
+          </label>
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
+        </div>
       </fieldset>
 
-      <fieldset>
-        <legend>Dados da Mãe</legend>
-
-        <label for="nome_mae">Nome da Mãe
-        <input type="text" id="nome_mae" name="nome_mae">
-        </label>
-
-        <label for="idade_mae">Idade
-        <input type="text" id="idade_mae" name="idade_mae" min="0">
-        </label>
-
-        <label for="profissao_mae">Profissão
-        <input type="text" id="profissao_mae" name="profissao_mae">
-        </label>
-      </fieldset>
-
-       <fieldset>
+       <fieldset class="step">
         <legend>Sobre a Criança</legend>
         <p>A criança é?</p>
 
@@ -132,9 +137,12 @@
           <label for="com_avos"><input type="radio" name="moradia" id="com_avos" value="com_avos"> Com avós</label>
           <label for="com_tios"><input type="radio" name="moradia" id="com_tios" value="com-tios"> Com os tios</label>
           <label for="com_outros"><input type="radio" name="moradia" id="com_outros" value="outros"> Outros</label>
+
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
        </fieldset>
 
-       <fieldset>
+       <fieldset class="step">
         <legend>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</legend>
 
         <p>Deficiência Mental?</p>
@@ -173,9 +181,12 @@
         <label> Queixas principais:<textarea class="observacoes" name="queixas_principais"></textarea></label>
 
         <label> Outras queixas:<textarea class="observacoes" name="queixas_secundarias"></textarea></label>
+
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
        </fieldset>
 
-       <fieldset>
+       <fieldset class="step">
         <legend>Motivo da Consulta e Encaminhamento</legend>
 
         <p>Quem percebeu ou identificou o problema?</p>
@@ -213,10 +224,13 @@
         </div>
 
         <label for="queixas">Descreva as queixas: <textarea class="observacoes" name="queixas" id="queixas"></textarea></label>
+
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
         
        </fieldset>
 
-       <fieldset>
+       <fieldset class="step">
         <legend>Histórico Gestacional e Perinatal</legend>
         <p>A Gestação foi?</p>
         <label for="planejada"><input type="radio" name="gestacao" id="planejada" value="planejada"> Planejada</label>
@@ -280,9 +294,12 @@
           <label for="detalhe">Explique:</label>
           <textarea id="detalhe"></textarea>
         </div>
+
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
        </fieldset>
 
-       <fieldset>
+       <fieldset class="step">
         <legend>Desenvolvimento da Linguagem e Psicomotor</legend>
         <p>Com que idade a criança falou às:</p>
         <label for="palavras">Primeiras palavras:
@@ -432,9 +449,12 @@
           <label for="descricao_ajuda_algo">Explique:</label>
           <textarea name="descricao_ajuda_algo" id="descricao_ajuda_algo"></textarea>
         </div>
+
+        <button type="button" class="voltar">Voltar</button>
+        <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
         <legend>Hábitos alimentares</legend>
         <p>A criança tem horários  para se alimentar</p>
         <label for="hora_sim"><input type="radio" name="hora_alimentar" id="hora_sim" value="sim"> Sim</label>
@@ -486,9 +506,12 @@
               <label for="caracteristicas">Diga se o peso está acima  ou abaixo:</label>
               <textarea name="caracteristicas" id="caracteristicas"></textarea>
             </div>
+
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Sono da Criança</legend>
             <p>A criança dorme sozinha?</p>
             <label for="dorme_sim"><input type="radio" name="dorme" id="dorme_sim" value="sim"> Sim</label>
@@ -577,9 +600,12 @@
             <label for="dificuldade_conciliar_sono"><input type="checkbox" name="descricao_sono_crianca[]" id="dificuldade_conciliar_sono"> Tem dificuldade para conciliar sono, mas depois dorme rapidamente</label>
 
             <label for="facilidade_sono"><input type="checkbox" name="descricao_sono_crianca[]" id="facilidade_sono"> Dorme sempre pesadamente</label>
+
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Saúde Geral</legend>
           <p>Qual a saúde geral da criança atualmente?</p>
             <label for="saude-atual_otimo"><input type="radio" name="saude-atual" id="saude-atual_otimo" value="otimo"> Ótimo</label>
@@ -656,9 +682,12 @@
                 <label for="descricao_coma">Quando e quanto tempo?</label>
                 <textarea name="descricao_coma" id="descricao_coma"></textarea>
               </div>
+
+              <button type="button" class="voltar">Voltar</button>
+              <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Quais tipos de tratamento de que a criança já necessitou ou necessita?</legend>
 
           <p>Fonoaudiologia?</p>
@@ -842,9 +871,12 @@
 
             <label for="melhora_outros_regular"><input type="radio" name="melhora_outros" id="melhora_outros_regular"> Regular</label>
           </div>
+
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Vida Acadêmica da Criança</legend>
           <P>Com quantos anos a criança iniciou a vida escolar?</P>         
             <label for="1_anos"><input type="radio" name="inicio_escola" id="1_anos" value="1_ano"> 1 ano</label>
@@ -1100,9 +1132,12 @@
           <div id="detalhes_escrita_espelho" class="ocultar">
             <label>Quais?<input type="text" name="espelhos" id="espelhos"></label>
           </div>
+
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Dinâmica Familiar</legend>
           <p>Qual o principal cuidador da criança?</p>
           <label><input type="radio" name="cuidador_principal" value="mae"> Mãe</label>
@@ -1254,9 +1289,12 @@
           <div id="detalhes_conselho" class="ocultar">
             <label> Quais essas outras pessoas?<input type="text" name="descricao_outros"></label>
           </div>
+
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Personalidade Criança</legend>
          
           <p>A criança é distraída?</p>
@@ -1325,9 +1363,12 @@
           </div>
 
           <label>Comente mais alguma característica da criança que julgue importante:<input type="text" name="comentario_caracteristica"></label>
+
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
         </fieldset>
 
-        <fieldset>
+        <fieldset class="step">
           <legend>Hábitos e Habilidades Sociais</legend>
           <p>A criança tem amigos?</p>
           <label><input type="radio" name="amizade_crianca" value="sim-muitos"> Sim muitos</label>
@@ -1496,11 +1537,8 @@
 
           <label for="observacoes">Observações importantes:<textarea name="observacoes" id="observacoes"></textarea></label>
 
-        </fieldset>
-
-
-
-      <button type="submit">Enviar ficha</button>
+           <button type="button" class="voltar">Voltar</button>
+          <button type="submit" class="enviar">Enviar formulário</button>
 
     </form>
   </main>

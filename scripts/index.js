@@ -1,4 +1,6 @@
-import alterarBackground from "./alterarBackground.js";
+import alterarCores from "./alterarCores.js";
 import controlarRadios from "./exibirConteudosRadio.js";
+import multiStep from "./multiStep.js";
 controlarRadios();
-alterarBackground();
+alterarCores();
+multiStep();

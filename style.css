@@ -35,6 +35,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     transition: 0.5s ease;
+    height: min-content;
 }
 
 main {
@@ -48,21 +49,29 @@ h1 {
 }
 
 form {
-    margin: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
 }
 
 fieldset { 
     display: flex;
     flex-direction: column;
-    padding: 30px; 
+    height: min-content;
+    padding: 10px; 
     background-color: var(--color-fieldset);
     border-radius: 8px;
     border: none;
-    margin-bottom: 40px;
     box-shadow:
         0 1px 2px rgba(0,0,0,0.05),
         0 6px 12px rgba(0,0,0,0.06);
 
+}
+
+/* Steps */
+.dados-pais {
+    margin-bottom: 30px;
 }
 
 legend {
@@ -135,7 +144,7 @@ h2 {
     opacity: 1;
     height: auto; background-color: #ffffff;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05),
-        0 6px 12px rgba(0,0,0,0.06);;
+        0 6px 12px rgba(0,0,0,0.06);
     transition: 0.4s ease, transform 0.4s ease;
     transform: translateY(0);
 }
@@ -143,3 +152,90 @@ h2 {
 .observacoes {
     height: 110px;
 }
+
+/* Estilo barra de progresso */
+.contador-steps {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+}
+
+.contador-steps span {
+  color: #000000;
+  margin: 0px 10px 0px 10px;
+  padding: 20px;
+}
+
+.barra-container {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.barra-progresso {
+  height: 100%;
+  width: 0%;
+  background-color: #2ECCB0;;
+  transition: width 0.4s ease;
+  border-radius: 20px;
+}
+/* Estilo multistep */
+.step {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.step.ativo {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+        0 6px 12px rgba(0,0,0,0.06);
+    cursor: pointer;
+}
+
+.enviar {
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+
+body.masculino .proximo {
+  background-color: #5DADE2;
+}
+
+body.feminino .proximo {
+  background-color: #BB8FCE;
+}
+
+body.padrao .proximo {
+  background-color: #ccc;
+}
+
+.voltar {
+    background-color: #ccc;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
