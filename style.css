@@ -45,12 +45,12 @@ main {
 
 h1 {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 }
 
 form {
     max-width: 600px;
-    margin: 40px auto;
+    margin: 0 auto;
     position: relative;
     overflow: hidden;
 }
@@ -58,7 +58,7 @@ form {
 fieldset { 
     display: flex;
     flex-direction: column;
-    height: min-content;
+    min-height: 70vh;
     padding: 10px; 
     background-color: var(--color-fieldset);
     border-radius: 8px;
