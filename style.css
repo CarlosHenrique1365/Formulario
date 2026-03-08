@@ -8,7 +8,7 @@
 }
 
 :root {
-    --color-fieldset: #ffffffce;
+    --cor-fundo: #fefefed0;
 }
 
 .masculino {
@@ -29,64 +29,182 @@
     background-attachment: fixed;
 }
 
+
+
 body {
+    display: flex;
+    justify-content: center;
     background-color: #80808048;
     background: url('./imagens/img-bg-padrao.png') center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
     transition: 0.5s ease;
-    height: min-content;
 }
 
 main {
-    max-width: 700px;
-    margin: 0 auto;
+    width: 80%;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+form {
+    position: relative;
+    width: 100%;
 }
 
 h1 {
     text-align: center;
-    padding: 10px;
+    font-size: 22px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
+h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+p {
+    margin: 10px;
+}
+
+.container-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--cor-fundo);
+    border-radius: 8px 8px 0px 0px;
+    height: max-content;
+    width: 100%;
+    padding: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #bfbbbb52;
+    border-radius: 5px;
     overflow: hidden;
+}
+
+.progress {
+    background-color: #49724a;
+    width: 0%;
+    height: 100%;
+    transition: width .3s ease;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #49724a;
 }
 
 fieldset { 
     display: flex;
     flex-direction: column;
-    min-height: 70vh;
-    padding: 10px; 
-    background-color: var(--color-fieldset);
+    width: 100%;
     border-radius: 8px;
+    background-color: var(--cor-fundo);
+    border-radius: 0px 0px 10px 10px;
     border: none;
+    padding: 20px;
     box-shadow:
-        0 1px 2px rgba(0,0,0,0.05),
-        0 6px 12px rgba(0,0,0,0.06);
-
+        0 1px 2px rgba(0, 0, 0, 0.219),
+        0 6px 12px rgba(0, 0, 0, 0.127);
 }
 
-/* Steps */
-.dados-pais {
+label {
+    display: block;
+    margin: 12px;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.buttons.step1 {
+    display: flex;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.buttons.step1 button{
+    background-color: #49724a;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.button-step {
+    display: flex;
+    justify-content: space-around;
+}
+
+.proximo, .enviar {
+    background-color: #49724a;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.voltar {
+    background-color: #e0d4d4;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button {
+    width: 130px;
+    height: 40px;
+    border: none;
+}
+
+.ocultar {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    transform: translateY(-10px);
+    transition: 0.4s ease, transform 0.4s ease;
+}
+
+.exibir {
+    visibility: visible;
+    padding: 5px;
+    opacity: 1;
+    height: auto; background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+        0 6px 12px rgba(0,0,0,0.06);
+    transition: 0.4s ease, transform 0.4s ease;
+    transform: translateY(0);
+}
+
+.observacoes {
+    height: 110px;
+}
+
+
+
+ .dados-pais {
     margin-bottom: 30px;
 }
 
+.step{
+position:absolute;
+width:100%;
+display: none;
+pointer-events:none;
+transition:opacity .3s;
+}
+
+.step.active{
+display: block;
+pointer-events:auto;
+}
+/*
 legend {
     font-variant: small-caps;
     color: var(--color-legend);
     background-color: #fff;
-    padding: 5px;
-    border-radius: 8px;
-}
-
-label {
-    width: 100%;
-    flex-direction: column;
-    padding: 5px;
-    margin-bottom: 2px;
 }
 
 textarea {
@@ -105,11 +223,6 @@ p {
     font-variant: small-caps;
     font-size: 1.1rem;
     color: var(--color-p);
-}
-
-div {
-    display: flex;
-    flex-direction: column;
 }
 
 .doencas_importantes {
@@ -153,52 +266,44 @@ h2 {
     height: 110px;
 }
 
-/* Estilo barra de progresso */
-.contador-steps {
+.container {
+  width: 600px;
+  padding: 10px;
+  height: 120px;
+  background-color: #ffffffce;
+  border-radius: 10px 10px 0px 0px;
+  margin: 40px auto 0px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.steps {
     display: flex;
     flex-direction: row;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #555;
+    justify-content: space-between;
+
 }
 
-.contador-steps span {
-  color: #000000;
-  margin: 0px 10px 0px 10px;
-  padding: 20px;
-}
-
-.barra-container {
-  width: 100%;
+.progress-bar {
   height: 8px;
-  background-color: #e0e0e0;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.barra-progresso {
-  height: 100%;
-  width: 0%;
-  background-color: #2ECCB0;;
-  transition: width 0.4s ease;
-  border-radius: 20px;
-}
-/* Estilo multistep */
-.step {
-  position: absolute;
   width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
+  background-color: #ddd;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
-.step.ativo {
-  opacity: 1;
-  pointer-events: auto;
-  position: relative;
+.progress {
+    width: 100%;
+    height: 0%;
+    background-color: #4caf50;
+    transition: .3s;
+}
+
+.step.active {
+    display: block;
+}
+
+.step {
+    display: none;
 }
 
 button {
@@ -214,28 +319,10 @@ button {
 }
 
 .enviar {
-    background-color: #28A745;
+    background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    }
-
-body.masculino .proximo {
-  background-color: #5DADE2;
 }
-
-body.feminino .proximo {
-  background-color: #BB8FCE;
-}
-
-body.padrao .proximo {
-  background-color: #ccc;
-}
-
-.voltar {
-    background-color: #ccc;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
+ */

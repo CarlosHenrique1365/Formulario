@@ -1,97 +1,77 @@
 export default function multiStep() { 
 
-  const steps = document.querySelectorAll('.step');
-  const btnProximo = document.querySelectorAll('.proximo');
-  const btnVoltar = document.querySelectorAll('.voltar');
-  const btnEnviar = document.querySelector('.enviar');
+const steps = document.querySelectorAll(".step");
+const btnNext = document.querySelectorAll(".proximo");
+const btnPrev = document.querySelectorAll(".voltar");
 
-  let stepAtual = 0;
+const progress = document.getElementById("progress");
+const stepNumber = document.getElementById("stepNumber");
 
-  const spanAtual = document.getElementById('step-atual');
-  const spanTotal = document.getElementById('total-steps');
+let currentStep = 0;
+const totalSteps = steps.length;
 
-  spanTotal.textContent = steps.length;
-  spanAtual.textContent = 1;
+function updateStep(){
 
-  function mostrarStep(index) {
+    steps.forEach((step, index)=>{
+        step.classList.remove("active");
 
-    if (index < 0 || index >= steps.length) return;
+        if(index === currentStep){
+            step.classList.add("active");
+        }
+    });
 
-    steps.forEach(step => step.classList.remove('ativo'));
-    steps[index].classList.add('ativo');
+    stepNumber.textContent = currentStep + 1;
 
-    spanAtual.textContent = index + 1;
+    let percent = ((currentStep + 1) / totalSteps) * 100;
+    progress.style.width = percent + "%";
+}
 
-    const ultimoStep = steps.length - 1;
 
-    if (index === ultimoStep) {
-      btnEnviar.classList.remove('oculto');
+// validar campos do step atual
+function validateStep(){
 
-      btnProximo.forEach(btn => {
-        btn.classList.add('oculto');
-      });
+    const currentFields = steps[currentStep].querySelectorAll("input, textarea, select");
 
-    } else {
-      btnEnviar.classList.add('oculto');
+    for(let field of currentFields){
 
-      btnProximo.forEach(btn => {
-        btn.classList.remove('oculto');
-      });
-    }
-  }
-
-  function validarStepAtual() {
-
-    const campos = steps[stepAtual].querySelectorAll('[required]');
-
-    for (let campo of campos) {
-
-      // radio ou checkbox
-      if (campo.type === "radio" || campo.type === "checkbox") {
-
-        const nome = campo.name;
-        const marcado = steps[stepAtual].querySelector(`input[name="${nome}"]:checked`);
-
-        if (!marcado) {
-          alert("Preencha todos os campos obrigatórios.");
-          return false;
+        if(!field.checkValidity()){
+            field.reportValidity();
+            return false;
         }
 
-      } else if (!campo.value.trim()) {
-
-        alert("Preencha todos os campos obrigatórios.");
-        campo.focus();
-        return false;
-
-      }
     }
 
     return true;
-  }
+}
 
-  btnProximo.forEach(btn => {
-    btn.addEventListener('click', () => {
 
-      if (!validarStepAtual()) return;
+// botão próximo
+btnNext.forEach(button=>{
+    button.addEventListener("click", ()=>{
 
-      if (stepAtual < steps.length - 1) {
-        stepAtual++;
-        mostrarStep(stepAtual);
-      }
+        if(!validateStep()) return;
 
-    });
-  });
-
-  btnVoltar.forEach(btn => {
-    btn.addEventListener('click', () => {
-
-      if (stepAtual > 0) {
-        stepAtual--;
-        mostrarStep(stepAtual);
-      }
+        if(currentStep < totalSteps - 1){
+            currentStep++;
+            updateStep();
+        }
 
     });
-  });
+});
 
-  mostrarStep(stepAtual);
+
+// botão voltar
+btnPrev.forEach(button=>{
+    button.addEventListener("click", ()=>{
+
+        if(currentStep > 0){
+            currentStep--;
+            updateStep();
+        }
+
+    });
+});
+
+updateStep();
+
 }
