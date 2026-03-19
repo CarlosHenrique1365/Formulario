@@ -35,25 +35,24 @@ background:url('./imagens/img-bg-padrao.png') center/cover no-repeat fixed;
 body{
 font-family:Arial, Helvetica, sans-serif;
 
-display:flex;
-justify-content:center;
-align-items:flex-start;
-
-height:100%;
-
 background:url('./imagens/img-bg-padrao.png') center/cover no-repeat fixed;
 background-color:#80808048;
 
-transition:background .6s ease;
+transition: .6s ease;
+
+min-height: 100vh;
+display: flex;
+margin: 60px 10px;
 }
 
 /* CONTAINER PRINCIPAL */
 
 main{
 width:100%;
-max-width:700px;
+max-width: 700px;
+height: 100%;
+margin: 0 auto;
 
-margin: 0px auto;
 border-radius:var(--radius);
 
 box-shadow:
@@ -61,24 +60,6 @@ box-shadow:
 0 10px 25px rgba(0,0,0,0.08);
 
 transition:var(--transition);
-}
-
-/* RESPONSIVO */
-
-@media (max-width:768px){
-
-body{
-min-height:90vh;
-padding:20px 10px;
-margin-top: 50px;
-background-attachment:scroll;
-}
-
-main{
-width:95%;
-margin:0 auto;
-}
-
 }
 
 /* FORM */
