@@ -2,7 +2,7 @@ export default function alterarCores() {
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    const form = document.getElementById('formulario');
+    const form = document.getElementById('formAnamnese');
     const radios = document.querySelectorAll('input[name="sexo_crianca"]');
 
     function mudarColor() {
@@ -25,21 +25,16 @@ export default function alterarCores() {
       }
     }
 
-    // Evento para mudar cor ao selecionar
     radios.forEach(radio => {
       radio.addEventListener('change', mudarColor);
     });
 
-    // Submit do formulário
     form.addEventListener('submit', function(event) {
       event.preventDefault();
 
       const dados = new FormData(form);
       const objeto = Object.fromEntries(dados.entries());
-
-      console.log(objeto);
-
-      enviarParaBackend(objeto);
+  
     });
 
   });
