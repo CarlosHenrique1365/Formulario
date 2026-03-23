@@ -3,39 +3,57 @@ export default function submitForm() {
 
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  const inputs = form.querySelectorAll('input, textarea, select');
 
-    const data = {};
-    const inputs = form.querySelectorAll('input, textarea, select');
+  function mostrarDataLabels() {
+    const dataLabels = {};
 
     inputs.forEach((input) => {
+      const dataLabel = input.getAttribute('data-label');
       const name = input.name;
 
-      if (!name) return;
+      if (!name || !dataLabel) return;
 
       if (input.type === 'checkbox') {
-        if (!data[name]) data[name] = [];
+        if (!dataLabels[dataLabel]) {
+          dataLabels[dataLabel] = [];
+        }
 
         if (input.checked) {
-          data[name].push(input.value);
+          dataLabels[dataLabel].push(input.value);
         }
       } else if (input.type === 'radio') {
+        if (!(dataLabel in dataLabels)) {
+          dataLabels[dataLabel] = '';
+        }
+
         if (input.checked) {
-          data[name] = input.value;
+          dataLabels[dataLabel] = input.value;
         }
       } else {
-        data[name] = input.value;
+        dataLabels[dataLabel] = input.value;
       }
     });
 
-    console.log('JSON enviado:', data);
+    console.clear();
+    console.log(dataLabels);
+  }
+
+  inputs.forEach((input) => {
+    input.addEventListener('change', mostrarDataLabels);
+    input.addEventListener('input', mostrarDataLabels);
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    mostrarDataLabels();
+
     alert('Teste realizado. Nada foi enviado ao webhook.');
 
-    window.location.href = 'sucesso.html';
+    // window.location.href = 'sucesso.html';
   });
 }
-
   // try {
   //   const response = await fetch('https://n8n-n8n.gfzm83.easypanel.host/webhook/Anamnese_Infantil', {
   //     method: 'POST',

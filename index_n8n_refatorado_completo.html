@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha de Anamnese Infantil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+      <div class="container-progress">  
+        <h1>Formulário de Anamnese Infantil</h1>
+        <div class="progress-bar">
+          <div class="progress" id="progress"></div>
+        </div>
+
+        <p class="progress-text">
+          Passo <span id="stepNumber">1</span>/16
+        </p>
+
+      </div>
+
+    <form id="formAnamnese">
+      <fieldset class="step active">
+
+        <h2>Dados da Criança</h2>
+
+        <label for="nome_crianca"> Nome da Criança <input type="text" id="nome_crianca" name="nome_da_crianca" required data-label="Nome da Criança"></label>
+        
+        <label for="data_nascimento">Data de Nascimento <input type="date" id="data_nascimento" name="data_de_nascimento" required data-label="Data de Nascimento"></label>
+
+        <label for="idade">Idade <input type="number" id="idade" name="idade_da_crianca" min="0" required data-label="Idade"></label> 
+        
+        <label for="data_entrevista">Data da Entrevista
+        <input type="date" id="data_entrevista" name="data_da_entrevista" data-label="Data da Entrevista">
+        </label>
+
+        <label for="masculino"><input type="radio" name="sexo_crianca" id="masculino" value="masculino" required data-label="Sexo da criança"> Masculino</label>
+
+        <label for="feminino"><input type="radio" name="sexo_crianca" id="feminino" value="feminino" required data-label="Sexo da criança"> Feminino</label>
+
+        <div class="buttons step1">
+          <button type="button" class="proximo">Próximo</button>
+        </div>
+       
+      </fieldset>
+
+      <fieldset class="step">
+        <h2>Dados da Escola</h2>
+
+        <label for="escola">Nome da Escola
+        <input type="text" id="escola" name="nome_da_escola" data-label="Nome da Escola">
+        </label>
+
+        <p>Tipo de Escola</p>
+
+        <label for="particular"><input type="radio" id="particular" name="tipo_escola" value="particular" data-label="Particular"> Particular</label>
+
+        <label for="estadual"><input type="radio" id="estadual" name="tipo_escola" value="estadual" data-label="Estadual"> Estadual</label>
+
+        <label for="municipal"><input type="radio" id="municipal" name="tipo_escola" value="municipal" data-label="Municipal"> Municipal</label>
+
+        <div class="button-step">
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
+        </div>
+      </fieldset>
+
+      <fieldset class="step">
+        <h2>Dados dos Pais</h2>
+        <div class="dados-pais">
+          <label for="nome_pai">Nome do Pai
+          <input type="text" id="nome_pai" name="nome_do_pai" data-label="Nome do Pai">
+          </label>
+          <label for="idade_pai">Idade
+          <input type="text" id="idade_pai" name="idade_do_pai" min="0" data-label="Idade">
+          </label>
+          <label for="profissao_pai">Profissão
+          <input type="text" id="profissao_pai" name="profissao_do_pai" data-label="Profissão">
+          </label>
+        </div >
+
+        <div class="dados-pais">
+          <label for="nome_mae">Nome da Mãe
+          <input type="text" id="nome_mae" name="nome_da_mae" data-label="Nome da Mãe">
+          </label>
+          <label for="idade_mae">Idade
+          <input type="text" id="idade_mae" name="idade_da_mae" min="0" data-label="Idade">
+          </label>
+          <label for="profissao_mae">Profissão
+          <input type="text" id="profissao_mae" name="profissao_da_mae" data-label="Profissão">
+          </label>
+        </div> 
+
+        <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+      </fieldset>
+
+       <fieldset class="step">
+        <h2>Sobre a Criança</h2>
+        <p>A criança é?</p>
+
+        <label for="filho_unico"><input type="radio" id="filho_unico" name="ordem_de_nascimento_da_crianca" value="filho_unico" data-label="Filho Único"> Filho Único </label>
+
+        <label for="primogenito"><input type="radio" id="primogenito" name="ordem_de_nascimento_da_crianca" value="primogenito" data-label="Primogênito o"> Primogênito</label>
+
+        <label for="segundo_filho"><input type="radio" id="segundo_filho" name="ordem_de_nascimento_da_crianca" value="segundo_filho" data-label="2° Filho"> 2° Filho</label>
+
+        <label for="terceiro_filho"><input type="radio" id="terceiro_filho" name="ordem_de_nascimento_da_crianca" value="terceiro_filho" data-label="3° Filho"> 3° Filho</label>
+
+        <label for="gemeo"><input type="radio" name="ordem_de_nascimento_da_crianca" id="gemeo" value="gemeo" data-label="Gêmeos"> Gêmeos</label>
+
+        <p>É Adotado(a)?</p>
+
+        <label for="sim"><input type="radio" id="sim" name="e_adotada" data-target="sabe_sobre_adocao" value="sim" data-label="Sim"> Sim</label>  
+
+        <label for="nao"><input type="radio" id="nao" name="e_adotada"value="nao" data-label="Não"> Não</label>
+
+        <div class="ocultar" id="sabe_sobre_adocao">
+          <p>A criança sabe sobre a adoção?</p>
+          <label><input type="radio" name="sabe_sobre_a_adocao" value="sim" data-label="Sim"> Sim</label><label><input type="radio" name="sabe_sobre_a_adocao" value="nao" data-label="Não"> Não</label>
+        </div>
+
+        <p>Possui Irmãos?</p>
+
+        <label for="psim"><input type="radio" id="psim" name="possui_irmaos" value="sim" data-target="detalhes_irmaos" data-label="Sim"> Sim</label>
+
+        <label for="pnao"><input type="radio" id="pnao" name="possui_irmaos" value="nao" data-label="Não"> Não</label>
+
+        <div class="ocultar" id="detalhes_irmaos">
+          <p>Dados Irmãos:</p>
+          <label> Nome<input type="text" name="nome_do_irmao" data-label="Nome"></label>
+          <label> Idade<input type="text" name="idade_do_irmao" data-label="Idade"></label>
+          <label> Escola<input type="text" name="escola_do_irmao" data-label="Escola"></label>
+          <label> Série<input type="text" name="serie_do_irmao" data-label="Série"></label>
+
+          <label> 
+          <p>O irmão(ã) possui dificuldade escolar?</p>            
+          <input type="radio" name="irmao_tem_dificuldade_escolar" value="sim" data-label="O irmão(ã) possui dificuldade escolar? Sim"> Sim</label>
+          <label><input type="radio" name="irmao_tem_dificuldade_escolar" value="nao" data-label="Não"> Não</label>
+        </div>
+
+        <p>A Criança mora com quem?</p>
+          <label for="so_mae"><input type="radio" name="mora_com" id="so_mae" value="so_mae" data-label="Só a mãe"> Só a mãe</label>
+          <label for="so_pai"><input type="radio" name="mora_com" id="so_pai" value="so_pai" data-label="Só o pai"> Só o pai</label>
+          <label for="com_pais"><input type="radio" name="mora_com" id="com_pais" value="com_pais" data-label="Com os pais"> Com os pais</label>
+          <label for="com_avos"><input type="radio" name="mora_com" id="com_avos" value="com_avos" data-label="Com avós"> Com avós</label>
+          <label for="com_tios"><input type="radio" name="mora_com" id="com_tios" value="com-tios" data-label="Com os tios"> Com os tios</label>
+          <label for="com_outros"><input type="radio" name="mora_com" id="com_outros" value="outros" data-label="Outros"> Outros</label>
+
+          <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+       </fieldset>
+
+       <fieldset class="step">
+        <h2>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</h2>
+
+        <p>Deficiência Mental?</p>
+          <label for="mental_sim"><input type="radio" id="mental_sim" name="historico_deficiencia_mental" value="sim" data-target="deficiencia_mental" data-label="Sim"> Sim</label>
+
+          <label for="mental_nao"><input type="radio" id="mental_nao" name="historico_deficiencia_mental" value="nao" data-label="Não"> Não</label>
+
+        <div id="deficiencia_mental" class="ocultar">
+          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_mental" data-label="Qual o grau de parentesco?"></label>
+
+          <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_mental" data-label="Essa pessoa reside com a família e qual o contato da criança com este parente?"></label>
+        </div>
+
+        <p>Doenças Psiquiátricas</p>
+          <label for="psique_sim"><input type="radio" id="psique_sim" name="historico_doenca_psiquiatrica" value="sim" data-target="doenca_psiquiatrica" data-label="Sim"> Sim</label>
+
+          <label for="psique_nao"><input type="radio" id="psique_nao" name="historico_doenca_psiquiatrica" value="nao" data-label="Não"> Não</label>
+
+         <div id="doenca_psiquiatrica" class="ocultar">
+          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_psiqui" data-label="Qual o grau de parentesco?"></label>
+
+          <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_psiqui" data-label="Essa pessoa reside com a família e qual o contato da criança com este parente?"></label>
+        </div>
+
+        <p>Doença Neurológica</p>
+          <label for="neuro_sim"><input type="radio" id="neuro_sim" name="historico_doenca_neurologica" value="sim" data-target="doenca_neuro" data-label="Sim"> Sim</label>
+
+          <label for="neuro_nao"><input type="radio" id="neuro_nao" name="historico_doenca_neurologica" value="nao" data-label="Não"> Não</label>
+
+         <div id="doenca_neuro" class="ocultar">
+          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_neuro" data-label="Qual o grau de parentesco?"></label>
+
+          <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_neuro" data-label="Essa pessoa reside com a família e qual o contato da criança com este parente?"></label>
+        </div>
+
+        <label> Queixas principais:<textarea class="observacoes" name="queixa_principal" data-label="Queixas principais"></textarea></label>
+
+        <label> Outras queixas:<textarea class="observacoes" name="outras_queixas" data-label="Outras queixas"></textarea></label>
+
+        <div class="button-step">
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
+        </div>
+       </fieldset>
+
+       <fieldset class="step">
+        <h2>Motivo da Consulta e Encaminhamento</h2>
+
+        <p>Quem percebeu ou identificou o problema?</p>
+        <label for="identificar_mae"><input type="radio" name="quem_identificou_o_problema" id="identificar_mae" value="mae" data-label="A mãe"> A mãe</label>
+
+        <label for="identificar_pai"><input type="radio" name="quem_identificou_o_problema" id="identificar_pai" value="pai" data-label="O pai"> O pai</label>
+
+        <label for="identificar_pais"><input type="radio" name="quem_identificou_o_problema" id="identificar_pais" value="pais" data-label="Os pais"> Os pais</label>
+
+        <label for="identificar_escola"><input type="radio" name="quem_identificou_o_problema" id="identificar_escola" value="escola" data-label="Escola"> Escola</label>
+
+        <label for="identificar_professora"><input type="radio" name="quem_identificou_o_problema" id="identificar_professora" value="professora" data-label="Professora"> Professora</label>
+
+        <label for="identificar_outros"><input type="radio" name="quem_identificou_o_problema" id="identificar_outros" value="outros" data-target="identificar_problema" data-label="Outros"> Outros</label>
+
+        <div id="identificar_problema" class="ocultar">
+          <label> Quem foi essa pessoa?<input type="text" name="descricao_de_quem_identificou_o_problema" data-label="Quem foi essa pessoa?"></label>
+        </div>
+
+        <p>Quem encaminhou a criança?</p>
+        <label for="encaminhar_mae"><input type="radio" name="quem_encaminhou_a_crianca" id="encaminhar_mae" value="mae" data-label="A mãe"> A mãe</label>
+
+        <label for="encaminhar_pai"><input type="radio" name="quem_encaminhou_a_crianca" id="encaminhar_pai" value="encaminhar_pai" data-label="O pai"> O pai</label>
+
+        <label for="encaminhar_pais"><input type="radio" name="quem_encaminhou_a_crianca" id="encaminhar_pais" value="encaminhar_pais" data-label="Os pais"> Os pais</label>
+
+        <label for="encaminhar_escola"><input type="radio" name="quem_encaminhou_a_crianca" id="encaminhar_escola" value="encaminhar_escola" data-label="Escola"> Escola</label>
+
+        <label for="encaminhar_professora"><input type="radio" name="quem_encaminhou_a_crianca" id="encaminhar_professora" value="professora" data-label="Professora"> Professora</label>
+
+        <label for="encaminhar_outros"><input type="radio" name="quem_encaminhou_a_crianca" id="encaminhar_outros" value="outros" data-target="encaminhar_problema" data-label="Outros"> Outros</label>
+
+        <div id="encaminhar_problema" class="ocultar">
+          <label> Quem foi essa pessoa?<input type="text" name="descricao_de_quem_encaminhou_a_crianca" data-label="Quem foi essa pessoa?"></label>
+        </div>
+
+        <label for="queixas">Descreva as queixas: <textarea class="observacoes" name="descricao_das_queixas" id="queixas" data-label="Descreva as queixas"></textarea></label>
+
+        <div class="button-step">
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
+        </div>
+        
+       </fieldset>
+
+       <fieldset class="step">
+        <h2>Histórico Gestacional e Perinatal</h2>
+        <p>A Gestação foi?</p>
+        <label for="planejada"><input type="radio" name="como_foi_a_gestacao" id="planejada" value="planejada" data-label="Planejada"> Planejada</label>
+
+        <label for="indesejada"><input type="radio" name="como_foi_a_gestacao" id="indesejada" value="indesejada" data-target="problema_gestacao_indesejada" data-label="Indesejada"> Indesejada</label>
+
+        <div id="problema_gestacao_indesejada" class="ocultar">
+          <label> Especifique:<input type="text" name="descricao_problema_mental" data-label="Especifique"></label>
+        </div>
+
+        <label for="intercorrencia"><input type="radio" name="como_foi_a_gestacao" id="intercorrencia" value="intercorrencia" data-label="Sem Intercorrência"> Sem Intercorrência</label>
+
+        <label for="ordem_fisica"><input type="radio" name="como_foi_a_gestacao" id="ordem_fisica" value="ordem_fisica" data-target="problema_gestacao_ordem_fisica" data-label="Problemas de Ordem Física"> Problemas de Ordem Física</label>
+
+        <div id="problema_gestacao_ordem_fisica" class="ocultar">
+          <label> Especifique:<input type="text" name="descricao_problema_fisica" data-label="Especifique"></label>
+        </div>
+
+        <label for="ordem_mental"><input type="radio" name="como_foi_a_gestacao" id="ordem_mental" value="ordem_mental" data-target="problema_gestacao_ordem_mental" data-label="Problemas de Ordem Mental"> Problemas de Ordem Mental</label>
+
+        <div id="problema_gestacao_ordem_mental" class="ocultar">
+          <label> Especifique:<input type="text" name="descricao_problema_mental" data-label="Especifique"></label>
+        </div>
+
+
+        <p>Como foi a saúde da mãe durante a gestação?</p>
+        <label for="saude_boa"><input type="radio" name="saude_da_mae_na_gestacao" id="saude_boa" value="boa" data-label="Boa"> Boa</label>
+
+        <label for="saude_regular"><input type="radio" name="saude_da_mae_na_gestacao" id="saude_regular" value="regular" data-label="Regular com Problemas Comuns"> Regular com Problemas Comuns</label>
+
+        <label for="saude_pessima"><input type="radio" name="saude_da_mae_na_gestacao" id="saude_pessima" value="pessima" data-label="Péssima"> Péssima</label>
+
+        <label for="observacao_gestacao">Fale sobre:</label>
+        <textarea name="observacoes_sobre_a_gestacao" id="observacao_gestacao"></textarea>
+        
+
+        <label for="medicacoes_gestacao">Medicações e exames feitos na gravidez:</label>
+        <textarea name="medicacoes_e_exames_na_gravidez" id="medicacoes_gestacao"></textarea>
+
+        <p>Nascimento:</p>
+        <label for="atermo"><input type="radio" name="tempo_de_nascimento" id="a_termo" value="a_termo" data-label="A Termo"> A Termo</label>
+
+        <label for="prematuro"><input type="radio" name="tempo_de_nascimento" id="prematuro" value="prematuro" data-label="Prematuro"> Prematuro</label>
+
+        <label for="meses">Quantos meses de gestação?
+        <input type="text" name="meses_de_gestacao" id="meses" data-label="Quantos meses de gestação?">
+        </label>
+        
+        <p>Como foi o Parto?</p>
+        <label for="parto_cesaria"><input type="radio" name="tipo_de_parto" id="parto_cesaria" value="cesaria" data-label="Cesária"> Cesária</label>
+
+        <label for="parto_normal"><input type="radio" name="tipo_de_parto" id="parto_normal" value="normal" data-label="Normal"> Normal</label>
+
+        <label for="parto_prematuro"><input type="radio" name="tipo_de_parto" id="parto_prematuro" value="prematuro" data-label="Prematuro"> Prematuro</label>
+
+        <p> O parto teve intercorrências?</p>
+        <label><input type="radio" name="houve_intercorrencia_no_parto" value="sim" data-target="descricao_intercorrencia" data-label="Sim"> Sim</label>
+        <label><input type="radio" name="houve_intercorrencia_no_parto" value="nao" data-label="Não"> Não</label>
+
+        <div id="descricao_intercorrencia" class="ocultar">
+          <label for="detalhe">Explique:</label>
+          <textarea id="detalhe" name="descricao_intercorrencia_parto"></textarea>
+        </div>
+
+        <div class="button-step">
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
+        </div>
+       </fieldset>
+
+       <fieldset class="step">
+        <h2>Desenvolvimento da Linguagem e Psicomotor</h2>
+        <p>Com que idade a criança falou às:</p>
+        <label for="palavras">Primeiras palavras:
+        <input type="text" name="idade_das_primeiras_palavras" id="palavras" data-label="Idade que falou as primeiras palavras">
+        </label>
+
+        <label for="frases">Primeiras frases:
+        <input type="text" name="idade_das_primeiras_frases" id="frases" data-label="Idade que falou as primeiras frases">
+        </label>
+
+        <p>Teve dificuldades na aquisição da fala?</p>
+
+        <label for="fala_sim"><input type="radio" name="teve_dificuldade_na_fala" id="fala_sim" value="sim" data-target="descricao_dificuldade_fala" data-label="Dificuldade aquisição fala"> Sim</label>
+
+        <label for="fala_nao"><input type="radio" name="teve_dificuldade_na_fala" id="fala_nao" value="nao" data-label="Dificuldade aquisição fala"> Não</label>
+
+        <div id="descricao_dificuldade_fala" class="ocultar">
+          <label for="trocas_palavras">Quais foram as trocas?</label>
+          <textarea name="descricao_das_trocas_na_fala" id="trocas_palavras" data-label="Trocas de palavras na fala"></textarea>
+        </div>
+
+        <p>Com que idade a criança:</p>
+
+        <label for="engatinhou">Engatinhou:
+        <input type="text" name="idade_que_engatinhou" id="engatinhou" data-label="Idade que engatinhou">
+        </label>
+
+        <label for="andou"> Andou:
+        <input type="text" name="idade_que_andou" id="andou" data-label="Idade que andou">
+        </label>
+
+        <label for="bicicleta"> Andou de bicicleta:
+        <input type="text" name="idade_que_andou_de_bicicleta" id="bicicleta" data-label="Idade que andou de bicicleta">
+        </label>
+
+        <h2>Controle Urinário Noturno</h2>
+        <label>Com que idade a criança teve controle da enurese(urinar na roupa/cama)? <input type="text" name="idade_controle_encoprese" id="idade_controle_encoprese" data-label="Com que idade a criança teve controle da enurese(urinar na roupa/cama)?"></label>
+
+        <p>A criança já permaneceu seca durante a noite por 6 meses consecutivos?</p>
+        <label>
+          <input type="radio" name="controle_noturno" value="sim" data-label="Já ficou seca a noite por mais de 6 meses"> Sim
+        </label>
+
+        <label>
+          <input type="radio" name="controle_noturno" value="nao" data-label="Já ficou seca a noite por mais de 6 meses"> Não
+        </label>
+
+        <h2>Classificação do quadro</h2>
+        <label for="enurese_primaria"><input type="radio" name="classificacao_enurese" id="enurese_primaria" value="enurese_primaria" data-label="Enurese primária (nunca houve controle noturno prolongado)"> Enurese primária (nunca houve controle noturno prolongado)
+       
+        </label>
+
+        <label for="enurese_secundaria">
+        <input type="radio" name="classificacao_enurese" id="enurese_secundaria" data-target="fatores_associados" id="enurese_secundaria" data-label="Enurese secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)"> Enurese secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)
+        </label>
+
+        <div id="fatores_associados" class="ocultar">
+          <label for="motivo_enurese">Houve algum evento ou mudança significativa antes do início do quadro?</label>
+          <textarea id="motivo_enurese" name="motivo_enurese"></textarea>
+        </div>
+
+         <h2>Controle Intestinal</h2>
+        <label>Com que idade a criança teve controle da encoprese(sujar a roupa com fezes)? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese" data-label="Com que idade a criança teve controle da encoprese(sujar a roupa com fezes)?"></label>
+
+        <p>A criança já manteve controle intestinal por 6 meses consecutivos?</p>
+        <label>
+          <input type="radio" name="controle_encoprese" value="sim" data-label="Sim"> Sim
+        </label>
+
+        <label>
+          <input type="radio" name="controle_encoprese" value="nao" data-label="Não"> Não
+        </label>
+
+        <h2>Classificação do quadro</h2>
+        <label for="encoprese_primaria"><input type="radio" name="classificacao_encoprese" id="encoprese_primaria" value="encoprese_primaria" data-label="Encoprese primária (nunca houve controle noturno prolongado)"> Encoprese primária (nunca houve controle noturno prolongado)
+       
+        </label>
+
+        <label for="encoprese_secundaria">
+        <input type="radio" name="classificacao_encoprese" id="encoprese_secundaria" data-target="fatores_associados_encoprese" value="encoprese_secundaria" data-label="Encoprese secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)"> Encoprese secundária (houve controle por pelo menos 6 meses e voltou a ocorrer)
+        </label>
+
+        <div id="fatores_associados_encoprese" class="ocultar">
+          <label for="motivo_encoprese">Houve algum evento ou mudança significativa antes do início do quadro?</label>
+          <textarea id="motivo_encoprese" name="motivo_encoprese"></textarea>
+        </div>
+
+
+        <p>Qual mão usa para comer?</p>
+        <label for="direita"><input type="radio" name="mao_comer" value="direita" id="direita" data-label="Direita"> Direita</label>
+        <label for="esquerda"><input type="radio" name="mao_comer" value="esquerda" id="esquerda" data-label="Esquerda"> Esquerda</label>
+
+        <p>Qual pé utiliza para chutar?</p>
+        <label for="pe_direito"><input type="radio" name="pe_chutar" value="pe_direito" id="pe_direito" data-label="Direito"> Direito</label>
+        <label for="pe_esquerdo"><input type="radio" name="pe_chutar" value="pe_esquerdo" id="pe_esquerdo" data-label="Esquerdo"> Esquerdo</label>
+
+        <p>Se veste sozinho?</p>
+        <label for="vestir_sim"><input type="radio" id="vestir_sim" name="se_veste_sozinha" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="vestir_nao"><input type="radio" id="vestir_nao" name="se_veste_sozinha" value="nao" data-target="dificuldade_vestir" data-label="Não"> Não</label>
+
+        <div id="dificuldade_vestir" class="ocultar">
+          <label for="motivo_vestir">Explique:</label>
+          <textarea name="motivo_vestir" id="motivo_vestir"></textarea>
+        </div>
+
+        <p>Toma banho sozinho?</p>
+
+        <label for="banho_sim"><input type="radio" name="toma_banho_sozinha" id="banho_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="banho_nao"><input type="radio" name="toma_banho_sozinha" id="banho_nao" value="nao" data-target="tomar_banho" data-label="Não"> Não</label>
+
+         <div id="tomar_banho" class="ocultar">
+          <label for="descricao_ajuda_banho">Explique:</label>
+          <textarea name="descricao_ajuda_banho" id="descricao_ajuda_banho"></textarea>
+        </div>
+
+        <p>Quando se fere pede ajuda?</p>
+
+        <label for="ferimento_sim"><input type="radio" name="pede_ajuda_quando_se_fere" id="ferimento_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="ferimento_nao"><input type="radio" name="pede_ajuda_quando_se_fere" id="ferimento_nao" value="nao" data-target="fere_pede_ajuda" data-label="Não"> Não</label>
+
+         <div id="fere_pede_ajuda" class="ocultar">
+          <label for="descricao_ajuda_ferimento">Explique:</label>
+          <textarea name="descricao_ajuda_ferimento" id="descricao_ajuda_ferimento"></textarea>
+        </div>
+      
+        <p>Quando está com fome pede ajuda?</p>
+
+        <label for="fome_sim"><input type="radio" name="pede_ajuda_quando_esta_com_fome" id="fome_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="fome_nao"><input type="radio" name="pede_ajuda_quando_esta_com_fome" id="fome_nao" value="nao" data-target="fome_pede_ajuda" data-label="Não"> Não</label>
+
+        <div id="fome_pede_ajuda" class="ocultar">
+          <label for="descricao_ajuda_comer">Explique:</label>
+          <textarea name="descricao_ajuda_comer" id="descricao_ajuda_comer"></textarea>
+        </div>
+
+        <p>Quando quer algo pede ajuda?</p>
+
+        <label for="ajuda_sim"><input type="radio" name="pede_ajuda_quando_quer_algo" id="ajuda_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="ajuda_nao"><input type="radio" name="pede_ajuda_quando_quer_algo" id="ajuda_nao" value="nao" data-target="pede_ajuda_algo" data-label="Não"> Não</label>
+
+        <div id="pede_ajuda_algo" class="ocultar">
+          <label for="descricao_ajuda_algo">Explique:</label>
+          <textarea name="descricao_ajuda_algo" id="descricao_ajuda_algo"></textarea>
+        </div>
+
+        <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+        <h2>Hábitos alimentares</h2>
+        <p>A criança tem horários  para se alimentar</p>
+        <label for="hora_sim"><input type="radio" name="tem_horario_para_se_alimentar" id="hora_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="hora_nao"><input type="radio" name="tem_horario_para_se_alimentar" id="hora_nao" value="nao" data-label="Não"> Não</label>
+        
+        <p>A criança respeita os horários ?</p>
+        <label for="respeita_sim"><input type="radio" name="respeita_os_horarios_da_alimentacao" id="respeita_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="respeita_nao"><input type="radio" name="respeita_os_horarios_da_alimentacao" id="respeita_nao" value="nao" data-label="Não"> Não</label>
+
+        <p>A criança faz as refeições  junto com outros familiares?</p>
+        <label for="junto_sim"><input type="radio" name="faz_refeicoes_com_a_familia" id="junto_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="junto__nao"><input type="radio" name="faz_refeicoes_com_a_familia" id="junto__nao" value="nao" data-label="Não"> Não</label>
+
+        <p>A criança recusa-se a comer?</p>
+        <label for="comer_sim"><input type="radio" name="recusa_se_a_comer" id="comer_sim" value="sim" data-label="Sim"> Sim</label>
+
+        <label for="comer_nao"><input type="radio" name="recusa_se_a_comer" id="comer_nao" value="nao" data-label="Não"> Não</label>
+
+        <p>Como é a alimentação da criança?</p>
+        <label><input type="radio" name="alimentacao_crianca" value="otima" data-label="Ótima, come bem"> Ótima, come bem</label>
+        <label><input type="radio" name="alimentacao_crianca" value="boa" data-label="Boa"> Boa</label>
+        <label><input type="radio" name="alimentacao_crianca" value="regular" data-label="Regular"> Regular</label>
+        <label><input type="radio" name="alimentacao_crianca" value="pessima" data-label="Péssima"> Péssima</label>
+
+        <p>Quem oferece a comida à criança?</p>
+        <label for="oferece_mae"><input type="radio" name="oferece_comida" id="oferece_mae" value="mae" data-label="Mãe"> Mãe</label>
+
+        <label for="oferece_pai"><input type="radio" name="oferece_comida" id="oferece_pai" value="pai" data-label="Pai"> Pai</label>
+
+        <label for="oferece_irmao"><input type="radio" name="oferece_comida" id="oferece_irmao" value="irmao" data-label="Irmão"> Irmão</label>
+
+        <label for="ofere_outros"><input type="radio" name="oferece_comida" id="ofere_outros" value="outros" data-label="Outros"> Outros</label>
+
+        <div id="preferencias_alimentares">
+          <label for="preferencias">Quais são suas preferêcias alimentares:</label>
+          <textarea class="observacoes" name="preferencias_alimentares" id="preferencias"></textarea>
+        </div>
+
+        <p>A criança está com dificuldades em relação ao peso?</p>
+
+        <label for="peso_sim"><input type="radio" name="tem_dificuldade_relacionada_ao_peso" id="peso_sim" value="sim" data-target="peso_carcteristicas" data-label="Sim"> Sim</label>
+
+        <label for="peso_nao"><input type="radio" name="tem_dificuldade_relacionada_ao_peso" id="peso_nao" value="nao" data-label="Não"> Não</label>
+
+        <div id="peso_carcteristicas" class="ocultar">
+          <label for="caracteristicas">Diga se o peso está acima  ou abaixo:</label>
+          <textarea name="descricao_da_situacao_do_peso" id="caracteristicas"></textarea>
+        </div>
+
+        <div class="button-step">
+          <button type="button" class="voltar">Voltar</button>
+          <button type="button" class="proximo">Próximo</button>
+        </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Sono da Criança</h2>
+            <p>A criança dorme sozinha?</p>
+            <label for="dorme_sim"><input type="radio" name="como_dorme" id="dorme_sim" value="sim" data-label="Sim"> Sim</label>
+
+            <label for="dorme_nao"><input type="radio" name="como_dorme" id="dorme_nao" value="nao" data-label="Não"> Não</label>
+
+            <label for="dorme_irmaos"><input type="radio" name="como_dorme" id="dorme_irmaos" value="irmaos" data-label="Com irmãos"> Com irmãos</label>
+
+            <label for="dorme_pais"><input type="radio" name="como_dorme" id="dorme_pais" value="pais" data-label="Com os pais"> Com os pais</label>
+
+            <label for="dorme_mae"><input type="radio" name="como_dorme" id="dorme_mae" value="mae" data-label="Com a mãe"> Com a mãe</label>
+
+            <label for="dorme_outros"><input type="radio" name="como_dorme" id="dorme_outros" value="outros" data-target="dorme_com_outros" data-label="Com outros"> Com outros</label>
+
+            <div id="dorme_com_outros" class="ocultar">
+              <label for="dorme_outro">Com quem?<input type="text" name="dorme_outro" id="dorme_outro" data-label="Com quem?"></input></label>
+              
+            </div>
+
+            <p>A criança tem o próprio quarto?</p>
+            <label for="quarto_sim"><input type="radio" name="tem_quarto_proprio" id="quarto_sim" value="sim" data-label="Sim"> Sim</label>
+
+            <label for="quarto_nao"><input type="radio" name="tem_quarto_proprio" id="quarto_nao" value="nao" data-label="Não"> Não</label>
+
+            <p>Dorme com outros irmãos?</p>
+            
+            <label for="irmao_sim"><input type="radio" name="dorme_com_irmaos" id="irmao_sim" value="sim" data-label="Sim"> Sim</label>
+
+            <label for="irmao_nao"><input type="radio" name="dorme_com_irmaos" id="irmao_nao" value="nao" data-label="Não"> Não</label>
+
+            <p>A criança se levanta durante a noite e vai para o quarto dos pais?</p>
+            <label for="dorme_pais_sim"><input type="radio" name="vai_para_o_quarto_dos_pais_durante_a_noite" id="dorme_pais_sim" value="sim" data-target="descriacao_mudanca_quarto" data-label="Sim"> Sim</label>
+
+            <label for="dorme_pais_nao"><input type="radio" name="vai_para_o_quarto_dos_pais_durante_a_noite" id="dorme_pais_nao" value="nao" data-label="Não"> Não</label>
+
+            <div id="descriacao_mudanca_quarto" class="ocultar">
+              <label for="atitude_pais"> Qual a atitude dos pais?</label>
+              <textarea name="atitude_pais" id="atitude_pais"></textarea>
+            </div>
+
+            <p>A criança tem pesadelos?</p>
+            <label for="pesadelo_sim"><input type="radio" name="tem_pesadelos" id="pesadelo_sim" value="sim" data-target="descricao_pesadelos" data-label="Sim"> Sim</label>
+
+            <label for="pesadelo_nao"><input type="radio" name="tem_pesadelos" id="pesadelo_nao" value="nao" data-label="Não"> Não</label>
+
+            <div id="descrica_pesadelos" class="ocultar">
+            <label for="pesadelo"> Qual a atitude dos pais?</label>
+            <textarea name="tem_pesadelos" id="pesadelo"></textarea>
+            </div>
+
+        
+            <div id="descricao_pesadelos" class="ocultar">
+              <p>Qual a frequência que tem pesadelos?</p>
+
+              <label for="frequencia_as_vezes"><input type="radio" name="frequencia_dos_pesadelos" id="frequencia_as_vezes" value="sim" data-label="As vezes"> As vezes</label>
+
+              <label for="frequencia_sempre"><input type="radio" name="frequencia_dos_pesadelos" id="frequencia_sempre" value="nao" data-label="Frequentemente"> Frequentemente</label>
+
+              <div>
+                <label for="atitude_freque"> Qual a atitude dos pais?</label>
+                <textarea name="atitude_freque" id="atitude_freque"></textarea>
+              </div>
+
+              <div>
+                <label for="tema"> Qual o tema mais frequente do pesadelo?</label>
+                <textarea name="tema" id="tema"></textarea>
+              </div>
+            </div>
+
+            <p>Qual a qualidade de sono da criança?</p>
+            <label for="qualidade_sono_pessimo"><input type="radio" name="qualidade_sono" id="qualidade_sono_pessimo" value="pessimo" data-label="Péssimo"> Péssimo</label>
+
+            <label for="qualidade_sono_regular"><input type="radio" name="qualidade_sono" id="qualidade_sono_regular" value="regular" data-label="Regular"> Regular</label>
+
+            <label for="qualidade_sono_bom"><input type="radio" name="qualidade_sono" id="qualidade_sono_bom" value="bom" data-label="Bom"> Bom</label>
+
+            <label for="qualidade_sono_otimo"><input type="radio" name="qualidade_sono" id="qualidade_sono_otimo" value="otimo" data-label="Ótimo"> Ótimo</label>
+
+            <p>Selecione as características que melhor descrevem o sono da criança:</p>
+            <label for="acorda_olheiras"><input type="checkbox" name="descricao_sono_crianca[]" id="acorda_olheiras" data-label="Acorda com olheiras, irritada, não quer levantar"> Acorda com olheiras, irritada, não quer levantar</label>
+
+            <label for="dificuldade_sono"><input type="checkbox" name="descricao_sono_crianca[]" id="dificuldade_sono" data-label="Tem dificuldade para conciliar sono"> Tem dificuldade para conciliar sono</label>
+
+            <label for="sono_regular"><input type="checkbox" name="descricao_sono_crianca[]" id="sono_regular" data-label="Regular, dorme rapidamente, mas levanta-se ou agita-se muito rápido durante a noite"> Regular, dorme rapidamente, mas levanta-se ou agita-se muito rápido durante a noite</label>
+
+            <label for="dificuldade_conciliar_sono"><input type="checkbox" name="descricao_sono_crianca[]" id="dificuldade_conciliar_sono" data-label="Tem dificuldade para conciliar sono, mas depois dorme rapidamente"> Tem dificuldade para conciliar sono, mas depois dorme rapidamente</label>
+
+            <label for="facilidade_sono"><input type="checkbox" name="descricao_sono_crianca[]" id="facilidade_sono" data-label="Dorme sempre pesadamente"> Dorme sempre pesadamente</label>
+
+            <div class="button-step">
+              <button type="button" class="voltar">Voltar</button>
+              <button type="button" class="proximo">Próximo</button>
+            </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Saúde Geral</h2>
+          <p>Qual a saúde geral da criança atualmente?</p>
+            <label for="saude-atual_otimo"><input type="radio" name="saude_atual_da_crianca" id="saude-atual_otimo" value="otimo" data-label="Ótimo"> Ótimo</label>
+
+            <label for="saude-atual_bom"><input type="radio" name="saude_atual_da_crianca" id="saude-atual_bom" value="bom" data-label="Bom"> Bom</label>
+
+            <label for="saude-atual_regular"><input type="radio" name="saude_atual_da_crianca" id="saude-atual_regular" value="regular" data-label="Regular"> Regular</label>
+
+            <label for="saude-atual_pessimo"><input type="radio" name="saude_atual_da_crianca" id="saude-atual_pessimo" value="pessimo" data-label="Péssimo"> Péssimo</label>             
+
+            <div class="detalhes_doencas">
+              <div class="doencas_importantes">
+                <label for="doenca_importante_medicamentos">Doença importante registrada e uso de medicamentos:</label>
+                <textarea name="doenca_importante_medicamentos" id="doenca_importante_medicamentos"></textarea>
+              </div>
+
+               <div class="doencas_importantes">
+                 <p>Medicações usadas atualmente?</p>
+                 <label for="medicacoes_sim"><input type="radio" name="usa_medicacoes_atualmente" id="medicacoes_sim" value="sim" data-target="medicacoes_atuais" data-label="Sim"> Sim</label>
+                 <label for="medicacoes_nao"><input type="radio" name="usa_medicacoes_atualmente" id="medicacoes_nao" value="nao" data-label="Não"> Não</label>
+                 
+                <div id="medicacoes_atuais" class="ocultar">
+                  <label for="medicamentos_atuais">Quais?</label>
+                  <textarea name="medicamentos_atuais" id="medicamentos_atuais"></textarea></div>
+                </div>
+                             
+                  <label for="doenca_crinca">Como a criança enfrentou os problemas de saúde?
+                  <input type="text" name="como_a_crianca_enfrentou_os_problemas_de_saude" id="doenca_crinca" data-label="Como a criança enfrentou os problemas de saúde?">
+                  </label>
+    
+                  <label for="doenca_pais">Como os pais enfrentaram os problemas de saúde?
+                  <input type="text" name="como_os_pais_enfrentaram_os_problemas_de_saude" id="doenca_pais" data-label="Como os pais enfrentaram os problemas de saúde?">
+                  </label>
+               </div>
+
+              <p>Alguma cirurgia importante?</p>              
+              <label for="cirurgia_sim"><input type="radio" name="ja_teve_cirurgia_importante" id="cirurgia_sim" value="sim" data-target="descricao_cirurgia" data-label="Sim"> Sim</label>
+
+              <label for="cirurgia_nao"><input type="radio" name="ja_teve_cirurgia_importante" id="cirurgia_nao" value="nao" data-label="Não"> Não</label>
+
+               <div id="descricao_cirurgia" class="ocultar">
+                <label for="descricao_cirurgia">Que tipo de cirurgia e com que idade ocorreu?</label>
+                <textarea name="descricao_cirurgia" id="descricao_cirurgia"></textarea>
+               </div>
+
+              <p>Já teve convulsões?</p>
+              <label for="convulsoes_sim"><input type="radio" name="ja_teve_convulsoes" id="convulsoes_sim" value="sim" data-target="detalhes_convulsao" data-label="Sim"> Sim</label>
+
+              <label for="convulsoes_nao"><input type="radio" name="ja_teve_convulsoes" id="convulsoes_nao" value="nao" data-label="Não"> Não</label>
+             
+              <div id="detalhes_convulsao" class="ocultar">
+                <label for="descricao_convulsao">Quando?</label>
+                <textarea name="descricao_convulsao" id="descricao_convulsao"></textarea>
+              </div>
+
+              <p>Já teve desmaios?</p>           
+              <label for="desmaios_sim"> <input type="radio" name="ja_teve_desmaios" id="desmaios_sim" value="sim" data-target="detalhes_desmaio" data-label="Sim"> Sim</label>
+
+              
+              <label for="desmaios_nao"><input type="radio" name="ja_teve_desmaios" id="desmaios_nao" value="nao" data-label="Não"> Não</label>
+              
+              <div id="detalhes_desmaio" class="ocultar">
+                <label for="descricao_desmaio">Quando?</label>
+                <textarea name="descricao_desmaio" id="descricao_desmaio"></textarea>
+              </div>
+             
+              <p>Já ficou em coma por algum motivo?</p>
+              <label for="ficar_coma_sim"><input type="radio" name="ja_ficou_em_coma" id="ficar_coma_sim" value="sim" data-target="detalhes_coma" data-label="Sim"> Sim</label>
+
+              
+              <label for="ficar_coma_nao"><input type="radio" name="ja_ficou_em_coma" id="ficar_coma_nao" value="nao" data-label="Não"> Não</label>
+              
+              <div id="detalhes_coma" class="ocultar">
+                <label for="descricao_coma">Quando e quanto tempo?</label>
+                <textarea name="descricao_coma" id="descricao_coma"></textarea>
+              </div>
+
+              <div class="button-step">
+                <button type="button" class="voltar">Voltar</button>
+                <button type="button" class="proximo">Próximo</button>
+              </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Quais tipos de tratamento de que a criança já necessitou ou necessita?</h2>
+
+          <p>Fonoaudiologia?</p>
+          <label><input type="radio" name="ja_fez_fonoaudiologia" value="sim" data-target="detalhes_fono" data-label="Sim"> Sim</label>
+
+          <label><input type="radio" name="ja_fez_fonoaudiologia" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_fono" class="ocultar">
+            <label for="motivo_fono">Qual motivo?
+            <input type="text" name="motivo_do_tratamento_fonoaudiologico" data-label="Qual motivo?">
+            </label>
+
+            <label for="tratamento_fono">Quanto tempo de tratamento?
+            <input type="text" name="tempo_de_tratamento_fonoaudiologico" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label for="nome_fono">Qual o nome da profissional?
+            <input type="text" name="nome_da_fonoaudiologa" id="nome_fono" data-label="Qual o nome da profissional?">
+            </label>
+
+            <p>Houve melhora?</p>
+            <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="sim" data-label="Sim"> Sim</label>
+
+           <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="nao" data-label="Não"> Não</label>
+
+            <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="regular" data-label="Regular"> Regular</label>
+          </div>
+
+          <p>Terapia ocupacional?</p>
+          <label><input type="radio" name="ja_fez_terapia_ocupacional" value="sim" data-target="detalhes_terapeuta_ocupacional" data-label="Sim"> Sim</label>
+
+          <label><input type="radio" name="ja_fez_terapia_ocupacional" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_terapeuta_ocupacional" class="ocultar">
+            <label for="motivo_terapeuta_ocupacional">Qual motivo?
+            <input type="text" name="motivo_terapia_ocupacional" data-label="Qual motivo?">
+            </label>
+
+            <label for="tratamento_terapeuta_ocupacional">Quanto tempo de tratamento?
+            <input type="text" name="tempo_tratamento_terapia_ocupacional" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label for="nome_terapeuta_ocupacional">Qual o nome da profissional?
+            <input type="text" name="nome_profissional_terapia_ocupacional" data-label="Qual o nome da profissional?">
+            </label>
+
+            <p>Houve melhora?</p>
+            <label><input type="radio" name="resultado_terapia_ocupacional" value="sim" data-label="Sim"> Sim</label>
+
+           <label><input type="radio" name="resultado_terapia_ocupacional" value="nao" data-label="Não"> Não</label>
+
+            <label><input type="radio" name="resultado_terapia_ocupacional" value="regular" data-label="Regular"> Regular</label>
+          </div>
+
+          <p>Fisioterapia?</p>
+          <label><input type="radio" name="ja_fez_fisioterapia" value="sim" data-target="detalhes_fisio" data-label="Sim"> Sim</label>
+
+          <label><input type="radio" name="ja_fez_fisioterapia" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_fisio" class="ocultar">
+            <label>Qual motivo?
+            <input type="text" name="motivo_fisioterapia" data-label="Qual motivo?">
+            </label>
+
+            <label>Quanto tempo de tratamento?
+            <input type="text" name="tempo_tratamento_fisioterapia" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label>Qual o nome da profissional?
+            <input type="text" name="nome_profissional_fisioterapia" data-label="Qual o nome da profissional?">
+            </label>
+
+            <p>Houve melhora?</p>
+            <label><input type="radio" name="resultado_fisioterapia" data-label="Sim"> Sim</label>
+
+           <label><input type="radio" name="resultado_fisioterapia" data-label="Não"> Não</label>
+
+            <label><input type="radio" name="resultado_fisioterapia" data-label="Regular"> Regular</label>
+          </div>
+
+          <p>Psicoterapia?</p>
+          <label for="psicoterapia_sim"><input type="radio" name="ja_fez_psicoterapia" id="psicoterapia_sim" value="sim" data-target="detalhes_psico" data-label="Sim"> Sim</label>
+
+          <label for="psicoterapia_nao"><input type="radio" name="ja_fez_psicoterapia" id="psicoterapia_nao" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_psico" class="ocultar">
+            <label for="motivo_psico">Qual motivo?
+            <input type="text" name="motivo_psicoterapia" id="motivo_psico" data-label="Qual motivo?">
+            </label>
+
+            <label for="tratamento_psico">Quanto tempo de tratamento?
+            <input type="text" name="tempo_tratamento_psicoterapia" id="tratamento_psico" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label for="nome_psico">Qual o nome da profissional?
+            <input type="text" name="nome_profissional_psicoterapia" id="nome_psico" data-label="Qual o nome da profissional?">
+            </label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_psico_sim"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_sim" data-label="Sim"> Sim</label>
+
+           <label for="melhora_psico_nao"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_nao" data-label="Não"> Não</label>
+
+            <label for="melhora_psico_regular"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_regular" data-label="Regular"> Regular</label>
+          </div>
+
+          <p>Psicopedagoga?</p>
+          <label for="psicopedagoga_sim"><input type="radio" name="psicopedagoga" id="psicopedagoga_sim" value="sim" data-target="detalhes_psico_pedagoga" data-label="Sim"> Sim</label>
+
+          <label for="psicopedagoga_nao"><input type="radio" name="psicopedagoga" id="psicopedagoga_nao" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_psico_pedagoga" class="ocultar">
+            <label for="motivo_psico_pedago">Qual motivo?
+            <input type="text" name="motivo_psico_pedago" id="motivo_psico_pedago" data-label="Qual motivo?">
+            </label>
+
+            <label for="tratamento_psico_pedago">Quanto tempo de tratamento?
+            <input type="text" name="tratamento_psico_pedago" id="tratamento_psico_pedago" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label for="nome_psico_pedago">Qual o nome da profissional?
+            <input type="text" name="nome_psico_pedago" id="nome_psico_pedago" data-label="Qual o nome da profissional?">
+            </label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_psico_pedago_sim"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_sim" data-label="Sim"> Sim</label>
+
+           <label for="melhora_psico_pedago_nao"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_nao" data-label="Não"> Não</label>
+
+            <label for="melhora_psico_pedago_regular"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_regular" data-label="Regular"> Regular</label>
+          </div>
+
+          <p>Psiquiatra?</p>
+          <label for="psiquiatra_sim"><input type="radio" name="psiquiatra" id="psiquiatra_sim" value="sim" data-target="detalhes_psiqui" data-label="Sim"> Sim</label>
+
+          <label for="psiquiatra_nao"><input type="radio" name="psiquiatra" id="psiquiatra_nao" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_psiqui" class="ocultar">
+            <label for="motivo_psiqui">Qual motivo?
+            <input type="text" name="motivo_psiqui" id="motivo_psiqui" data-label="Qual motivo?">
+            </label>
+
+            <label for="tratamento_psiqui">Quanto tempo de tratamento?
+            <input type="text" name="tratamento_psiqui" id="tratamento_psiqui" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label for="nome_psiqui">Qual o nome da profissional?
+            <input type="text" name="nome_psiqui" id="nome_psiqui" data-label="Qual o nome da profissional?">
+            </label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_psiqui_sim"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_sim" data-label="Sim"> Sim</label>
+
+           <label for="melhora_psiqui_nao"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_nao" data-label="Não"> Não</label>
+
+            <label for="melhora_psiqui_regular"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_regular" data-label="Regular"> Regular</label>
+          </div>
+
+          <p>Outros?</p>
+          <label for="outros_tratamentos_sim"><input type="radio" name="outros_tratamentos" id="outros_tratamentos_sim" value="sim" data-target="detalhes_outros" data-label="Sim"> Sim</label>
+
+          <label for="outros_tratamentos_nao"><input type="radio" name="outros_tratamentos" id="outros_tratamentos_nao" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_outros" class="ocultar">
+            <label for="motivo_outros">Qual motivo?
+            <input type="text" name="motivo_outros" id="motivo_outros" data-label="Qual motivo?">
+            </label>
+
+            <label for="tratamento_outros">Quanto tempo de tratamento?
+            <input type="text" name="tratamento_outros" id="tratamento_outros" data-label="Quanto tempo de tratamento?">
+            </label>
+
+            <label for="nome_outros">Qual o nome da profissional?
+              <input type="text" name="nome_outros" id="nome_outros" data-label="Qual o nome da profissional?">
+              </label>
+
+            <p>Houve melhora?</p>
+            <label for="melhora_outros_sim"><input type="radio" name="melhora_outros" id="melhora_outros_sim" data-label="Sim"> Sim</label>
+
+           <label for="melhora_outros_nao"><input type="radio" name="melhora_outros" id="melhora_outros_nao" data-label="Não"> Não</label>
+
+            <label for="melhora_outros_regular"><input type="radio" name="melhora_outros" id="melhora_outros_regular" data-label="Regular"> Regular</label>
+          </div>
+
+          <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Vida Acadêmica da Criança</h2>
+          <P>Com quantos anos a criança iniciou a vida escolar?</P>         
+            <label for="1_anos"><input type="radio" name="inicio_escola" id="1_anos" value="1_ano" data-label="1 ano"> 1 ano</label>
+            <label for="2_anos"><input type="radio" name="inicio_escola" id="2_anos" value="2_anos" data-label="2 anos"> 2 anos</label>
+            <label for="3_anos"><input type="radio" name="inicio_escola" id="3_anos" value="3_anos" data-label="3 anos"> 3 anos</label>
+            <label for="4_anos"><input type="radio" name="inicio_escola" id="4_anos" value="4_anos" data-label="4 anos"> 4 anos</label>
+            <label for="5_anos"><input type="radio" name="inicio_escola" id="5_anos" value="5_anos" data-label="5 anos"> 5 anos</label>
+            <label for="6_anos"><input type="radio" name="inicio_escola" id="6_anos" value="6_anos" data-label="6 anos"> 6 anos</label>
+            <label for="7_anos"><input type="radio" name="inicio_escola" id="7_anos" value="7_anos" data-label="7 anos"> 7 anos</label>
+            <label for="outra_idade"><input type="radio" name="inicio_escola" id="outra_idade" value="outra_idade" data-label="Outra idade"> Outra idade</label>
+
+            <p>A criança cursou?</p>
+              <label for="maternal">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="maternal" value="maternal" data-target="detalhes_maternal" data-label="Maternal">
+                Maternal
+              </label>
+              </div>
+
+              <div id="detalhes_maternal" class="ocultar">
+                <label for="onde_maternal">Qual escola?
+                  <input type="text" name="escola_do_maternal" id="onde_maternal" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="jardim_I">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="jardim_I" value="jardim_I" data-target="detalhes_jardim_I" data-label="Jardim I">
+                Jardim I
+              </label>
+
+              <div id="detalhes_jardim_I" class="ocultar">
+                <label for="onde_jardimI">Qual escola?
+                  <input type="text" name="escola_do_jardim_1" id="onde_jardimI" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="jardim_II">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="jardim_II" value="jardim_II" data-target="detalhes_jardim_II" data-label="Jardim II">
+                Jardim II
+              </label>
+
+              <div id="detalhes_jardim_II" class="ocultar">
+                <label for="ondejardimII">Qual escola?
+                  <input type="text" name="escola_do_jardim_2" id="ondejardimII" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="jardim_III">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="jardim_III" value="jardim_III" data-target="detalhes_jardim_III" data-label="Jardim III">
+                Jardim III
+              </label>
+
+              <div id="detalhes_jardim_III" class="ocultar">
+                <label for="onde_jardimIII">Qual escola?
+                  <input type="text" name="escola_do_jardim_3" id="onde_jardimIII" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="pre_escola">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="pre_escola" value="pre_escola" data-target="detalhes_pre_escola" data-label="Pré escola">
+                Pré escola
+              </label>
+
+              <div id="detalhes_pre_escola" class="ocultar">
+                <label for="onde_preescola">Qual escola?
+                  <input type="text" name="escola_da_pre_escola" id="onde_preescola" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="primeira_serie">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="primeira_serie" value="primeira_serie" data-target="detalhes_primeira_serie" data-label="1ª série">
+                1ª série
+              </label>
+
+              <div id="detalhes_primeira_serie" class="ocultar">
+                <label for="onde_primeiraSerie">Qual escola?
+                  <input type="text" name="escola_da_primeira_serie" id="onde_primeiraSerie" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="segunda_serie">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="segunda_serie" value="segunda_serie" data-target="detalhes_segunda_serie" data-label="2ª série">
+                2ª série
+              </label>
+
+              <div id="detalhes_segunda_serie" class="ocultar">
+                <label for="onde_segundaSerie">Qual escola?
+                  <input type="text" name="escola_da_segunda_serie" id="onde_segundaSerie" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="terceira_serie">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="terceira_serie" value="terceira_serie" data-target="detalhes_terceira_serie" data-label="3ª série">
+                3ª série
+              </label>
+
+              <div id="detalhes_terceira_serie" class="ocultar">
+                <label for="onde_terceiraSerie">Qual escola?
+                  <input type="text" name="escola_da_terceira_serie" id="onde_terceiraSerie" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="quarta_serie">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="quarta_serie" value="quarta_serie" data-target="detalhes_quarta_serie" data-label="4ª série">
+                4ª série
+              </label>
+
+              <div id="detalhes_quarta_serie" class="ocultar">
+                <label for="onde_quartaSerie">Qual escola?
+                  <input type="text" name="escola_da_quarta_serie" id="onde_quartaSerie" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="quinta_serie">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="quinta_serie" value="quinta_serie" data-target="detalhes_quinta_serie" data-label="5ª série">
+                5ª série
+              </label>
+
+              <div id="detalhes_quinta_serie" class="ocultar">
+                <label for="onde_quintaSerie">Qual escola?
+                  <input type="text" name="escola_da_quinta_serie" id="onde_quintaSerie" data-label="Qual escola?">
+                </label>
+              </div>
+
+              <label for="sexta_serie">
+                <input type="checkbox" name="etapas_escolares_cursadas[]" id="sexta_serie" value="sexta_serie" data-target="detalhes_sexta_serie" data-label="6ª série">
+                6ª série
+              </label>
+
+              <div id="detalhes_sexta_serie" class="ocultar">
+                <label for="onde_sextaSerie">Qual escola?
+                  <input type="text" name="escola_da_sexta_serie" id="onde_sextaSerie" data-label="Qual escola?">
+                </label>
+              </div>
+          <p>Já reprovou?</p>
+          <label for="reprovou_sim"><input type="radio" name="ja_reprovou_na_escola" id="reprovou_sim" data-label="A criança já reprovou"> Sim</label>
+
+          <label for="reprovou_nao"><input type="radio" name="ja_reprovou_na_escola" id="reprovou_nao" data-label="A criança já reprovou"> Não</label>
+
+          <div id="detalhes_reprovacao" class="ocultar">
+            <label for="quando_reprovou">Quais séries reprovou?
+            <input type="text" name="quando_reprovou" id="quando_reprovou" data-label="Quais séries reprovou">
+            </label>
+            <label for="motivos_reprovou">Quais motivos da reprovação?
+            <input type="text" name="motivos_reprovou" id="motivos_reprovou" data-label="Quais motivos da reprovação">
+            </label>
+            <label for="reacao_crianca">Qual a reação da criança?
+            <input type="text" name="reacao_crianca" id="reacao_crianca" data-label="Qual a reação da criança com a reprovação">
+            </label>
+            <label for="reacao_pais">Qual a reação dos pais?
+            <input type="text" name="reacao_pais" id="reacao_pais" data-label="Qual a reação dos pais com a reprovação">
+            </label>
+          </div>
+
+          <p>Qual o tipo de dificuldade da criança?</p>
+          <label><input type="radio" name="dificuldade_escolar" value="leitura" data-label="Qual o tipo de dificuldade da criança"> Leitura</label>
+          <label><input type="radio" name="dificuldade_escolar" value="escrita" data-label="Qual o tipo de dificuldade da criança"> Escrita</label>
+          <label><input type="radio" name="dificuldade_escolar" value="matematica" data-label="Qual o tipo de dificuldade da criança"> Matemática</label>
+          <label><input type="radio" name="dificuldade_escolar" value="outras" data-label="Qual o tipo de dificuldade da criança"> Outros</label>
+
+          <p>Quais matérias a criança tem dificuldade?</p>
+            <label><input type="checkbox" name="difi_matematia" id="difi_matematia" value="matematica" data-label="Quais matérias a criança tem dificuldade"> Matemática</label>
+            <label><input type="checkbox" name="difi_portugues" id="difi_portugues" value="portugues" data-label="Quais matérias a criança tem dificuldade"> Português</label>
+            <label><input type="checkbox" name="difi_ciencias" id="difi_ciencias" value="ciencias" data-label="Quais matérias a criança tem dificuldade"> Ciências</label>
+            <label><input type="checkbox" name="difi_historia" id="difi_historia" value="historia" data-label="Quais matérias a criança tem dificuldade"> História</label>
+            <label><input type="checkbox" name="difi_geografia" id="difi_geografia" value="geografia" data-label="Quais matérias a criança tem dificuldade"> Geografia</label>
+            <label><input type="checkbox" name="difi_ingles" id="difi_ingles" value="ingles" data-label="Quais matérias a criança tem dificuldade">Inglês</label>
+            <label><input type="checkbox" name="difi_outra_lingua" id="difi_outa_lingua" value="outra_lingua" data-label="Quais matérias a criança tem dificuldade"> Outra língua</label>
+            <label><input type="checkbox" name="difi_outra" id="difi_outra" value="outra" data-label="Quais matérias a criança tem dificuldade"> Outra matéria</label>
+            
+          <div id="difi_outro" style="display: none;">
+            <label for="detalhes_difi">Diga qual: <textarea name="detalhes_desmaio" id="detalhes_difi" data-label="Quais outras matérias a criança tem dificuldade"></textarea></label>
+          </div>
+
+          <p>A criança sempre apresentou dificuldade ou passou a apresentar dificuldade na escola recentemente?</p>
+      
+          <label><input type="radio" name="apresentar_difi" value="sempre" data-label="Sempre"> Sempre</label>
+          <label><input type="radio" name="apresentar_difi" value="recentemente" data-label="Recentemente"> Recentemente</label>
+
+           <div id="detalhes_difi_escolar">
+            <p>Qundo a criança passou a apresentar dificuldade?</p>
+            <label><input type="radio" name="aprsentou_difi" value="I_serie" data-label="Quando a criança passou a apresentar dificuldade escolar"> 1ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="II_serie" data-label="Quando a criança passou a apresentar dificuldade escolar"> 2ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="III_serie" data-label="Quando a criança passou a apresentar dificuldade escolar"> 3ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="IV_serie" data-label="Quando a criança passou a apresentar dificuldade escolar"> 4ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="IV_serie" data-label="Quando a criança passou a apresentar dificuldade escolar"> 5ª série</label>
+
+            <label><input type="radio" name="aprsentou_difi" value="VI_serie" data-label="Quando a criança passou a apresentar dificuldade escolar"> 6ª série</label>
+           </div>
+
+           <p>Quais os motivos que possivelmente desencadearam a dificuldade?</p>
+           <span>Problemas emocionais:</span>
+           <label><input type="checkbox" name="perda" value="perda" data-label="Motivo emocional dificulade escolar"> Perda de alguém próximo</label>
+           <label><input type="checkbox" name="morte" value="morte" data-label="Motivo emocional dificulade escolar"> Morte de alguém próximo</label>
+           <label><input type="checkbox" name="nascimento_irmao" value="nascimento_irmao" data-label="Motivo emocional dificulade escolar"> Nascimento de um irmão</label>
+           <label><input type="checkbox" name="depressao" value="depressao" data-label="Motivo emocional dificulade escolar"> Depressão</label>
+           <label><input type="checkbox" name="ansiedade" value="ansiedade" data-label="Motivo emocional dificulade escolar"> Ansiedade</label>
+           <label><input type="checkbox" name="outro_emocao" value="outro_emocao" data-target="detalhe_emocao" data-label="Motivo emocional dificulade escolar"> Outros</label>
+
+           <div id="detalhe_emocao" class="ocultar">
+            <label for="outra_emocao"> Que outras emoções?<input type="text" name="outra_emocao" id="outra_emocao" data-label="Que outras emoções causaram dificuldade escolar"></label>
+           </div>
+
+           <span>Outros problemas:</span>
+
+           <label><input type="checkbox" name="mudanca_escola" value="mudou_escola" data-label="Outros motivos dificuldade escolar"> Mudou de escola</label>
+           <label><input type="checkbox" name="mudanca_professor" value="mudou_professor" data-label="Outros motivos dificuldade escolar"> Mudou de professor
+          </label>
+          <label><input type="checkbox" name="mudanca_cidade" value="mudou_cidade" data-label="Outros motivos dificuldade escolar"> Mudou de cidade</label>
+          <label><input type="checkbox" name="mudanca_casa" value="mudou_casa" data-label="Outros motivos dificuldade escolar"> Mudou de casa</label>
+          <label><input type="checkbox" name="mudanca_bairro" value="mudou_casa" data-label="Outros motivos dificuldade escolar"> Mudou de bairro</label>
+          <label><input type="checkbox" name="outro_problema" value="outros_problemas" data-target="detalhe_problema" data-label="Outros motivos dificuldade escolar"> Outros</label>
+           <div id="detalhe_problema" class="ocultar">
+            <label for="outra_problema"> Que outros problemas?<input type="text" name="outra_problema" id="outra_problema" data-label="Que outros motivos causaram dificuldade escolar"></label>
+           </div>
+
+           <p>Como é a letra da criança?</p>
+           <label><input type="radio" name="letra_pessima" data-label="Como é a letra da criança"> Péssima</label><label><input type="radio" name="letra_regular" data-label="Como é a letra da criança"> Regular</label><label><input type="radio" name="letra_boa" data-label="Como é a letra da criança"> Boa</label>
+
+           <p>A letra da criança apresenta:</p>
+           <p>Trocas de letras (substitui uma letra por outra ao escrever uma palavra)?</p>
+           <label><input type="radio" name="trocas_letras" value="sim" data-target="detalhes_letras" data-label="Trocas de letras"> Sim</label>
+
+            <label><input type="radio" name="trocas_letras" value="nao" data-label="Trocas de letras"> Não</label>
+
+           <div id="detalhes_letras" class="ocultar">
+            <label for="letras">Quais?<input type="text" name="letras" id="letras" data-label="Quais trocas de letras"></label>
+          </div>
+
+          <p>Omissões (deixa de escrever letras ou sílabas que deveriam estar na palavra)?</p>
+          <label><input type="radio" name="omissao_letra" value="sim" data-target="detalhes_omissoes" data-label="Omissões na escrita"> Sim</label>
+          <label><input type="radio" name="omissao_letra" value="nao" data-label="Omissões na escrita"> Não</label>
+   
+          <div id="detalhes_omissoes" class="ocultar">
+            <label>Quais?<input type="text" name="omissoes" id="omissoes" data-label="Quais omissões na escrita"></label>
+          </div>
+
+          <p>Aglutinações (junta palavras que deveriam estar separadas)?</p>
+          <label><input type="radio" name="aglutinacao_letra" value="sim" data-target="detalhes_aglutinacoes" data-label="Aglutinações na escrita"> Sim</label>
+          <label><input type="radio" name="aglutinacao_letra" value="nao" data-label="Aglutinaçoes na escrita"> Não</label>
+  
+          <div id="detalhes_aglutinacoes" class="ocultar">
+            <label>Quais?<input type="text" name="aglutinacoes" id="aglutinacoes" data-label="Quais palavras escreve com alglutinação"></label>
+          </div>
+          
+          <p>Escrita em espelho (escreve letras, números ou palavras invertidos)?</p>
+          <label><input type="radio" name="escrita_espelho" value="sim" data-target="detalhes_escrita_espelho" data-label="Escrita em espelho"> Sim</label>
+          <label><input type="radio" name="escrita_espelho" value="nao" data-label="Escrita em espelho"> Não</label>
+      
+          <div id="detalhes_escrita_espelho" class="ocultar">
+            <label>Quais?<input type="text" name="espelhos" id="espelhos" data-label="Quais palavras escreve em espelho"></label>
+          </div>
+
+          <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Dinâmica Familiar</h2>
+          <p>Qual o principal cuidador da criança?</p>
+          <label><input type="radio" name="principal_cuidador_da_crianca" value="mae" data-label="Qual o principal cuidador da criança"> Mãe</label>
+          <label><input type="radio" name="principal_cuidador_da_crianca" value="pai" data-label="Qual o principal cuidador da criança"> Pai</label>
+          <label><input type="radio" name="principal_cuidador_da_crianca" value="irmao" data-label="Qual o principal cuidador da criança"> Irmão</label>
+          <label><input type="radio" name="principal_cuidador_da_crianca" value="empregada" data-label="Qual o principal cuidador da criança"> Empregada</label>
+          <label><input type="radio" name="principal_cuidador_da_crianca" value="outro" data-label="Qual o principal cuidador da criança"> Outro</label>
+
+          <label> Com quem a criança se relaciona melhor?<input type="text" name="com_quem_a_crianca_se_relaciona_melhor" data-label="Com quem a criança se relaciona melhor"></label>
+
+          <label> Com quem a criança tem o relacionamento mais problemático?<input type="text" name="com_quem_a_crianca_tem_relacionamento_mais_dificil" data-label="Com quem a criança tem o relacionamento mais problemático"></label>
+
+          <label> Qual o motivo? <input type="text" name="motivo_do_relacionamento_mais_dificil" id="motivo_relacao" data-label="Qual o motivo de se relacionar assim com essa pessoa"></label>
+
+          <p>Os pais tem o hábito de brincar com a criança?</p>
+          <label><input type="radio" name="pais_costumam_brincar_com_a_crianca" data-target="vezes_brincadas_semana" data-label="Os pais tem o hábito de brincar com a criança"> Sim</label>
+          <label><input type="radio" name="pais_costumam_brincar_com_a_crianca" data-label="Os pais tem o hábito de brincar com a criança"> Não</label>
+
+          <div id="vezes_brincadas_semana">
+            <p>Quantas vezes por semana?</p>
+            <label><input type="radio" name="frequencia_semanal_de_brincadeiras_com_os_pais" value="uma" data-label="Frequência semanal de brincadeiras com os pais"> Uma vez</label>
+            <label><input type="radio" name="frequencia_semanal_de_brincadeiras_com_os_pais" value="duas" data-label="Frequência semanal de brincadeiras com os pais"> Duas vezes</label>
+            <label><input type="radio" name="frequencia_semanal_de_brincadeiras_com_os_pais" value="tres" data-label="Frequência semanal de brincadeiras com os pais"> Três vezes ou mais</label>
+            <label><input type="radio" name="frequencia_semanal_de_brincadeiras_com_os_pais" value="diariamente" data-label="Frequência semanal de brincadeiras com os pais"> Todos os dias</label>
+          </div>
+
+          <p>Quem brinca mais com a criança?</p>
+          <label><input type="radio" name="quem_brinca_mais_com_a_crianca" value="mae_brinca" data-label="Quem brinca mais com a criança"> Mãe</label>
+          <label><input type="radio" name="quem_brinca_mais_com_a_crianca" value="pai_brinca" data-label="Quem brinca mais com a criança"> Pai</label>
+          <label><input type="radio" name="quem_brinca_mais_com_a_crianca" value="os_dois_brinca" data-label="Quem brinca mais com a criança"> Os dois</label>
+          <label><input type="radio" name="quem_brinca_mais_com_a_crianca" value="irmaos" data-label="Quem brinca mais com a criança"> Irmãos</label>
+
+          <label>Que tipo de brincadeiras?<input type="text" name="frequencia_brincadeiras" data-label="Que tipo de brincadeiras a pessoa que mais brinca com a criança"></label>
+
+          <p>Os irmãos brincam com a criança?</p>
+          <label><input type="radio" name="irmao_brinca" value="irmao_brinca_sim" data-target="detalhes_brincadeiras" data-label="Os irmãos brincam com a criança"> Sim</label>
+          <label><input type="radio" name="irmao_brinca" value="irmao_brinca_nao" data-label="Os irmãos brincam com a criança"> Não</label>
+
+          <div id="detalhes_brincadeiras" class="ocultar">
+            <label> Que tipos de brincadeiras?<input type="text" name="tipos_de_brincadeiras_dos_irmaos_com_a_crianca" data-label="Que tipos de brincadeiras com o irmão ou irmã"></label>
+          </div>
+
+          <p>Outra pessoa da casa brinca com a criança?</p>
+          <label><input type="radio" name="outra_pessoa_da_casa_brinca_com_a_crianca" value="outros_brinca_sim" data-target="detalhes_brincadeiras_outros" data-label="Outra pessoa da casa brinca com a criança"> Sim</label>
+          <label><input type="radio" name="outra_pessoa_da_casa_brinca_com_a_crianca" value="outros_brinca_nao" data-label="Outra pessoa da casa brinca com a criança"> Não</label>
+
+          <div id="detalhes_brincadeiras_outros" class="ocultar">
+            <label> Que tipos de brincadeiras?<input type="text" name="tipos_de_brincadeiras_de_outras_pessoas_da_casa" data-label="Que tipos de brincadeiras essa outra pessoa propõe"></label>
+          </div>
+
+          <p>Quem acompanha intimamente a vida acadêmica da criança</p>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="mae_acompanha" data-label="Quam acompanha a vida escolar da criança"> Mãe</label>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="pai_acompanha" data-label="Quam acompanha a vida escolar da criança"> Pai</label>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="irmao_acompanha" data-label="Quam acompanha a vida escolar da criança"> Irmão</label>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="empregada_acompanha" data-label="Quam acompanha a vida escolar da criança"> Empregada</label>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="outro_acompanha" data-label="Quam acompanha a vida escolar da criança"> Outros</label>
+
+          <p>Quem vai as reuniões escolares?</p>
+          <label><input type="radio" name="quem_vai_as_reunioes_escolares" value="mae_vai_reuniao" data-label="Quem vai as reuniões escolares"> Mãe</label>
+          <label><input type="radio" name="quem_vai_as_reunioes_escolares" value="pai_vai_reuniao" data-label="Quem vai as reuniões escolares"> Pai</label>
+          <label><input type="radio" name="quem_vai_as_reunioes_escolares" value="irmao_vai_reuniao" data-label="Quem vai as reuniões escolares"> Irmão</label>
+          <label><input type="radio" name="quem_vai_as_reunioes_escolares" value="empregada_vai_reuniao" data-label="Quem vai as reuniões escolares"> Empregada</label>
+          <label><input type="radio" name="quem_vai_as_reunioes_escolares" value="outro_vai_reuniao" data-label="Quem vai as reuniões escolares"> Outros</label>
+
+          <p>Com quem a criança faz a tarefa da escola?</p>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="sozinha_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Sozinha</label>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="mae_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Com a mãe</label>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="pai_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Com o pai</label>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="irmao_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Irmã(o) mais velho</label>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="empregada_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Com a empregada</label>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="professora_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Professora particular</label>
+          <label><input type="radio" name="com_quem_a_crianca_faz_a_tarefa_escolar" value="outro_tarefa" data-label="Com quem a criança faz as tarefas escolares"> Outro</label>
+
+          <label> Qual é o comportamento da criança na hora da tarefa?<input type="text" name="comportamento_tarefa" data-label="Qual é o comportamento da criança na hora da tarefa"></label>
+
+          <p>Como a criança cuida do material escolar?</p>
+          <label><input type="radio" name="cuidado_material" value="muito_cuidado" data-label="Como a criança cuida do material escolar"> Muito cuidado</label>
+          <label><input type="radio" name="cuidado_material" value="cuidado_regular" data-label="Como a criança cuida do material escolar"> Cuidado regular</label>
+          <label><input type="radio" name="cuidado_material" value="pessimo_cuidado" data-label="Como a criança cuida do material escolar"> Péssimo cuidado</label>
+
+          <p> A famìlia possui o hábito de sair juntos?</p>
+          <label><input type="radio" name="habito_sair" value="habito_sim" data-target="opcoes_lugares" data-label="Sim"> Sim</label><label><input type="radio" name="habito_sair" value="habito_nao" data-label="Não"> Não</label>
+
+          <div id="opcoes_lugares" class="ocultar">
+            <p>Quais tipos de passeios?</p>
+            <label><input type="checkbox" name="lugares_visitados[]" value="parque_circo" data-label="Tipos de passeios">Ir ao parque ou circo
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="shopping" data-label="Tipos de passeios">Ir ao shopping
+            </label>
+            <label> <input type="checkbox" name="lugares_visitados[]" value="cinema" data-label="Tipos de passeios">Ir ao cinema
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="viagens" data-label="Tipos de passeios"> Viagens
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="parentes" data-label="Tipos de passeios"> Visitar parentes
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="amigos" data-label="Tipos de passeios"> Visitar amigos
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="igreja" data-label="Tipos de passeios"> Ir à igreja
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="festas_amigos_pais" data-label="Tipos de passeios">Ir a festas de amigos dos pais
+            </label>
+            <label><input type="checkbox" name="lugares_visitados[]" value="festas_infantis" data-label="Tipos de passeios"> Ir a festas infantis
+            </label>
+
+            <label><input type="checkbox" name="lugares_visitados[]" value="outros" data-target="detalhes_outros_lugares" data-label="Quais outros lugares que passeiam"> Outros
+            </label>
+
+             <div id="detalhes_outros_lugares" class="ocultar">
+            <label> Quais esses outros lugares?<input type="text" name="descricao_outros" data-label="Quais são esses outros lugares que passeia"></label>
+          </div>
+          </div>
+
+          <p>Os pais tem amigos ou contato com outros casais que possuem crianças?</p>
+          <label><input type="radio" name="contato_crianca" value="contato_crianca_sim" data-label="Os pais tem amigos ou contato com outros casais que possuem crianças"> Sim</label>
+          <label><input type="radio" name="contato_crianca" value="contato_crianca_nao" data-label="Os pais tem amigos ou contato com outros casais que possuem crianças"> Não</label>
+
+          <p>Os pais conhecem os pais dos amigos dos seus filhos?</p>
+          <label><input type="radio" name="contato_crianca_pais_amigos" value="contato_sim" data-label=">Os pais conhecem os pais dos amigos dos seus filhos"> Sim</label>
+          <label><input type="radio" name="contato_crianca_pais_amigos" value="contato_nao" data-label="Os pais conhecem os pais dos amigos dos seus filhos"> Não</label>
+
+          <p>Os pais tem dúvidas a cerca da educação dos seus filhos</p>
+          <label><input type="radio" name="duvida_educacao" value="duvida_sim" data-target="duvida_educacao_filho" data-label="Os pais tem dúvidas sobre a educação da criança"> Sim</label>
+          <label><input type="radio" name="duvida_educacao" value="duvida_nao" data-label="Os pais tem dúvidas sobre a educação da criança"> Não</label>
+
+          <div id="duvida_educacao_filho" class="ocultar">
+            <label> Quais essas dúvidas?<input type="text" name="descricao_duvida" data-label="Quais essas dúvidas sobre a educação da criança"></label>
+          </div>
+
+          <p>Com quem os pais se aconselham a cerca da educação dos seus filhos?</p>
+            <label>
+              <input type="checkbox" name="orientacao_parental[]" value="avos" data-label="Com quem os pais buscam conselhos sobre a educação da criança">
+              Com os próprios pais (avós da criança)
+            </label>
+            <label>
+              <input type="checkbox" name="orientacao_parental[]" value="parentes_proximos" data-label="Com quem os pais buscam conselhos sobre a educação da criança">
+              Com parentes próximos
+            </label>
+            <label>
+              <input type="checkbox" name="orientacao_parental[]" value="amigos_sem_filhos" data-label="Com quem os pais buscam conselhos sobre a educação da criança">
+              Com amigos que não possuem crianças
+            </label>
+            <label>
+              <input type="checkbox" name="orientacao_parental[]" value="amigos_com_filhos" data-label="Com quem os pais buscam conselhos sobre a educação da criança">
+              Com amigos que possuem crianças
+            </label>
+            <label>
+              <input type="checkbox" name="orientacao_parental[]" value="especialistas" data-label="Com quem os pais buscam conselhos sobre a educação da criança">
+              Com especialistas (psicólogo, psicopedagogo, médicos, etc.)
+            </label>
+            <label>
+              <input type="checkbox" name="orientacao_parental[]" value="outros" data-target="detalhes_conselho" data-label="Com quem os pais buscam conselhos sobre a educação da criança">
+              Outras pessoas
+            </label>
+          <div id="detalhes_conselho" class="ocultar">
+            <label> Quais essas outras pessoas?<input type="text" name="descricao_outros" data-label="Quem são essas outras pessoas que os pais buscam conselhos sobre a educação da criança"></label>
+          </div>
+
+          <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Personalidade Criança</h2>
+         
+          <p>A criança é distraída?</p>
+            <label><input type="radio" name="distraida" value="frequentemente" data-label="A criança é distraída"> Frequentemente</label>
+            <label><input type="radio" name="distraida" value="as_vezes" data-label="A criança é distraída"> Às vezes</label>
+            <label><input type="radio" name="distraida" value="raramente" data-label="A criança é distraída"> Raramente</label>
+            <label><input type="radio" name="distraida" value="nunca" data-label="A criança é distraída"> Nunca</label>
+
+
+            <p>Perde seus brinquedos e objetos?</p>
+            <label><input type="radio" name="perde_itens" value="frequentemente" data-label="A criança perde brinquedos e objetos"> Frequentemente</label>
+            <label><input type="radio" name="perde_itens" value="as_vezes" data-label="A criança perde brinquedos e objetos"> Às vezes</label>
+            <label><input type="radio" name="perde_itens" value="raramente" data-label="A criança perde brinquedos e objetos"> Raramente</label>
+            <label><input type="radio" name="perde_itens" value="nunca" data-label="A criança perde brinquedos e objetos"> Nunca</label>
+
+            <p>A criança é obediente?</p>
+            <label><input type="radio" name="obediencia" value="frequentemente" data-label="A criança é obediente"> Frequentemente</label>
+            <label><input type="radio" name="obediencia" value="as_vezes" data-target="detalhes_obediencia" data-label="A criança é obediente"> Às vezes</label>
+            <label><input type="radio" name="obediencia" value="raramente" data-target="detalhes_obediencia" data-label="A criança é obediente"> Raramente</label>
+            <label><input type="radio" name="obediencia" value="nunca" data-target="detalhes_obediencia" data-label="A criança é obediente"> Nunca</label>
+
+            <div id="detalhes_obediencia" class="ocultar">
+              <label>
+                Com quem?
+                <input type="text" name="descricao_desobediencia" data-label="Com quem a criança é desobediente">
+              </label>
+
+              <label>
+                Qual a atitude dos pais?
+                <input type="text" name="descricao_atitude_pais" data-label="Qual a atitude dos pais diante da desobediência">
+              </label>
+            </div>
+
+
+            <p>A criança respeita limites e aceita regras?</p>
+            <label><input type="radio" name="limites" value="frequentemente" data-label="A criança respeita limites e regras"> Frequentemente</label>
+            <label><input type="radio" name="limites" value="as_vezes" data-target="detalhes_limites" data-label="A criança respeita limites e regras"> Às vezes</label>
+            <label><input type="radio" name="limites" value="raramente" data-target="detalhes_limites" data-label="A criança respeita limites e regras"> Raramente</label>
+            <label><input type="radio" name="limites" value="nunca" data-target="detalhes_limites" data-label="A criança respeita limites e regras"> Nunca</label>
+
+            <div id="detalhes_limites" class="ocultar">
+              <label>
+                Qual a atitude dos pais?
+                <input type="text" name="descricao_atitude_pais_regras" data-label="Qual a atitude dos responsáveis quando a criança não respeita limites e regras">
+              </label>
+            </div>
+          <p>Tenta de alguma forma driblar as regras?</p>
+          <label><input type="radio" name="driblar_regras" value="frequentemente" data-target="detalhes_driblar_regras" data-label="A criança dribla regras"> Frequentemente</label>
+          <label><input type="radio" name="driblar_regras" value="as_vezes" data-target="detalhes_driblar_regras" data-label="A criança dribla regras"> Às vezes</label>
+          <label><input type="radio" name="driblar_regras" value="raramente" data-label="A criança dribla regras">Raramente</label>
+          <label><input type="radio" name="driblar_regras" value="nunca" data-label="A criança dribla regras">Nunca</label>
+
+          <div id="detalhes_driblar_regras" class="ocultar">
+            <label for="descricao_como_driblar_regras"> Como? <input type="text" name="descricao_como_driblar_regras" id="descricao_driblar_regras" data-label="Como criança dribla regras"></label>
+           
+            <label for="descricao_driblar_regras"> Qual a atitude dos pais? <input type="text" name="descricao_driblar_regras" id="descricao_driblar_regras" data-label="Qual a atitude dos responsáveis quando a criança tenta driblar regras"></label>
+          </div>
+
+          <p>Tem comportamento de birra ou desafiador?</p>
+          <label><input type="radio" name="desafiar_pais" value="sim" data-target="detalhes_desafiar_pais" data-label="Comportamento de birra ou desafiador"> Sim</label>
+          <label><input type="radio" name="desafiar_pais" value="nao" data-label="Comportamento de birra ou desafiador"> Não</label>
+          <label><input type="radio" name="desafiar_pais" value="as_vezes" data-label="Comportamento de birra ou desafiador"> Ás vezes</label>
+
+          <div id="detalhes_desafiar_pais" class="ocultar">
+            <label for="descricao_desafiar_pais"> Qual a atitude dos pais?<input type="text" name="descricao_desafiar_pais" id="descrica_desafiar_pais" data-label="Qual a atitude dos responáveis diante de birra ou desafio"></label>
+          </div>
+
+          <label>Comente mais alguma característica da criança que julgue importante:<input type="text" name="comentario_caracteristica" data-label="Comente mais alguma característica da criança que julgue importante"></label>
+
+          <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="button" class="proximo">Próximo</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="step">
+          <h2>Hábitos e Habilidades Sociais</h2>
+          <p>A criança tem amigos?</p>
+          <label><input type="radio" name="amizade_crianca" value="sim-muitos" data-label="A criança têm amigos"> Sim muitos</label>
+          <label><input type="radio" name="amizade_crianca" value="sim_poucos" data-target="detalhes_amizades" data-label="A criança têm amigos"> Sim poucos</label>
+
+          <div id="detalhes_amizades" class="ocultar">
+            <label for="motivo_amizade"> Se poucos ou nenhum, qual o motivo?<input type="text" name="motivo_amizade" id="motivo_amizade" data-label="Qual motivo da criança ter poucas ou nenhuma amizade"></label>
+          </div>
+
+          <p>Briga muito com outras crianças?</p>
+          <label><input type="radio" name="briga_crianca" value="sim" data-target="detalhe_confito" data-label="A criança briga com outras crianças"> Sim</label>
+          <label><input type="radio" name="briga_crianca" value="nao" data-label="A criança briga com outras crianças"> Não</label>
+
+          <div id="detalhe_confito" class="ocultar">
+            <label> Qual o motivo?<input type="text" name="motivo_dos_conflitos_com_outras_criancas" data-label="Qual o motivo?"></label>
+          </div>
+
+          <p>Quer ser sempre o líder?</p>
+          <label><input type="radio" name="quer_ser_sempre_o_lider" value="sim" data-label="Sim"> Sim</label>
+          <label><input type="radio" name="quer_ser_sempre_o_lider" value="nao" data-label="Não"> Não</label>
+
+          <p>Os amigos mais próximos, com quem a criança se relaciona melhor são:</p>
+          <label><input type="checkbox" name="relacionamento_social[]" value="criancas_mais_velhas" data-label="Crianças mais velhas"> Crianças mais velhas</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="mesma_idade" data-label="Crianças da mesma idade"> Crianças da mesma idade</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="criancas_mais_jovens" data-label="Crianças mais jovens que ela"> Crianças mais jovens que ela</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="adultos" data-label="Adultos"> Adultos</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="idosos" data-label="Idosos"> Idosos</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="vizinhos" data-label="Vizinhos"> Vizinhos</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="familia" data-label="Família"> Família</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="parentes_proximos" data-label="Parentes próximos"> Parentes próximos</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="escola" data-label="Da escola"> Da escola</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="desconhecidos_dos_pais" data-label="Desconhecidos dos pais"> Desconhecidos dos pais</label>
+
+          <label><input type="checkbox" name="relacionamento_social[]" value="se_relaciona_com_todos" data-label="Se relaciona bem com todo tipo de pessoa"> Se relaciona bem com todo tipo de pessoa</label>
+
+          <p>A criança cai ou se fere com frequência?</p>
+          <label><input type="radio" name="cai_ou_se_fere_com_frequencia" value="sim" data-target="detalhes_atitude_pais_ferimentos" data-label="Sim"> Sim</label><label><input type="radio" name="cai_ou_se_fere_com_frequencia" value="nao" data-label="Não"> Não</label>
+
+          <div id="detalhes_atitude_pais_ferimentos" class="ocultar">
+            <label> Qual a atitude dos pais?<input type="text" name="atitude_dos_pais_quando_a_crianca_se_fere" data-label="Qual a atitude dos pais?"></label>
+          </div>
+
+          <p>A criança tem noção do perigo?</p>
+           <label><input type="radio" name="tem_nocao_do_perigo" value="sim" data-label="Sim"> Sim</label><label><input type="radio" name="tem_nocao_do_perigo" value="nao" data-target="detalhes_atitude_pais_nocao_crianca" data-label="Não"> Não</label>
+
+          <div id="detalhes_atitude_pais_nocao_crianca" class="ocultar">
+            <label> Qual a atitude dos pais?<input type="text" name="atitude_dos_pais_quando_a_crianca_nao_tem_nocao_do_perigo" data-label="Qual a atitude dos pais?"></label>
+          </div>
+
+          <h2>Atividades de lazer:</h2>
+          <p>Televisão</p>
+          <label><input type="radio" name="frequencia_televisao" value="sim_muito" data-label="Costuma assistir televisão"> Sim, muito</label>
+          <label><input type="radio" name="frequencia_televisao" value="sim_razoavel" data-label="Costuma assistir televisão"> Sim, razoável</label>
+          <label><input type="radio" name="frequencia_televisao" value="raramente" data-label="Costuma assistir televisão"> Raramente</label>
+          <label><input type="radio" name="frequencia_televisao" value="nunca_assiste" data-label="Costuma assistir televisão"> Nunca</label>
+
+          <p>Computador</p>
+          <label><input type="radio" name="frequencia_computador" value="sim_muito" data-label="Costuma usar computador"> Sim, muito</label>
+          <label><input type="radio" name="frequencia_computador" value="sim_razoavel" data-label="Costuma usar computador"> Sim, razoável</label>
+          <label><input type="radio" name="frequencia_computador" value="raramente" data-label="Costuma usar computador"> Raramente</label>
+          <label><input type="radio" name="frequencia_computador" value="nunca_assiste" data-label="Costuma usar computador"> Nunca</label>
+
+          <p>Brincadeiras</p>
+          <label><input type="radio" name="frequencia_brincadeiras" value="sim_muito" data-label="Sim, muito"> Sim, muito</label>
+          <label><input type="radio" name="frequencia_brincadeiras" value="sim_razoavel" data-label="Sim, razoável"> Sim, razoável</label>
+          <label><input type="radio" name="frequencia_brincadeiras" value="raramente" data-label="Raramente"> Raramente</label>
+          <label><input type="radio" name="frequencia_brincadeiras" value="nunca_brinca" data-label="Não gosta de brincar"> Não gosta de brincar</label>
+
+          <p> Assiste filmes?</p>
+          <label><input type="radio" name="tipos_filmes" value="sim" data-target="detalhes_filmes" data-label="Assiste filmes"> Sim</label>
+          <label><input type="radio" name="tipos_filmes" value="nao"  data-label="Assiste filmes"> Não</label>
+
+          <div id="detalhes_filmes" class="ocultar">
+            <p>Quais gêneros ela prefere?</p>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="desenho" data-label="Gênero filme preferido"> Desenhos</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="aventura" data-label="Gênero filme preferido"> Aventura</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="terror" data-label="Gênero filme preferido"> Terror</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="comedia" data-label="Gênero filme preferido"> Comédias</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="suspense" data-label="Gênero filme preferido"> Suspense</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="policial" data-label="Gênero filme preferido"> Policial</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="esporte" data-label="Gênero filme preferido"> Esporte</label>
+            <label><input type="checkbox" name="generos_de_filmes_preferidos[]" value="todos" data-label="Gênero filme preferido"> Todos</label>
+          </div>    
+
+          <p>Atividades preferidas no commputador:</p>
+          <label><input type="checkbox" name="atividades_preferidas_no_computador[]" value="jogos" data-label="Atividades preferidas no computador"> Jogos</label>
+          <label><input type="checkbox" name="atividades_preferidas_no_computador[]" value="pesquisa_escolar" data-label="Atividades preferidas no computador"> Pesquisa da escola</label>
+          <label><input type="checkbox" name="atividades_preferidas_no_computador[]" value="internet" data-label="Atividades preferidas no computador"> Internet</label>
+          <label><input type="checkbox" name="atividades_preferidas_no_computador[]" value="outros" data-target="detalhes_atividades_preferidas_computador" data-label="Atividades preferidas no computador"> Outros</label>
+
+          <div id="detalhes_atividades_preferidas_computador" class="ocultar">
+            <label> Quais estas outras atividades?<input type="text" name="outras_atividades_preferidas_no_computador" data-label="Quais estas outras atividades"></label>
+          </div>
+
+          <p>As brincadeiras são:</p>
+
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="dentro_de_casa" data-label="Tipos de brincadeiras"> Somente dentro de casa</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="video_game" data-label="Tipos de brincadeiras"> Vídeo Game</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="na_rua" data-label="Tipos de brincadeiras"> Na rua</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="lutas" data-label="Tipos de brincadeiras"> Lutas</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="futebol_boneca" data-label="Tipos de brincadeiras"> Futebol ou Boneca</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="jogos_de_montar" data-label="Tipos de brincadeiras"> Jogos de Montar</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="desenhar" data-label="Tipos de brincadeiras"> Desenhar</label>
+          <label><input type="checkbox" name="tipos_de_brincadeiras[]" value="outras_brincadeiras" data-target="detalhes_brincadeiras_preferidas" data-label="Tipos de brincadeiras"> Outros</label>
+
+          <div id="detalhes_brincadeiras_preferidas" class="ocultar">
+            <label> Quais são essas outras brincadeiras?<input type="text" name="outras_brincadeiras_preferidas" data-label="Quais são essas outras brincadeiras"></label>
+          </div>
+          
+          <p>A criança pratica algum esporte?</p>
+            <label><input type="radio" name="pratica_esportes" value="sim" data-target="esportes_praticados" data-label="Sim"> Sim</label>
+            <label><input type="radio" name="pratica_esportes" value="nao" data-label="Não"> Não</label>
+
+          <div id="esportes_praticados" class="ocultar">
+            <p>Quais esportes a criança já praticou?</p>
+              <label><input type="checkbox" name="esportes_ja_praticados[]" value="natacao" data-label="Quais esportes a criança já praticou"> Natação</label>
+              <label><input type="checkbox" name="esportes_ja_praticados[]" value="futebol" data-label="Quais esportes a criança já praticou"> Futebol</label>
+
+              <label><input type="checkbox" name="esportes_ja_praticados[]" value="artes_marciais" data-label="Quais esportes a criança já praticou"> Artes Marciais</label>
+
+              <label><input type="checkbox" name="esportes_ja_praticados[]" value="outros" data-target="detalhes_atividades_praticadas_passado" data-label="Quais esportes a criança já praticou"> Outros</label>
+
+               <div id="detalhes_atividades_praticadas_passado" class="ocultar">
+              <label> Quais são esses outros esportes?<input type="text" name="outros_esportes_ja_praticados" value="" data-label="Quais são esses outros esportes já praticados">
+              </label>
+            </div>
+
+            <p>Atualmente quais esportes ela pratica?</p>  
+              <label><input type="checkbox" name="esportes_praticados_atualmente[]" value="natacao" data-label="Quais esportes a criança pratica"> Natação</label>
+
+              <label><input type="checkbox" name="esportes_praticados_atualmente[]" value="futebol" data-label="Quais esportes a criança pratica"> Futebol</label>
+
+              <label><input type="checkbox" name="esportes_praticados_atualmente[]" value="artes_marciais" data-label="Quais esportes a criança pratica"> Artes Marciais</label>
+
+              <label><input type="checkbox" name="esportes_praticados_atualmente[]" value="outros" data-target="detalhes_atividades_preferidas_esportes" data-label="Quais esportes a criança pratica"> Outros</label>
+
+            <div id="detalhes_atividades_preferidas_esportes" class="ocultar">
+              <label> Quais são esses outros esportes?<input type="text" name="outros_esportes_praticados_atualmente" data-label="Quais são esses outros esportes">
+              </label>
+            </div>
+          </div>
+
+          <p>Os pais praticam algum tipo de esporte?</p>
+            <label><input type="radio" name="pais_praticam_esportes" value="sim" data-target="detalhes_esportes_praticados_pais" data-label="Os pais praticam algum esporte"> Sim</label><label><input type="radio" name="pais_praticam_esportes" value="nao" data-label="Os pais praticam algum esporte"> Não</label>
+
+          <div id="detalhes_esportes_praticados_pais" class="oculto">
+            <p>Quais esportes?</p>
+              <label><input type="checkbox" name="esporte1_praticado_pais" value="natacao" data-label="Esportes que os pais praticam"> Natação</label>
+              <label><input type="checkbox" name="esporte2_praticado_pais" value="futebol" data-label="Esportes que os pais praticam"> Futebol</label>
+              <label><input type="checkbox" name="esporte3_praticado_pais" value="artes_marciais" data-label="Esportes que os pais praticam"> Artes Marciais</label>
+              <label><input type="checkbox" name="esporte4_praticado_pais" value="outros" data-target="descricao_esportes_praticados_pais" data-label="Esportes que os pais praticam"> Outros</label>
+          </div>
+
+          <div id="descricao_esportes_praticados_pais" class="ocultar">
+            <label> Quais são esses outros esportes?<input type="text" name="descricao_esportes_pais" data-label="Quais são esses outros esportes que os pais praticam?">
+              </label>
+          </div>
+
+          <p>Os pais incentivam a prática de esportes?</p>
+            <label><input type="radio" name="esportes_pais_incentivar" value="sim" data-label="Os pais incentivam a prática de esportes"> Sim</label>
+
+            <label><input type="radio" name="esportes_pais_incentivar" value="nao" data-label="Os pais incentivam a prática esportes"> Não</label>
+            </div>
+
+          <label for="observacoes">Observações importantes:<textarea name="observacoes" id="observacoes" data-label="Observações importantes"></textarea></label>
+
+          <div class="button-step">
+            <button type="button" class="voltar">Voltar</button>
+            <button type="submit" class="enviar">Enviar formulário</button>
+          </div>
+
+    </form>
+    <div id="sucesso" class="hidden">
+      <h2>✅ Enviado com sucesso!</h2>
+      <p>Obrigado por preencher o formulário.</p>
+    </div>
+  </main>
+<script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
