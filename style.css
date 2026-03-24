@@ -83,7 +83,7 @@ text-align:center;
 }
 
 p{
-margin:10px;
+margin:20px 0px 0px 0px;
 }
 
 /* PROGRESS */
@@ -126,16 +126,10 @@ color:var(--cor-primaria);
 
 fieldset{
 width:100%;
-
-
 padding: 20px;
-
 border:none;
-
 background:var(--cor-fundo);
-
 border-radius:0 0 var(--radius) var(--radius);
-
 box-shadow:
 0 1px 2px rgba(0,0,0,.18),
 0 6px 12px rgba(0,0,0,.12);
@@ -145,7 +139,7 @@ box-shadow:
 
 label{
 display:block;
-margin:12px;
+margin:20px 0px 0px 10px;
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
