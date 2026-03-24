@@ -26,22 +26,22 @@
 
         <h2>Dados da Criança</h2>
 
-        <label for="nome_crianca"> Nome da Criança <input type="text" id="nome_crianca" name="nome_da_crianca" required data-label="Nome da criança"></label>
+        <label for="nome_crianca"> Nome da Criança:<input type="text" id="nome_crianca" name="nome_da_crianca" required data-label="Nome da criança"></label>
         
-        <label for="data_nascimento">Data de Nascimento <input type="date" id="data_nascimento" name="data_de_nascimento" required data-label="Data de nascimento"></label>
+        <label for="data_nascimento">Data de Nascimento:<input type="date" id="data_nascimento" name="data_de_nascimento" required data-label="Data de nascimento"></label>
 
-        <label for="idade">Idade <input type="number" id="idade" name="idade_da_crianca" min="0" required data-label="Idade da criança"></label> 
+        <label for="idade">Idade:<input type="number" id="idade" name="idade_da_crianca" min="0" required data-label="Idade da criança"></label> 
         
-        <label for="data_entrevista">Data da Entrevista
+        <label for="data_entrevista">Data da Entrevista:
         <input type="date" id="data_entrevista" name="data_da_entrevista" data-label="Data da entrevista">
         </label>
 
-        <p>Sexo da criança</p>
+        <p>Sexo da criança:</p>
         <label for="masculino"><input type="radio" name="sexo_crianca" id="masculino" value="masculino" required data-label="Sexo da criança"> Masculino</label>
 
         <label for="feminino"><input type="radio" name="sexo_crianca" id="feminino" value="feminino" required data-label="Sexo da criança"> Feminino</label>
 
-        <label for="escola">Nome da Escola
+        <label for="escola">Nome da Escola:
         <input type="text" id="escola" name="nome_da_escola" data-label="Nome da escola">
         </label>
 
@@ -63,25 +63,25 @@
       <fieldset class="step">
         <h2>Dados dos Pais</h2>
         <div class="dados-pais">
-          <label for="nome_pai">Nome do Pai
+          <label for="nome_pai">Nome do Pai:
           <input type="text" id="nome_pai" name="nome_do_pai" data-label="Nome do pai">
           </label>
-          <label for="idade_pai">Idade
+          <label for="idade_pai">Idade:
           <input type="text" id="idade_pai" name="idade_do_pai" min="0" data-label="Idade do pai">
           </label>
-          <label for="profissao_pai">Profissão
+          <label for="profissao_pai">Profissão:
           <input type="text" id="profissao_pai" name="profissao_do_pai" data-label="Profissão do pai">
           </label>
         </div >
 
         <div class="dados-pais">
-          <label for="nome_mae">Nome da Mãe
+          <label for="nome_mae">Nome da Mãe:
           <input type="text" id="nome_mae" name="nome_da_mae" data-label="Nome da mãe">
           </label>
-          <label for="idade_mae">Idade
+          <label for="idade_mae">Idade:
           <input type="text" id="idade_mae" name="idade_da_mae" min="0" data-label="Idade da mãe">
           </label>
-          <label for="profissao_mae">Profissão
+          <label for="profissao_mae">Profissão:
           <input type="text" id="profissao_mae" name="profissao_da_mae" data-label="Profissão da mãe">
           </label>
         </div> 
@@ -94,7 +94,7 @@
 
        <fieldset class="step">
         <h2>Sobre a Criança</h2>
-        <p>A criança é?</p>
+        <p>A criança é:</p>
 
         <label for="filho_unico"><input type="radio" id="filho_unico" name="ordem_de_nascimento_da_crianca" value="filho_unico" data-label="A criança é"> Filho Único </label>
 
@@ -142,24 +142,24 @@
        <fieldset class="step">
         <h2>Antecedentes Familiares de Doenças Neurológicas e Psiquiátricas</h2>
 
-        <p>Transtornos Psiquiátricos</p>
+        <p>Transtornos Psiquiátricos?</p>
           <label for="psique_sim"><input type="radio" id="psique_sim" name="historico_doenca_psiquiatrica" value="sim" data-target="doenca_psiquiatrica" data-label="Algum familiar tem transtorno psiquiátrico"> Sim</label>
 
           <label for="psique_nao"><input type="radio" id="psique_nao" name="historico_doenca_psiquiatrica" value="nao" data-label="Algum familiar tem transtorno psiquiátrico"> Não</label>
 
          <div id="doenca_psiquiatrica" class="ocultar">
-          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_psiqui" data-label="Qual o grau de parentesco transtorno psiquiátrico"></label>
+          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_psiqui" data-label="Qual o grau de parentesco dessa pessoa que tem transtorno psiquiátrico"></label>
 
           <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_psiqui" data-label="Qual o contato da criança com essa pessoa que tem transtorno psiquiátrico"></label>
         </div>
 
-        <p>Doenças Físicas</p>
+        <p>Doenças Físicas?</p>
           <label for="fisica_sim"><input type="radio" id="fisica_sim" name="historico_doenca_fisica" value="sim" data-target="doenca_fisica" data-label="Algum familiar tem doença física"> Sim</label>
 
           <label for="fisica_nao"><input type="radio" id="fisica_nao" name="historico_doenca_fisica" value="nao" data-label="Algum familiar tem doença física"> Não</label>
 
          <div id="doenca_fisica" class="ocultar">
-          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_doenca_fisica" data-label="Qual o grau de parentesco doença fisica"></label>
+          <label> Qual o grau de parentesco?<input type="text" name="descricao_grau_parentesco_doenca_fisica" data-label="Qual o grau de parentesco dessa pesssoa que tem doença física"></label>
 
           <label> Essa pessoa reside com a família e qual o contato da criança com este parente?<input type="text" name="descricao_contato_parente_neuro" data-label="Qual o contato da criança com essa pessoa que tem doenças físicas"></label>
         </div>
@@ -259,15 +259,14 @@
 
        <fieldset class="step">
         <h2>Desenvolvimento da Linguagem e Psicomotor</h2>
-        <p>Com que idade a criança falou às:</p>
-
-        <label for="palavras">Primeiras palavras:
+    
+        <label for="palavras">Com que idade a criaça falou as primeiras palavras?
         <input type="text" name="idade_das_primeiras_palavras" id="palavras" data-label="Idade que falou as primeiras palavras">
         </label>
 
         <p>Teve dificuldades na aquisição da fala?</p>
 
-        <label for="fala_sim"><input type="radio" name="teve_dificuldade_na_fala" id="fala_sim" value="sim" data-target="descricao_dificuldade_fala" data-label="Dificuldade naaquisição fala"> Sim</label>
+        <label for="fala_sim"><input type="radio" name="teve_dificuldade_na_fala" id="fala_sim" value="sim" data-target="descricao_dificuldade_fala" data-label="Dificuldade na aquisição fala"> Sim</label>
 
         <label for="fala_nao"><input type="radio" name="teve_dificuldade_na_fala" id="fala_nao" value="nao" data-label="Dificuldade na aquisição fala"> Não</label>
 
@@ -278,19 +277,19 @@
 
         <p>Com que idade a criança:</p>
 
-        <label for="engatinhou">Engatinhou:
+        <label for="engatinhou">Engatinhou?
         <input type="text" name="idade_que_engatinhou" id="engatinhou" data-label="Idade que engatinhou">
         </label>
 
-        <label for="andou"> Andou:
+        <label for="andou"> Andou?
         <input type="text" name="idade_que_andou" id="andou" data-label="Idade que andou">
         </label>
 
         <h2>Controle Urinário Noturno</h2>
-        <label>Com que idade a criança teve controle da enurese(urinar na roupa/cama)? <input type="text" name="idade_controle_encoprese" id="idade_controle_encoprese" data-label="Com que idade a criança teve controle da enurese(urinar na roupa/cama)"></label>
+        <label>Com que idade a criança teve controle da enurese (urinar na roupa/cama)? <input type="text" name="idade_controle_encoprese" id="idade_controle_encoprese" data-label="Com que idade a criança teve controle da enurese(urinar na roupa/cama)"></label>
 
          <h2>Controle Intestinal</h2>
-        <label>Com que idade a criança teve controle da encoprese(sujar a roupa com fezes)? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese" data-label="Com que idade a criança teve controle da encoprese(sujar a roupa com fezes)?"></label>
+        <label>Com que idade a criança teve controle da encoprese (sujar a roupa com fezes)? <input type="text" name="idade_controle_enurese" id="idade_controle_enurese" data-label="Com que idade a criança teve controle da encoprese(sujar a roupa com fezes)"></label>
 
         <p>Qual mão usa para comer?</p>
         <label for="direita"><input type="radio" name="mao_comer" value="direita" id="direita" data-label="Qual mão usa para comer"> Direita</label>
@@ -373,9 +372,9 @@
         <label for="respeita_nao"><input type="radio" name="respeita_os_horarios_da_alimentacao" id="respeita_nao" value="nao" data-label="A criança respeita os horários de se alimentar"> Não</label>
 
         <p>A criança faz as refeições junto com outros familiares?</p>
-        <label for="junto_sim"><input type="radio" name="faz_refeicoes_com_a_familia" id="junto_sim" value="sim" data-label="A criança se alemnta junto com outros familiares"> Sim</label>
+        <label for="junto_sim"><input type="radio" name="faz_refeicoes_com_a_familia" id="junto_sim" value="sim" data-label="A criança se alimenta junto com outros familiares"> Sim</label>
 
-        <label for="junto__nao"><input type="radio" name="faz_refeicoes_com_a_familia" id="junto__nao" value="nao" data-label="A criança se alemnta junto com outros familiares"> Não</label>
+        <label for="junto__nao"><input type="radio" name="faz_refeicoes_com_a_familia" id="junto__nao" value="nao" data-label="A criança se alimenta junto com outros familiares"> Não</label>
 
         <p>A criança recusa-se a comer?</p>
         <label for="comer_sim"><input type="radio" name="recusa_se_a_comer" id="comer_sim" value="sim" data-label="A criança recusa-se a comer"> Sim</label>
@@ -398,7 +397,7 @@
         <label for="ofere_outros"><input type="radio" name="oferece_comida" id="ofere_outros" value="outros" data-label="Quem oferece comida a criança"> Outros</label>
 
         <div id="preferencias_alimentares">
-          <label for="preferencias">Quais são suas preferêcias alimentares:</label>
+          <label for="preferencias">Quais são suas preferêcias alimentares?</label>
           <textarea class="observacoes" name="preferencias_alimentares" id="preferencias" data-label="Quais as preferências alimentares da criança"></textarea>
         </div>
 
@@ -410,7 +409,7 @@
 
         <div id="peso_carcteristicas" class="ocultar">
           <label for="caracteristicas">Diga se o peso está acima  ou abaixo:</label>
-          <textarea name="descricao_da_situacao_do_peso" id="caracteristicas" data-label="O peso está acima ou abaixo"></textarea>
+          <textarea name="descricao_da_situacao_do_peso" id="caracteristicas" data-label="O peso está acima ou abaixo do peso"></textarea>
         </div>
 
         <div class="button-step">
@@ -433,7 +432,7 @@
 
             <div id="descriacao_mudanca_quarto" class="ocultar">
               <label for="atitude_pais"> Qual a atitude dos pais?</label>
-              <textarea name="atitude_pais" id="atitude_pais" data-label="Atitude dos pais em relaçao á criança ir dormir com eles no meio da noite"></textarea>
+              <textarea name="atitude_pais" id="atitude_pais" data-label="Atitude dos pais em relação à criança ir dormir com eles no meio da noite"></textarea>
             </div>
 
             <p>Qual a qualidade de sono da criança?</p>
@@ -483,7 +482,7 @@
         </fieldset>
 
         <fieldset class="step">
-          <h2>Quais tipos de tratamento de que a criança já necessitou ou necessita?</h2>
+          <h2>Quais tipos de tratamento de que a criança já necessitou ou necessita</h2>
 
           <p>Fonoaudiologia?</p>
           <label><input type="radio" name="ja_fez_fonoaudiologia" value="sim" data-target="detalhes_fono" data-label="Fonaudiologia"> Sim</label>
@@ -504,11 +503,11 @@
             </label>
 
             <p>Houve melhora?</p>
-            <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="sim" data-label="Melhora com fonoaudiologia"> Sim</label>
+            <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="sim" data-label="Houve melhora com o tratamento de fonoaudiologia"> Sim</label>
 
-           <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="nao" data-label="Melhora com fonoaudiologia"> Não</label>
+           <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="nao" data-label="Houve melhora com o tratamento de fonoaudiologia"> Não</label>
 
-            <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="regular" data-label="Melhora com fonoaudiologia"> Regular</label>
+            <label><input type="radio" name="resultado_do_tratamento_fonoaudiologico" value="regular" data-label="Houve melhora com o tratamento de fonoaudiologia"> Regular</label>
           </div>
 
           <p>Terapia ocupacional?</p>
@@ -530,11 +529,11 @@
             </label>
 
             <p>Houve melhora?</p>
-            <label><input type="radio" name="resultado_terapia_ocupacional" value="sim" data-label="Melhora com terapia ocupacional"> Sim</label>
+            <label><input type="radio" name="resultado_terapia_ocupacional" value="sim" data-label="Houve melhora com a terapia ocupacional"> Sim</label>
 
-           <label><input type="radio" name="resultado_terapia_ocupacional" value="nao" data-label="Melhora com terapia ocupacional"> Não</label>
+           <label><input type="radio" name="resultado_terapia_ocupacional" value="nao" data-label="Houve melhora com a terapia ocupacional"> Não</label>
 
-            <label><input type="radio" name="resultado_terapia_ocupacional" value="regular" data-label="Melhora com terapia ocupacional"> Regular</label>
+            <label><input type="radio" name="resultado_terapia_ocupacional" value="regular" data-label="Houve melhora com a terapia ocupacional"> Regular</label>
           </div>
 
           <p>Fisioterapia?</p>
@@ -556,11 +555,11 @@
             </label>
 
             <p>Houve melhora?</p>
-            <label><input type="radio" name="resultado_fisioterapia" data-label="Melhorou com fisioterapia"> Sim</label>
+            <label><input type="radio" name="resultado_fisioterapia" data-label="Houve melhora com fisioterapia"> Sim</label>
 
-           <label><input type="radio" name="resultado_fisioterapia" data-label="Melhora com fisioterapia"> Não</label>
+           <label><input type="radio" name="resultado_fisioterapia" data-label="Houve melhora com fisioterapia"> Não</label>
 
-            <label><input type="radio" name="resultado_fisioterapia" data-label="Melhora com fisioterapia"> Regular</label>
+            <label><input type="radio" name="resultado_fisioterapia" data-label="Houve melhora com fisioterapia"> Regular</label>
           </div>
 
           <p>Psicoterapia?</p>
@@ -582,11 +581,11 @@
             </label>
 
             <p>Houve melhora?</p>
-            <label for="melhora_psico_sim"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_sim" data-label="Melhora com a psicoterapia"> Sim</label>
+            <label for="melhora_psico_sim"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_sim" data-label="Houve melhora com a psicoterapia"> Sim</label>
 
-           <label for="melhora_psico_nao"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_nao" data-label="Melhora com a psicoterapia"> Não</label>
+           <label for="melhora_psico_nao"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_nao" data-label="Houve melhora com a psicoterapia"> Não</label>
 
-            <label for="melhora_psico_regular"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_regular" data-label="Melhora com a psicoterapia"> Regular</label>
+            <label for="melhora_psico_regular"><input type="radio" name="resultado_psicoterapia" id="melhora_psico_regular" data-label="Houve melhora com a psicoterapia"> Regular</label>
           </div>
 
           <p>Psicopedagogia?</p>
@@ -608,11 +607,11 @@
             </label>
 
             <p>Houve melhora?</p>
-            <label for="melhora_psico_pedago_sim"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_sim" data-label="Melhora com psicopedagoga"> Sim</label>
+            <label for="melhora_psico_pedago_sim"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_sim" data-label="Houve melhora com psicopedagoga"> Sim</label>
 
-           <label for="melhora_psico_pedago_nao"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_nao" data-label="Melhora com psicopedagoga"> Não</label>
+           <label for="melhora_psico_pedago_nao"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_nao" data-label="Houve melhora com psicopedagoga"> Não</label>
 
-            <label for="melhora_psico_pedago_regular"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_regular" data-label="Melhora com psicopedagoga"> Regular</label>
+            <label for="melhora_psico_pedago_regular"><input type="radio" name="melhora_psico_pedago" id="melhora_psico_pedago_regular" data-label="Houve melhora com psicopedagoga"> Regular</label>
           </div>
 
           <p>Psiquiatria?</p>
@@ -634,11 +633,11 @@
             </label>
 
             <p>Houve melhora?</p>
-            <label for="melhora_psiqui_sim"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_sim" data-label="Melhora com psiquiatra"> Sim</label>
+            <label for="melhora_psiqui_sim"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_sim" data-label="Houve melhora com psiquiatra"> Sim</label>
 
-           <label for="melhora_psiqui_nao"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_nao" data-label="Melhora com psiquiatra"> Não</label>
+           <label for="melhora_psiqui_nao"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_nao" data-label="Houve melhora com psiquiatra"> Não</label>
 
-            <label for="melhora_psiqui_regular"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_regular" data-label="Melhora com psiquiatra"> Regular</label>
+            <label for="melhora_psiqui_regular"><input type="radio" name="melhora_psiqui" id="melhora_psiqui_regular" data-label="Houve melhora com psiquiatra"> Regular</label>
           </div>
 
           <p>Outros?</p>
@@ -699,13 +698,7 @@
           </div>
 
           <label for="dificuldade_escolar">Qual o tipo de dificuldade escolar da criança?<input type="text" name="dificuldade_escolar" id="dificuldade_escolar" data-label="Tipo de dificuldade escolar"></label>
-         
-
-          <p>A criança sempre apresentou dificuldade ou passou a apresentar dificuldade na escola recentemente?</p>
       
-          <label><input type="radio" name="apresentar_difi" value="sempre" data-label="Dificuldade escolar"> Sempre</label>
-          <label><input type="radio" name="apresentar_difi" value="recentemente" data-label="Dificuldade escolar"> Recentemente</label>
-
            <p>A letra da criança apresenta:</p>
            <p>Trocas de letras (substitui uma letra por outra ao escrever uma palavra)?</p>
            <label><input type="radio" name="trocas_letras" value="sim" data-target="detalhes_letras" data-label="Trocas de letras"> Sim</label>
@@ -726,7 +719,7 @@
 
           <p>Aglutinações (junta palavras que deveriam estar separadas)?</p>
           <label><input type="radio" name="aglutinacao_letra" value="sim" data-target="detalhes_aglutinacoes" data-label="Aglutinações na escrita"> Sim</label>
-          <label><input type="radio" name="aglutinacao_letra" value="nao" data-label="Aglutinaçoes na escrita"> Não</label>
+          <label><input type="radio" name="aglutinacao_letra" value="nao" data-label="Aglutinações na escrita"> Não</label>
   
           <div id="detalhes_aglutinacoes" class="ocultar">
             <label>Quais?<input type="text" name="aglutinacoes" id="aglutinacoes" data-label="Quais palavras escreve com alglutinação"></label>
@@ -748,7 +741,7 @@
 
         <fieldset class="step">
           <h2>Dinâmica Familiar</h2>
-          <label for="">Principal cuidador<input type="text" name="principal_cuidador" id="principal_cuidador" data-label="Principal cuidador"></label>
+          <label for="principal_cuidador">Principal cuidador:<input type="text" name="principal_cuidador" id="principal_cuidador" data-label="Principal cuidador"></label>
           
 
           <label>Como é o relacionamento da criança com as pessoas do cotidiano?<input type="text" name="com_quem_a_crianca_se_relaciona_melhor" data-label="Como é o ralacionamento da criança com as pessoas do cotidiano"></label>
@@ -771,16 +764,16 @@
           <label><input type="radio" name="quem_brinca_mais_com_a_crianca" value="os_dois_brinca" data-label="Quem brinca mais com a criança"> Os pais</label>
           <label><input type="radio" name="quem_brinca_mais_com_a_crianca" value="irmaos" data-label="Quem brinca mais com a criança"> Irmãos</label>
 
-          <p>Quem acompanha intimamente a vida acadêmica da criança</p>
-          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="mae_acompanha" data-label="Quam acompanha a vida escolar da criança"> Mãe</label>
-          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="pai_acompanha" data-label="Quam acompanha a vida escolar da criança"> Pai</label>
-          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="outro_acompanha" data-label="Quam acompanha a vida escolar da criança" data-target="outros_acompanha_vida_escolar"> Outros</label>
+          <p>Quem acompanha intimamente a vida acadêmica da criança?</p>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="mae_acompanha" data-label="Quem acompanha a vida escolar da criança"> Mãe</label>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="pai_acompanha" data-label="Quem acompanha a vida escolar da criança"> Pai</label>
+          <label><input type="radio" name="quem_acompanha_a_vida_academica_da_crianca" value="outro_acompanha" data-label="Quem acompanha a vida escolar da criança" data-target="outros_acompanha_vida_escolar"> Outros</label>
 
           <div class="ocultar" id="outros_acompanha_vida_escolar">
-            <label for="descricao_outro_acompanha_escola">Quem é essa pessoa?<input type="text" name="descricao_outro_acompanha_escola"></label>
+            <label for="descricao_outro_acompanha_escola">Quem é essa pessoa?<input type="text" name="descricao_outro_acompanha_escola" data-label="Quem é essa outra pessoa que acompanha a vida escolar da criança"></label>
           </div>
 
-          <label> Qual é o comportamento da criança na hora da tarefa?<input type="text" name="comportamento_tarefa" data-label="Qual é o comportamento da criança na hora da tarefa"></label>
+          <label> Qual é o comportamento da criança na hora da tarefa?<input type="text" name="comportamento_tarefa" data-label="Qual o comportamento da criança na hora da tarefa"></label>
 
           <p>Como a criança cuida do material escolar?</p>
           <label><input type="radio" name="cuidado_material" value="muito_cuidado" data-label="Como a criança cuida do material escolar"> Muito cuidado</label>
@@ -788,13 +781,8 @@
           <label><input type="radio" name="cuidado_material" value="pessimo_cuidado" data-label="Como a criança cuida do material escolar"> Péssimo cuidado</label>
 
           <p> A famìlia possui o hábito de sair juntos?</p>
-          <label><input type="radio" name="habito_sair" value="habito_sim" data-target="opcoes_lugares" data-label="A família sai junto"> Sim</label><label><input type="radio" name="habito_sair" value="habito_nao" data-label="A família sai junto"> Não</label>
-
-          <div id="opcoes_lugares" class="ocultar">
-            <div id="detalhes_lugares" class="ocultar">
-            <label> Quais  lugares?<input type="text" name="descricao_lugares" data-label="Quais são esses lugares que vão juntos"></label>
-          </div>
-          </div>
+          <label><input type="radio" name="habito_sair" value="habito_sim" data-target="opcoes_lugares" data-label="A família sai junto"> Sim</label>
+          <label><input type="radio" name="habito_sair" value="habito_nao" data-label="A família sai junto"> Não</label>
 
           <div class="button-step">
             <button type="button" class="voltar">Voltar</button>
@@ -858,7 +846,7 @@
           <div id="detalhes_driblar_regras" class="ocultar">
             <label for="descricao_como_driblar_regras"> Como? <input type="text" name="descricao_como_driblar_regras" id="descricao_driblar_regras" data-label="Como criança dribla regras"></label>
            
-            <label for="descricao_driblar_regras"> Qual a atitude dos pais? <input type="text" name="descricao_driblar_regras" id="descricao_driblar_regras" data-label="Qual a atitude dos responsáveis quando a criança tenta driblar regras"></label>
+            <label for="descricao_driblar_regras"> Qual a atitude dos pais? <input type="text" name="descricao_driblar_regras" id="descricao_driblar_regras" data-label="Qual a atitude dos pais quando a criança tenta driblar regras"></label>
           </div>
 
           <p>Tem comportamento de birra ou desafiador?</p>
@@ -904,26 +892,26 @@
           <label><input type="radio">Outros</label>
 
           <p>A criança cai ou se fere com frequência?</p>
-          <label><input type="radio" name="cai_ou_se_fere_com_frequencia" value="sim" data-target="detalhes_atitude_pais_ferimentos" data-label="A criança cai ou se fere frequentemente"> Sim</label><label><input type="radio" name="cai_ou_se_fere_com_frequencia" value="nao" data-label="A criança cai ou se fere frequentementeo"> Não</label>
+          <label><input type="radio" name="cai_ou_se_fere_com_frequencia" value="sim" data-target="detalhes_atitude_pais_ferimentos" data-label="A criança cai ou se fere frequentemente"> Sim</label><label><input type="radio" name="cai_ou_se_fere_com_frequencia" value="nao" data-label="A criança cai ou se fere frequentemente"> Não</label>
 
           <div id="detalhes_atitude_pais_ferimentos" class="ocultar">
-            <label> Qual a atitude dos pais?<input type="text" name="atitude_dos_pais_quando_a_crianca_se_fere" data-label="Qual a atitude dos pais?"></label>
+            <label> Qual a atitude dos pais?<input type="text" name="atitude_dos_pais_quando_a_crianca_se_fere" data-label="Qual a atitude dos pais a criança se ferir frequentemente"></label>
           </div>
 
           <p>A criança tem noção do perigo?</p>
            <label><input type="radio" name="tem_nocao_do_perigo" value="sim" data-label="A criança tem noção de perigo"> Sim</label><label><input type="radio" name="tem_nocao_do_perigo" value="nao" data-target="detalhes_atitude_pais_nocao_crianca" data-label="A criança tem noção de perigo"> Não</label>
 
           <div id="detalhes_atitude_pais_nocao_crianca" class="ocultar">
-            <label> Qual a atitude dos pais?<input type="text" name="atitude_dos_pais_quando_a_crianca_nao_tem_nocao_do_perigo" data-label="Qual a atitude dos pais?"></label>
+            <label> Qual a atitude dos pais?<input type="text" name="atitude_dos_pais_quando_a_crianca_nao_tem_nocao_do_perigo" data-label="Qual a atitude dos pais em relação a falta de noção de perigo"></label>
           </div>
 
-          <h2>Atividades de lazer:</h2>
-          <p>Eletrônicos</p>
+          <h2>Atividades de lazer</h2>
+          <p>Eletrônicos?</p>
           <label><input type="radio" name="frequencia_televisao" value="sim_muito" data-label="Costuma assistir televisão"> Sim</label>
           <label><input type="radio" name="frequencia_televisao" value="raramente" data-label="Costuma assistir televisão"> Raramente</label>
           <label><input type="radio" name="frequencia_televisao" value="nunca_assiste" data-label="Costuma assistir televisão"> Nunca</label>
 
-          <p>Brincadeiras</p>
+          <p>Brincadeiras?</p>
           <label><input type="radio" name="frequencia_brincadeiras" value="sim_muito" data-label="Brincadeiras"> Sim</label>
           <label><input type="radio" name="frequencia_brincadeiras" value="sim_razoavel" data-label="Brincadeiras"> Sim, razoável</label>
           <label><input type="radio" name="frequencia_brincadeiras" value="raramente" data-label="Brincadeiras"> Raramente</label>

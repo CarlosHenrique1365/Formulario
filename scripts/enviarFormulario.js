@@ -5,7 +5,7 @@ export default function submitForm() {
 
   const inputs = form.querySelectorAll('input, textarea, select');
 
-  function mostrarDataLabels() {
+  function gerarJSONDataLabels() {
     const dataLabels = {};
 
     inputs.forEach((input) => {
@@ -35,19 +35,28 @@ export default function submitForm() {
       }
     });
 
-    console.clear();
-    console.log(dataLabels);
+    return JSON.stringify(dataLabels, null, 2);
   }
 
   inputs.forEach((input) => {
-    input.addEventListener('change', mostrarDataLabels);
-    input.addEventListener('input', mostrarDataLabels);
+    input.addEventListener('change', () => {
+      console.clear();
+      console.log(gerarJSONDataLabels());
+    });
+
+    input.addEventListener('input', () => {
+      console.clear();
+      console.log(gerarJSONDataLabels());
+    });
   });
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    mostrarDataLabels();
+    const json = gerarJSONDataLabels();
+
+    console.clear();
+    console.log(json);
 
     alert('Teste realizado. Nada foi enviado ao webhook.');
 
