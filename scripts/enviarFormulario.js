@@ -12,71 +12,83 @@ export default function submitForm() {
       const dataLabel = input.getAttribute('data-label');
       const name = input.name;
 
-      if (!name || !dataLabel) return;
+      if (!name || !dataLabel || input.disabled) return;
 
       if (input.type === 'checkbox') {
-        if (!dataLabels[dataLabel]) {
-          dataLabels[dataLabel] = [];
-        }
-
         if (input.checked) {
-          dataLabels[dataLabel].push(input.value);
+          if (!dataLabels[dataLabel]) {
+            dataLabels[dataLabel] = [];
+          }
+
+          const valor = input.value.trim();
+
+          if (valor !== '') {
+            dataLabels[dataLabel].push(valor);
+          }
         }
       } else if (input.type === 'radio') {
-        if (!(dataLabel in dataLabels)) {
-          dataLabels[dataLabel] = '';
-        }
-
         if (input.checked) {
-          dataLabels[dataLabel] = input.value;
+          const valor = input.value.trim();
+
+          if (valor !== '') {
+            dataLabels[dataLabel] = valor;
+          }
         }
       } else {
-        dataLabels[dataLabel] = input.value;
+        const valor = input.value.trim();
+
+        if (valor !== '') {
+          dataLabels[dataLabel] = valor;
+        }
       }
     });
 
-    return JSON.stringify(dataLabels, null, 2);
+    return dataLabels;
+  }
+
+  function mostrarJSONNoConsole() {
+    const json = gerarJSONDataLabels();
+    console.clear();
+    console.log(JSON.stringify(json, null, 2));
   }
 
   inputs.forEach((input) => {
-    input.addEventListener('change', () => {
-      console.clear();
-      console.log(gerarJSONDataLabels());
-    });
+    input.addEventListener('change', mostrarJSONNoConsole);
 
-    input.addEventListener('input', () => {
-      console.clear();
-      console.log(gerarJSONDataLabels());
-    });
+    if (
+      input.type !== 'checkbox' &&
+      input.type !== 'radio' &&
+      input.tagName.toLowerCase() !== 'select'
+    ) {
+      input.addEventListener('input', mostrarJSONNoConsole);
+    }
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const json = gerarJSONDataLabels();
+    const data = gerarJSONDataLabels();
 
     console.clear();
-    console.log(json);
+    console.log(JSON.stringify(data, null, 2));
 
-    window.location.href = 'sucesso.html';
+    try {
+      const response = await fetch('https://n8n-n8n.gfzm83.easypanel.host/webhook/Anamnese_Infantil', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        window.location.href = 'sucesso.html';
+      } else {
+        alert('Erro ao enviar.');
+      }
+    } catch (error) {
+      console.error('Erro na requisição:', error);
+      alert('Erro na requisição.');
+    }
   });
 }
-  // try {
-  //   const response = await fetch('https://n8n-n8n.gfzm83.easypanel.host/webhook/Anamnese_Infantil', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(data)
-  //   });
-
-  //   if (response.ok) {
-  //     alert('Enviado com sucesso!');
-  //   } else {
-  //     alert('Erro ao enviar.');
-  //   }
-
-  // } catch (error) {
-  //   console.error(error);
-  //   alert('Erro na requisição');
-  // }
