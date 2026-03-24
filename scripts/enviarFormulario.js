@@ -60,7 +60,7 @@ export default function submitForm() {
 
     alert('Teste realizado. Nada foi enviado ao webhook.');
 
-    // window.location.href = 'sucesso.html';
+    window.location.href = 'sucesso.html';
   });
 }
   // try {
