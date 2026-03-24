@@ -58,8 +58,6 @@ export default function submitForm() {
     console.clear();
     console.log(json);
 
-    alert('Teste realizado. Nada foi enviado ao webhook.');
-
     window.location.href = 'sucesso.html';
   });
 }
