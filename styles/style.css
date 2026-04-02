@@ -19,15 +19,15 @@ list-style:none;
 /* BACKGROUNDS DINÂMICOS */
 
 .masculino{
-background:url('./imagens/img-bg-menino.jfif') center/cover no-repeat fixed;
+background:url('../imagens/img-bg-menino.jfif') center/cover no-repeat fixed;
 }
 
 .feminino{
-background:url('./imagens/img-bg-menina.png') center/cover no-repeat fixed;
+background:url('../imagens/img-bg-menina.png') center/cover no-repeat fixed;
 }
 
 .padrao{
-background:url('./imagens/img-bg-padrao.png') center/cover no-repeat fixed;
+background:url('../imagens/img-bg-padrao.png') center/cover no-repeat fixed;
 }
 
 /* BODY */

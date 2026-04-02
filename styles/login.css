@@ -22,7 +22,7 @@
 body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background: url('./imagens/img-bg-padrao.png') center/cover no-repeat fixed;
+  background: url('../imagens/img-bg-padrao.png') center/cover no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: center;
