@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Anamnese Infantil</title>
+  <link rel="stylesheet" href="./styles/login.css" />
+</head>
+<body>
+
+  <main class="login-wrapper">
+    <section class="login-card">
+      <div class="login-top">
+        <span class="login-badge">Acesso seguro</span>
+        <h1>Bem-vindo(a)</h1>
+        <p>
+          Faça login para acessar o <strong>formulário de anamnese infantil</strong>.
+        </p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <label for="email">
+          E-mail
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+        </label>
+
+        <label for="senha">
+          Senha
+          <div class="senha-box">
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite sua senha"
+              required
+            />
+            <button type="button" id="toggleSenha" class="toggle-senha">
+              Mostrar
+            </button>
+          </div>
+        </label>
+
+        <p id="mensagemErro" class="mensagem-erro"></p>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+
+        <button type="submit" class="btn-login" id="btnLogin">Entrar</button>
+      </form>
+
+      <div class="login-footer">
+        <p>Área destinada ao preenchimento do formulário.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="./scripts/login.js" type="module"></script>
+</body>
+</html>

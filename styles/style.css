@@ -275,3 +275,22 @@ pointer-events:auto;
 .hidden {
   display: none;
 }
+
+.logout-btn {
+  align-self: flex-end;
+  width: 110px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffffd9;
+  color: #49724a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
